@@ -1,0 +1,20 @@
+# Compiled
+*.exe
+*.pyc
+__pycache__/
+dist/
+build/
+*.spec
+
+# Cache
+cache/
+*.tmp
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
