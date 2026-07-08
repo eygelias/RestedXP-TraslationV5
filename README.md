@@ -86,6 +86,11 @@ Traducción española de la interfaz de Hermes Agent (Electron desktop app).
 
 ## Changelog
 
+### v1.4 (2026-07-08)
+- Fix directo: `Akoru el Clamafuegos` → `Akoru el Pirotigma`
+- Reparación del macro abierto en tiempo real (`MacroFrameText`)
+- Cambio `targetName:trim()` → `strtrim(...)` para compatibilidad WoW Lua
+
 ### v1.3 (2026-07-07)
 - Fix macro usando ID del paso activo
 - Corrección de unitlist en tiempo real

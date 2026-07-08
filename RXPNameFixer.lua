@@ -1,7 +1,7 @@
 -- RXPNameFixer.lua
 -- Corrige automáticamente los nombres de mobs en RestedXP
 -- usando los nombres reales que el cliente del juego proporciona.
--- v1.3 - Corrige macro/step usando IDs del paso activo
+-- v1.4 - Overrides + reparación del macro abierto en tiempo real
 
 local addonName, ns = ...
 
@@ -23,8 +23,26 @@ local MacroFixCount = 0
 local ScanCount = 0
 local LogMaxEntries = 500
 
+-- ponytail: overrides quirúrgicos cuando la DB está mal y el step no expone ID usable.
+local ManualNameFixes = {
+    ["Akoru el Clamafuegos"] = "Akoru el Pirotigma",
+}
+
 local function EscapePattern(text)
     return tostring(text):gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1")
+end
+
+local function ApplyManualNameFixes(text)
+    if type(text) ~= "string" then return text, false end
+    local changed = false
+    for wrong, correct in pairs(ManualNameFixes) do
+        local fixed = text:gsub(EscapePattern(wrong), correct)
+        if fixed ~= text then
+            text = fixed
+            changed = true
+        end
+    end
+    return text, changed
 end
 
 local function ExtractNpcID(value)
@@ -200,8 +218,15 @@ local function FixMacroContent(content)
     if not content then return content end
     
     local changed = false
+    local manualFixed, manualChanged = ApplyManualNameFixes(content)
+    if manualChanged then
+        content = manualFixed
+        changed = true
+        MacroFixCount = MacroFixCount + 1
+        LogEntry("MACRO_MANUAL_FIX", "Override manual aplicado")
+    end
     local newContent = content:gsub("/targetexact ([^\n]+)", function(targetName)
-        targetName = targetName:trim()
+        targetName = strtrim(targetName or "")
         local fixed, npcID = FixName(targetName)
         if fixed == targetName then
             npcID = FirstCurrentStepNpcID()
@@ -236,6 +261,33 @@ if EditMacro then
     end
 end
 
+local function GetSelectedMacroIndex()
+    local selected = MacroFrame and MacroFrame.selectedMacro
+    if not selected then return nil end
+    local base = (MacroFrame and MacroFrame.macroBase) or 0
+    return base + selected
+end
+
+local function FixOpenMacroFrame()
+    if InCombatLockdown and InCombatLockdown() then return end
+    if not MacroFrame or not MacroFrame:IsShown() or not MacroFrameText then return end
+    local body = MacroFrameText:GetText()
+    local fixedBody = FixMacroContent(body)
+    if fixedBody == body then return end
+
+    MacroFrameText:SetText(fixedBody)
+    local macroIndex = GetSelectedMacroIndex()
+    if macroIndex and EditMacro and GetMacroInfo then
+        local name, icon = GetMacroInfo(macroIndex)
+        if name and (name == "RXPtargeting" or name:find("RXP")) then
+            pcall(EditMacro, macroIndex, name, icon, fixedBody)
+        end
+    end
+    LogEntry("MACRO_FRAME_FIX", "Macro abierto corregido")
+end
+
+local macroTicker
+
 -- ══════════════════════════════════════════
 --  HOOK: CORREGIR TEXTO DEL STEP
 -- ══════════════════════════════════════════
@@ -246,6 +298,15 @@ local function FixStepText(element)
     
     local text = element.text
     local changed = false
+
+    local manualText, manualChanged = ApplyManualNameFixes(text)
+    if manualChanged then
+        text = manualText
+        element.text = manualText
+        changed = true
+        FixCount = FixCount + 1
+        LogEntry("STEP_MANUAL_FIX", "Override manual aplicado")
+    end
     
     -- Patrón npc:NOMBRE:ID
     local newText = text:gsub("npc:(.-):(%d+)", function(oldName, idStr)
@@ -283,6 +344,8 @@ local function FixCurrentStep()
 
     ForEachCurrentStepNpc(function(id, oldName, element, list, index)
         local realName = GetRealName(id)
+        local manualName, manualChanged = ApplyManualNameFixes(oldName)
+        if manualChanged then realName = manualName end
         if not realName then return end
         if type(list) == "table" and list[index] ~= realName then
             list[index] = realName
@@ -381,7 +444,7 @@ eventFrame:SetScript("OnEvent", function(self, event, arg1)
         LogEntry("SYSTEM", "Cache cargada: " .. count .. " nombres")
         
         C_Timer.After(3, HookRestedXP)
-        LogEntry("SYSTEM", "RXP Name Fixer v1.3 cargado")
+        LogEntry("SYSTEM", "RXP Name Fixer v1.4 cargado")
         
     elseif event == "ZONE_CHANGED_NEW_AREA" then
         LogEntry("ZONE", "Zona: " .. (GetRealZoneText() or "?"))
@@ -392,6 +455,7 @@ end)
 C_Timer.NewTicker(1.5, function()
     ScanNearbyMobs()
     FixCurrentStep()
+    FixOpenMacroFrame()
 end)
 
 -- ══════════════════════════════════════════
@@ -404,7 +468,7 @@ SlashCmdList["RXPNAMEFIXER"] = function(msg)
     if msg == "stats" or msg == "" then
         local count = 0
         for _ in pairs(NameCache) do count = count + 1 end
-        print("|cff00ff00RXP Name Fixer v1.3|r")
+        print("|cff00ff00RXP Name Fixer v1.4|r")
         print("  Cache: " .. count .. " nombres")
         print("  Texto corregido: " .. FixCount .. " veces")
         print("  Macro corregida: " .. MacroFixCount .. " veces")
@@ -447,4 +511,4 @@ SlashCmdList["RXPNAMEFIXER"] = function(msg)
 end
 
 LogEntry("SYSTEM", "Addon cargado")
-print("|cff00ff00RXP Name Fixer v1.3|r - /rxpnf")
+print("|cff00ff00RXP Name Fixer v1.4|r - /rxpnf")

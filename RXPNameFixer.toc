@@ -2,7 +2,7 @@
 ## Title: RXP Name Fixer
 ## Notes: Corrige nombres de mobs en RestedXP (texto + macro) usando nombres reales del cliente.
 ## Author: RXP Translator V5
-## Version: 1.2
+## Version: 1.4
 ## Dependencies: RXPGuides
 ## SavedVariables: RXPNameFixerDB RXPNameFixerLog
 
