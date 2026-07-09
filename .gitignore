@@ -26,7 +26,7 @@ QuestieDB-v*.zip
 *.rar
 *.7z
 *.zip
-!release/*.zip
+release/
 
 # OS / IDE
 Thumbs.db
