@@ -1,20 +1,36 @@
-# Compiled
-*.exe
-*.pyc
+# Python
 __pycache__/
-dist/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Build output
 build/
-*.spec
+dist/
+*.spec.bak
+*.exe
+*.pkg
 
-# Cache
-cache/
-*.tmp
+# Local runtime output
+cache/*.tmp
+cache/descriptions*.json
+cache/unresolved*.json
+cache/validation_report.json
+output/
+input/*.lua
 
-# OS
+# Large/raw upstream archives
+QuestieDB-v*.zip
+*.rar
+*.7z
+*.zip
+!release/*.zip
+
+# OS / IDE
 Thumbs.db
 Desktop.ini
 .DS_Store
-
-# IDE
 .vscode/
 .idea/

@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RXP Translator V5</title>
+    <style>
+        body {
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .window {
+            width: 480px;
+            background: linear-gradient(180deg, #2b2c40 0%, #1a1a2e 100%);
+            border: 2px solid #5a5c7a;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .floating-logo {
+            position: absolute;
+            top: -16px;
+            left: -16px;
+            width: 55px;
+            height: 55px;
+            z-index: 10;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+            border: 2px solid #3a3c5a;
+            background-color: #151522;
+        }
+        .header {
+            background: linear-gradient(90deg, #1f2032 0%, #151522 100%);
+            padding: 8px 12px 8px 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #3a3c5a;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .header-title {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #dcdcdc;
+        }
+        .header-controls {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .lang-selector {
+            background: #2a2a3a;
+            color: #dcdcdc;
+            border: 1px solid #4a4c6a;
+            border-radius: 4px;
+            padding: 3px 6px;
+            font-size: 12px;
+            font-family: inherit;
+            cursor: pointer;
+            outline: none;
+            margin-right: 4px;
+        }
+        .lang-selector option {
+            background: #151522;
+            color: #dcdcdc;
+        }
+        .btn-icon {
+            background: #2a2a3a;
+            border: 1px solid #4a4c6a;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .btn-close {
+            background: #8a2a2a;
+            border-color: #aa4a4a;
+        }
+        .content {
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        .panel {
+            background: #242538;
+            border: 1px solid #4a4c6a;
+            border-radius: 6px;
+            padding: 6px 8px;
+            position: relative;
+        }
+        .panel::before, .panel::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #7a7c9a;
+            border-radius: 50%;
+            box-shadow: inset 1px 1px 2px #111;
+        }
+        .panel::before { top: 4px; left: 4px; }
+        .panel::after { bottom: 4px; right: 4px; }
+        .file-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+            gap: 6px;
+        }
+        .file-label {
+            width: 45px;
+            font-size: 12px;
+        }
+        .file-input {
+            flex-grow: 1;
+            background: transparent;
+            color: #dcdcdc;
+            border: none;
+            font-family: monospace;
+            font-size: 11px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .btn-standard {
+            background: linear-gradient(180deg, #1d3b66 0%, #10223d 100%);
+            border: 1px solid #3a5c8c;
+            color: #e0e0e0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            min-width: 80px;
+        }
+        .btn-standard:hover {
+            background: linear-gradient(180deg, #2a4b7c 0%, #1d3b66 100%);
+        }
+        .btn-standard:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .panel-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: 14px;
+            color: #c0c2cc;
+        }
+        .target-lang-container {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #dcdcdc;
+            font-size: 13px;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+        .checkbox-item {
+            background: #1e1e2f;
+            border: 1px solid #3a3c5a;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            user-select: none;
+        }
+        .checkbox-item input[type="checkbox"] {
+            accent-color: #3a5c8c;
+            width: 13px;
+            height: 13px;
+        }
+        .select-all {
+            text-align: center;
+            margin-top: 10px;
+            color: #b8bacc;
+            font-size: 13px;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s ease;
+        }
+        .select-all:hover {
+            color: #ffffff;
+        }
+        .actions-row {
+            display: flex;
+            gap: 8px;
+        }
+        .btn-large {
+            flex-grow: 1;
+            padding: 6px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            background: linear-gradient(180deg, #1d3b66 0%, #10223d 100%);
+            border: 1px solid #3a5c8c;
+            color: #e0e0e0;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-large:hover {
+            background: linear-gradient(180deg, #2a4b7c 0%, #1d3b66 100%);
+        }
+        .btn-large:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .btn-large.active {
+            background: linear-gradient(180deg, #3a6b9c 0%, #2a4b7c 100%);
+            border-color: #5a8cbc;
+        }
+        .btn-folder {
+            width: 40px;
+            flex-grow: 0;
+            background: linear-gradient(180deg, #2b2c40 0%, #1a1a2e 100%);
+        }
+        .btn-stop {
+            width: 43px;
+            flex-grow: 0;
+            padding: 8px;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, #6b2020 0%, #4a1515 100%);
+            border: 1px solid #8a3a3a;
+            color: #e0e0e0;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-stop:hover {
+            background: linear-gradient(180deg, #8a3030 0%, #6b2020 100%);
+        }
+        .progress-container {
+            background: #11111a;
+            border: 1px solid #3a3c5a;
+            border-radius: 4px;
+            height: 22px;
+            position: relative;
+            overflow: hidden;
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #2a4b7c 0%, #4a6c9c 100%);
+            width: 0%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            transition: width 0.3s ease;
+        }
+        .progress-text-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 1px #000;
+        }
+        .stats-text {
+            text-align: center;
+            font-size: 13px;
+            color: #dcdcdc;
+            margin-top: 6px;
+        }
+        .log-box {
+            background: #151522;
+            border: 1px solid #3a3c5a;
+            border-radius: 4px;
+            padding: 6px;
+            font-family: monospace;
+            font-size: 11px;
+            color: #dcdcdc;
+            height: 60px;
+            overflow-y: auto;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            user-select: text;
+            -webkit-user-select: text;
+            cursor: text;
+        }
+        .log-title {
+            text-align: center;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        .log-box::-webkit-scrollbar { width: 6px; }
+        .log-box::-webkit-scrollbar-track { background: #11111a; }
+        .log-box::-webkit-scrollbar-thumb { background: #3a3c5a; border-radius: 3px; }
+
+        /* ── Context menu ── */
+        .context-menu {
+            display: none;
+            position: fixed;
+            background: linear-gradient(180deg, #2b2c40 0%, #1a1a2e 100%);
+            border: 1px solid #5a5c7a;
+            border-radius: 6px;
+            padding: 4px 0;
+            z-index: 200;
+            min-width: 160px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+        .context-menu.active { display: block; }
+        .context-menu-item {
+            padding: 8px 16px;
+            color: #dcdcdc;
+            font-size: 13px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .context-menu-item:hover {
+            background: rgba(90,140,188,0.2);
+            color: #fff;
+        }
+        .context-menu-item .shortcut {
+            margin-left: auto;
+            color: #6B72A8;
+            font-size: 11px;
+        }
+
+        /* ── Loading spinner ── */
+        .loading-indicator {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            padding: 4px 0;
+        }
+        .loading-indicator.active {
+            display: flex;
+        }
+        .spinner {
+            width: 16px;
+            height: 16px;
+            border: 2px solid #3a3c5a;
+            border-top: 2px solid #5a8cbc;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .loading-text {
+            font-size: 12px;
+            color: #8a8caa;
+            animation: pulse-text 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse-text {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .loading-dots::after {
+            content: '';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+        @keyframes dots {
+            0% { content: ''; }
+            25% { content: '.'; }
+            50% { content: '..'; }
+            75% { content: '...'; }
+        }
+
+        /* ── Help modal ── */
+        .help-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+        .help-overlay.active {
+            display: flex;
+        }
+        .help-modal {
+            background: linear-gradient(180deg, #2b2c40 0%, #1a1a2e 100%);
+            border: 2px solid #5a5c7a;
+            border-radius: 10px;
+            width: 460px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 20px;
+            color: #dcdcdc;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+        }
+        .help-modal::-webkit-scrollbar { width: 6px; }
+        .help-modal::-webkit-scrollbar-track { background: #1a1a2e; }
+        .help-modal::-webkit-scrollbar-thumb { background: #3a3c5a; border-radius: 3px; }
+        .help-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #5a8cbc;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px solid #3a3c5a;
+            padding-bottom: 10px;
+        }
+        .help-section {
+            margin-bottom: 15px;
+        }
+        .help-section h3 {
+            font-size: 14px;
+            color: #5a8cbc;
+            margin: 10px 0 6px 0;
+        }
+        .help-section p, .help-section li {
+            font-size: 13px;
+            color: #b8bacc;
+            line-height: 1.6;
+            margin: 4px 0;
+        }
+        .help-section ul {
+            padding-left: 20px;
+            margin: 6px 0;
+        }
+        .help-close {
+            display: block;
+            margin: 15px auto 0;
+            background: linear-gradient(180deg, #1d3b66 0%, #10223d 100%);
+            border: 1px solid #3a5c8c;
+            color: #e0e0e0;
+            padding: 8px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .help-close:hover {
+            background: linear-gradient(180deg, #2a4b7c 0%, #1d3b66 100%);
+        }
+        .help-x-btn { position: absolute; top: 10px; right: 14px; background: #8a2a2a; border: 1px solid #aa4a4a; border-radius: 50%; width: 26px; height: 26px; color: white; cursor: pointer; display: flex; justify-content: center; align-items: center; font-size: 14px; font-weight: bold; z-index: 10; }
+        .help-x-btn:hover { background: #aa3a3a; }
+        .help-modal { position: relative; }
+    </style>
+</head>
+<body>
+
+<div class="window">
+    <img src="https://www.restedxp.com/images/rxplogoanimated.gif" alt="RXP Logo" class="floating-logo">
+
+    <div class="header">
+        <div class="header-title">RXP Translator V5</div>
+        <div class="header-controls">
+            <select class="lang-selector" id="languageSelect">
+                <option value="es" selected>Español</option>
+                <option value="en">English</option>
+                <option value="pt">Português</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
+                <option value="ru">Русский</option>
+                <option value="zh-tw">繁體中文</option>
+                <option value="zh-cn">简体中文</option>
+            </select>
+            <button class="btn-icon" onclick="toggleHelp()">?</button>
+            <button class="btn-icon btn-close" onclick="closeApp()">✕</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Archivos -->
+        <div class="panel">
+            <div class="file-row">
+                <span class="file-label" data-i18n="lbl-guide">Guía:</span>
+                <span class="file-input" id="guidePath">[Seleccionar guía...]</span>
+                <button class="btn-standard" onclick="selectGuide()"><span data-i18n="btn-folder">📁 Carpeta</span></button>
+            </div>
+            <div class="file-row" style="margin-bottom: 0;">
+                <span class="file-label" data-i18n="lbl-output">Salida:</span>
+                <span class="file-input" id="outputPath">output\</span>
+                <button class="btn-standard" onclick="selectOutput()"><span data-i18n="btn-open-folder">Abrir Carpeta</span></button>
+            </div>
+        </div>
+
+        <!-- Opciones de traducción -->
+        <div class="panel">
+            <div class="panel-header">
+                <div class="section-title" data-i18n="title-translate">TRADUCIR</div>
+                <div class="target-lang-container">
+                    <span data-i18n="lbl-to">a:</span>
+                    <select class="lang-selector" id="targetLangSelect">
+                        <option value="esES">Español (EU)</option>
+                        <option value="esMX">Español (AL)</option>
+                        <option value="ptBR">Português</option>
+                        <option value="deDE">Deutsch</option>
+                        <option value="frFR">Français</option>
+                        <option value="ruRU">Русский</option>
+                        <option value="koKR">한국어</option>
+                        <option value="zhTW">繁體中文</option>
+                        <option value="zhCN">简体中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid-2col">
+                <label class="checkbox-item"><input type="checkbox" id="chk-npcs" checked> <span data-i18n="chk-npcs">NPCs/Enemigos</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="chk-items" checked> <span data-i18n="chk-items">Items</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="chk-world" checked> <span data-i18n="chk-world">Objetos mundo</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="chk-quests" checked> <span data-i18n="chk-quests">Misiones</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="chk-zones" checked> <span data-i18n="chk-zones">Zonas</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="chk-subzones" checked> <span data-i18n="chk-subzones">Subzonas</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="chk-instructions" checked> <span data-i18n="chk-instructions">Instrucciones</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="chk-skills" checked> <span data-i18n="chk-skills">Habilidades</span></label>
+            </div>
+            <div class="select-all" id="selectAllBtn" data-i18n="btn-select-all">✨ Seleccionar todo ✨</div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="actions-row">
+            <button class="btn-large" id="btnTranslate" onclick="doTranslate()"><span data-i18n="btn-translate-action">▶ Traducir</span></button>
+            <button class="btn-stop" id="btnStop" onclick="doStop()"><span data-i18n="btn-stop">⏹</span></button>
+            <button class="btn-large" id="btnValidate" onclick="doValidate()"><span data-i18n="btn-validate">🔍 Validar</span></button>
+            <button class="btn-large btn-folder" onclick="openOutput()">📂</button>
+        </div>
+        
+        <!-- Botón traducir interfaz del addon -->
+        <div class="panel" style="margin-top: 4px; padding: 6px 8px;">
+            <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                <div class="section-title" data-i18n="title-addon-interface" style="font-size:12px;">INTERFAZ DEL ADDON</div>
+                <select class="lang-selector" id="addonLangSelect" style="font-size:11px; padding:2px 4px;">
+                    <option value="esES">esES</option>
+                    <option value="esMX">esMX</option>
+                    <option value="ptBR">ptBR</option>
+                    <option value="deDE">deDE</option>
+                    <option value="frFR">frFR</option>
+                    <option value="ruRU">ruRU</option>
+                    <option value="koKR">koKR</option>
+                    <option value="zhTW">zhTW</option>
+                    <option value="zhCN">zhCN</option>
+                </select>
+            </div>
+            <div style="display: flex; gap: 4px; align-items: center;">
+                <span data-i18n="lbl-addon-folder" style="font-size:12px;">Addon:</span>
+                <span class="file-input" id="addonPath" style="flex:1; font-size:11px;">[Seleccionar carpeta...]</span>
+                <button class="btn-standard" onclick="selectAddonFolder()" style="padding:4px 8px; font-size:11px; min-width:auto;"><span data-i18n="btn-addon-folder">📁</span></button>
+                <button class="btn-large" id="btnTranslateAddon" onclick="doTranslateAddon()" style="padding:4px 8px; font-size:11px; flex:0 0 auto; width:auto;"><span data-i18n="btn-translate-addon">🌐 Traducir</span></button>
+            </div>
+        </div>
+
+        <!-- Loading indicator -->
+        <div class="loading-indicator" id="loadingIndicator">
+            <div class="spinner"></div>
+            <span class="loading-text"><span data-i18n="loading-text">Procesando</span><span class="loading-dots"></span></span>
+        </div>
+
+        <!-- Progreso -->
+        <div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+                <div class="progress-text-overlay" id="progressText">0%</div>
+            </div>
+            <div class="stats-text" id="stats-text">Listo</div>
+        </div>
+
+        <!-- Log -->
+        <div class="panel" style="padding-top: 4px;">
+            <div class="log-title" data-i18n="log-title">Log</div>
+            <div class="log-box" id="logBox"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Context Menu (must be before script) -->
+<div class="context-menu" id="contextMenu">
+    <div class="context-menu-item" onclick="contextCopy()">📋 Copiar <span class="shortcut">Ctrl+C</span></div>
+    <div class="context-menu-item" onclick="contextSelectAll()">☑️ Seleccionar todo <span class="shortcut">Ctrl+A</span></div>
+</div>
+
+<!-- Help Modal (must be before script) -->
+<div class="help-overlay" id="helpOverlay" onclick="if(event.target===this)toggleHelp()">
+    <div class="help-modal" id="helpModalContent">
+        <button class="help-x-btn" onclick="toggleHelp()" title="Cerrar">✕</button>
+    </div>
+</div>
+
+<!-- QWebChannel library (injected by PyQt5) -->
+<script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+
+<script>
+
+    const contextMenu = document.getElementById('contextMenu');
+    let contextTarget = null;
+
+    document.addEventListener('contextmenu', function(e) {
+        // Only show on log box or text-selectable elements
+        const logBox = document.getElementById('logBox');
+        if (logBox && (logBox.contains(e.target) || e.target === logBox)) {
+            e.preventDefault();
+            contextTarget = logBox;
+            contextMenu.style.left = e.clientX + 'px';
+            contextMenu.style.top = e.clientY + 'px';
+            contextMenu.classList.add('active');
+        }
+    });
+
+    document.addEventListener('click', function() {
+        contextMenu.classList.remove('active');
+    });
+
+    function contextCopy() {
+        const selection = window.getSelection().toString();
+        if (selection) {
+            navigator.clipboard.writeText(selection);
+        }
+        contextMenu.classList.remove('active');
+    }
+
+    function contextSelectAll() {
+        if (contextTarget) {
+            const range = document.createRange();
+            range.selectNodeContents(contextTarget);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+        contextMenu.classList.remove('active');
+    }
+
+    // ── Help modal ──
+
+    const helpContent = {
+        es: {
+            title: "❓ RXP Translator V5 — Ayuda",
+            s1h: "🎮 ¿Qué es este programa?", s1p: "RXP Translator es una herramienta que traduce las guías del addon <strong>RestedXP</strong> de World of Warcraft a tu idioma.", s1p2: "RestedXP es un addon que te muestra paso a paso cómo subir de nivel tu personaje. Las guías originales están en inglés. Este programa las traduce para que las entiendas mejor.",
+            s2h: "📋 ¿Cómo funciona? (Paso a paso)", s2li: ['<strong>Paso 1:</strong> Haz clic en <strong>📁 Carpeta</strong> junto a "Guía" para seleccionar el archivo .lua de la guía.', '<strong>Paso 2:</strong> (Opcional) Haz clic en <strong>Abrir Carpeta</strong> junto a "Salida" para elegir dónde se guardará.', '<strong>Paso 3:</strong> Elige el idioma en el menú desplegable <strong>"a:"</strong>.', '<strong>Paso 4:</strong> Marca las casillas de lo que quieres traducir. Recomendado: dejar todas marcadas.', '<strong>Paso 5:</strong> Haz clic en <strong>▶ Traducir</strong> y espera. Verás el progreso abajo.', '<strong>Paso 6:</strong> Haz clic en <strong>📂</strong> para abrir la carpeta con tu guía traducida.', '<strong>Paso 7:</strong> Copia el archivo traducido a la carpeta de guías de RestedXP en tu juego.'],
+            s3h: "📁 ¿Dónde encuentro las guías?", s3p: "Las guías están en tu carpeta de addons de WoW:", s3p2: "Busca archivos con extensión <strong>.lua</strong>. Cada archivo es una guía diferente.",
+            s4h: "📁 ¿Dónde pongo la guía traducida?", s4p: "En la misma carpeta donde están las guías originales. El addon RestedXP las detectará automáticamente.", s4p2: "<strong>Importante:</strong> Haz una copia de seguridad de las guías originales antes de reemplazarlas.",
+            s5h: "🌍 ¿Qué idiomas soporta?", s5li: ["🇪🇸 Español (Europa)","🇲🇽 Español (Latinoamérica)","🇧🇷 Português","🇩🇪 Deutsch","🇫🇷 Français","🇷🇺 Русский","🇰🇷 한국어","🇹🇼 繁體中文","🇨🇳 简体中文"],
+            s6h: "☑️ ¿Qué significan las casillas?", s6li: ["<strong>NPCs/Enemigos:</strong> Nombres de personajes y monstruos.","<strong>Items:</strong> Objetos, armas y armaduras.","<strong>Objetos mundo:</strong> Cofres, plantas, minerales.","<strong>Misiones:</strong> Nombres de misiones/quests.","<strong>Zonas:</strong> Regiones del mapa.","<strong>Subzonas:</strong> Pueblos, cuevas, edificios.","<strong>Instrucciones:</strong> Texto de las instrucciones de la guía.","<strong>Habilidades:</strong> Hechizos y habilidades."],
+            s7h: "🔍 ¿Qué hace Validar?", s7p: 'Revisa que la guía traducida no tenga errores de formato. Si dice "OK", la guía es segura de usar en el juego.',
+            s8h: "⚠️ Cosas importantes", s8li: ["Necesita <strong>conexión a internet</strong> para traducir texto libre (usa Google Translate).","La primera vez puede ser lenta. Después las traducciones se guardan en caché y es más rápido.","Algunos nombres pueden quedar en inglés si no están en la base de datos. Esto es normal.","Siempre haz una <strong>copia de seguridad</strong> de tus guías originales."],
+            close: "Cerrar"
+        },
+        en: {
+            title: "❓ RXP Translator V5 — Help",
+            s1h: "🎮 What is this program?", s1p: "RXP Translator is a tool that translates <strong>RestedXP</strong> addon guides for World of Warcraft into your language.", s1p2: "RestedXP is an addon that shows you step-by-step how to level up your character. The original guides are in English. This program translates them so you can understand better.",
+            s2h: "📋 How does it work? (Step by step)", s2li: ['<strong>Step 1:</strong> Click <strong>📁 Folder</strong> next to "Guide" to select the .lua guide file.', '<strong>Step 2:</strong> (Optional) Click <strong>Open Folder</strong> next to "Output" to choose where to save.', '<strong>Step 3:</strong> Choose the language in the <strong>"to:"</strong> dropdown.', '<strong>Step 4:</strong> Check the boxes for what you want to translate. Recommended: leave all checked.', '<strong>Step 5:</strong> Click <strong>▶ Translate</strong> and wait. Progress shows below.', '<strong>Step 6:</strong> Click <strong>📂</strong> to open the folder with your translated guide.', '<strong>Step 7:</strong> Copy the translated file to the RestedXP guides folder in your game.'],
+            s3h: "📁 Where do I find guides to translate?", s3p: "Guides are in your WoW addons folder:", s3p2: "Look for files with <strong>.lua</strong> extension. Each file is a different guide.",
+            s4h: "📁 Where do I put the translated guide?", s4p: "In the same folder where the original guides are. RestedXP addon will detect them automatically.", s4p2: "<strong>Important:</strong> Back up your original guides before replacing them.",
+            s5h: "🌍 What languages are supported?", s5li: ["🇪🇸 Spanish (Europe)","🇲🇽 Spanish (Latin America)","🇧🇷 Portuguese","🇩🇪 German","🇫🇷 French","🇷🇺 Russian","🇰🇷 Korean","🇹🇼 Traditional Chinese","🇨🇳 Simplified Chinese"],
+            s6h: "☑️ What do the checkboxes mean?", s6li: ["<strong>NPCs/Enemies:</strong> Character and monster names.","<strong>Items:</strong> Objects, weapons and armor.","<strong>World Objects:</strong> Chests, plants, minerals.","<strong>Quests:</strong> Quest/mission names.","<strong>Zones:</strong> Map regions.","<strong>Subzones:</strong> Towns, caves, buildings.","<strong>Instructions:</strong> Guide instruction text.","<strong>Skills:</strong> Spells and abilities."],
+            s7h: "🔍 What does Validate do?", s7p: 'Checks that the translated guide has no format errors. If it says "OK", the guide is safe to use in the game.',
+            s8h: "⚠️ Important things", s8li: ["Needs <strong>internet connection</strong> to translate free text (uses Google Translate).","First time may be slow. After that, translations are cached and much faster.","Some names may stay in English if not in the database. This is normal.","Always <strong>back up</strong> your original guides."],
+            close: "Close"
+        },
+        pt: {
+            title: "❓ RXP Translator V5 — Ajuda", s1h: "🎮 O que é este programa?", s1p: "RXP Translator é uma ferramenta que traduz as guias do addon <strong>RestedXP</strong> do World of Warcraft para o seu idioma.", s1p2: "RestedXP é um addon que mostra passo a passo como subir de nível. As guias originais estão em inglês. Este programa as traduz.",
+            s2h: "📋 Como funciona? (Passo a passo)", s2li: ['<strong>Passo 1:</strong> Clique em <strong>📁 Pasta</strong> ao lado de "Guia" para selecionar o arquivo .lua.', '<strong>Passo 2:</strong> (Opcional) Clique em <strong>Abrir Pasta</strong> ao lado de "Saída".', '<strong>Passo 3:</strong> Escolha o idioma no menu <strong>"para:"</strong>.', '<strong>Passo 4:</strong> Marque as caixas. Recomendado: deixar todas marcadas.', '<strong>Passo 5:</strong> Clique em <strong>▶ Traduzir</strong> e aguarde.', '<strong>Passo 6:</strong> Clique em <strong>📂</strong> para abrir a pasta com sua guia traduzida.', '<strong>Passo 7:</strong> Copie o arquivo traduzido para a pasta de guias do RestedXP.'],
+            s3h: "📁 Onde encontro as guias?", s3p: "Na pasta de addons do WoW:", s3p2: "Procure arquivos com extensão <strong>.lua</strong>.",
+            s4h: "📁 Onde coloco a guia traduzida?", s4p: "Na mesma pasta das guias originais. O RestedXP detectará automaticamente.", s4p2: "<strong>Importante:</strong> Faça backup das guias originais.",
+            s5h: "🌍 Quais idiomas são suportados?", s5li: ["🇪🇸 Espanhol (Europa)","🇲🇽 Espanhol (Latinoamérica)","🇧🇷 Português","🇩🇪 Alemão","🇫🇷 Francês","🇷🇺 Russo","🇰🇷 Coreano","🇹🇼 Chinês Tradicional","🇨🇳 Chinês Simplificado"],
+            s6h: "☑️ O que significam as caixas?", s6li: ["<strong>NPCs/Inimigos:</strong> Nomes de personagens e monstros.","<strong>Itens:</strong> Objetos, armas e armaduras.","<strong>Objetos mundo:</strong> Baús, plantas, minerais.","<strong>Missões:</strong> Nomes de missões.","<strong>Zonas:</strong> Regiões do mapa.","<strong>Subzonas:</strong> Vilas, cavernas, edifícios.","<strong>Instruções:</strong> Texto das instruções da guia.","<strong>Habilidades:</strong> Feitiços e habilidades."],
+            s7h: "🔍 O que faz Validar?", s7p: 'Verifica se a guia traduzida não tem erros de formato. Se diz "OK", é segura para usar.',
+            s8h: "⚠️ Importante", s8li: ["Precisa de <strong>internet</strong> para traduzir texto livre (usa Google Translate).","A primeira vez pode ser lenta. Depois fica mais rápida com o cache.","Alguns nomes podem ficar em inglês. Isso é normal.","Sempre faça <strong>backup</strong> das guias originais."],
+            close: "Fechar"
+        },
+        de: {
+            title: "❓ RXP Translator V5 — Hilfe", s1h: "🎮 Was ist dieses Programm?", s1p: "RXP Translator ist ein Tool, das <strong>RestedXP</strong>-Guides für World of Warcraft in deine Sprache übersetzt.", s1p2: "RestedXP ist ein Addon, das dir Schritt für Schritt zeigt, wie du levelst. Die Originalguides sind auf Englisch.",
+            s2h: "📋 Wie funktioniert es?", s2li: ['<strong>Schritt 1:</strong> Klicke auf <strong>📁 Ordner</strong> neben "Guide".', '<strong>Schritt 2:</strong> (Optional) Klicke auf <strong>Ordner Öffnen</strong> neben "Ausgabe".', '<strong>Schritt 3:</strong> Wähle die Sprache im <strong>"nach:"</strong> Menü.', '<strong>Schritt 4:</strong> Markiere die Checkboxen. Empfohlen: alle markiert lassen.', '<strong>Schritt 5:</strong> Klicke auf <strong>▶ Übersetzen</strong> und warte.', '<strong>Schritt 6:</strong> Klicke auf <strong>📂</strong> um den Ordner zu öffnen.', '<strong>Schritt 7:</strong> Kopiere die Datei in den RestedXP-Ordner.'],
+            s3h: "📁 Wo finde ich Guides?", s3p: "Im WoW-Addon-Ordner:", s3p2: "Suche nach <strong>.lua</strong> Dateien.",
+            s4h: "📁 Wohin kommt der übersetzte Guide?", s4p: "In denselben Ordner wie die Originale.", s4p2: "<strong>Wichtig:</strong> Mache ein Backup der Originale.",
+            s5h: "🌍 Welche Sprachen werden unterstützt?", s5li: ["🇪🇸 Spanisch (Europa)","🇲🇽 Spanisch (Lateinamerika)","🇧🇷 Portugiesisch","🇩🇪 Deutsch","🇫🇷 Französisch","🇷🇺 Russisch","🇰🇷 Koreanisch","🇹🇼 Traditionelles Chinesisch","🇨🇳 Vereinfachtes Chinesisch"],
+            s6h: "☑️ Was bedeuten die Checkboxen?", s6li: ["<strong>NPCs/Feinde:</strong> Charakter- und Monsternamen.","<strong>Gegenstände:</strong> Objekte, Waffen, Rüstungen.","<strong>Weltobjekte:</strong> Truhen, Pflanzen, Mineralien.","<strong>Quests:</strong> Questnamen.","<strong>Zonen:</strong> Kartenregionen.","<strong>Teilzonen:</strong> Städte, Höhlen, Gebäude.","<strong>Anweisungen:</strong> Guide-Text.","<strong>Fähigkeiten:</strong> Zauber und Fähigkeiten."],
+            s7h: "🔍 Was macht Validieren?", s7p: 'Prüft ob der übersetzte Guide Formatfehler hat. "OK" = sicher zu benutzen.',
+            s8h: "⚠️ Wichtig", s8li: ["Braucht <strong>Internet</strong> für freien Text (Google Translate).","Beim ersten Mal langsam. Danach schneller durch Cache.","Manche Namen bleiben auf Englisch. Das ist normal.","Immer <strong>Backup</strong> der Originale machen."],
+            close: "Schließen"
+        },
+        fr: {
+            title: "❓ RXP Translator V5 — Aide", s1h: "🎮 Qu'est-ce que ce programme ?", s1p: "RXP Translator est un outil qui traduit les guides <strong>RestedXP</strong> de World of Warcraft dans votre langue.", s1p2: "RestedXP est un addon qui montre comment monter de niveau. Les guides originaux sont en anglais.",
+            s2h: "📋 Comment ça marche ?", s2li: ['<strong>Étape 1 :</strong> Cliquez sur <strong>📁 Dossier</strong> à côté de "Guide".', '<strong>Étape 2 :</strong> (Optionnel) Cliquez sur <strong>Ouvrir Dossier</strong> à côté de "Sortie".', '<strong>Étape 3 :</strong> Choisissez la langue dans le menu <strong>"vers:"</strong>.', '<strong>Étape 4 :</strong> Cochez les cases. Recommandé : toutes cochées.', '<strong>Étape 5 :</strong> Cliquez sur <strong>▶ Traduire</strong> et attendez.', '<strong>Étape 6 :</strong> Cliquez sur <strong>📂</strong> pour ouvrir le dossier.', '<strong>Étape 7 :</strong> Copiez le fichier dans le dossier RestedXP.'],
+            s3h: "📁 Où trouver les guides ?", s3p: "Dans le dossier addons de WoW :", s3p2: "Cherchez les fichiers <strong>.lua</strong>.",
+            s4h: "📁 Où mettre le guide traduit ?", s4p: "Dans le même dossier que les originaux.", s4p2: "<strong>Important :</strong> Sauvegardez les originaux.",
+            s5h: "🌍 Langues supportées", s5li: ["🇪🇸 Espagnol (Europe)","🇲🇽 Espagnol (Amérique)","🇧🇷 Portugais","🇩🇪 Allemand","🇫🇷 Français","🇷🇺 Russe","🇰🇷 Coréen","🇹🇼 Chinois Traditionnel","🇨🇳 Chinois Simplifié"],
+            s6h: "☑️ Que signifient les cases ?", s6li: ["<strong>PNJ/Ennemis :</strong> Noms de personnages.","<strong>Objets :</strong> Armes et armures.","<strong>Objets monde :</strong> Coffres, plantes.","<strong>Quêtes :</strong> Noms de quêtes.","<strong>Zones :</strong> Régions de la carte.","<strong>Sous-zones :</strong> Villes, grottes.","<strong>Instructions :</strong> Texte du guide.","<strong>Compétences :</strong> Sorts et capacités."],
+            s7h: "🔍 Que fait Valider ?", s7p: 'Vérifie les erreurs de format. "OK" = sûr à utiliser.',
+            s8h: "⚠️ Important", s8li: ["Besoin d'<strong>internet</strong> pour le texte libre (Google Translate).","La première fois est lente. Ensuite plus rapide avec le cache.","Certains noms restent en anglais. C'est normal.","Toujours <strong>sauvegarder</strong> les originaux."],
+            close: "Fermer"
+        },
+        ru: {
+            title: "❓ RXP Translator V5 — Помощь", s1h: "🎮 Что это за программа?", s1p: "RXP Translator — инструмент для перевода гайдов <strong>RestedXP</strong> для World of Warcraft.", s1p2: "RestedXP — аддон, показывающий как прокачивать персонажа. Оригинальные гайды на английском.",
+            s2h: "📋 Как это работает?", s2li: ['<strong>Шаг 1:</strong> Нажмите <strong>📁 Папка</strong> рядом с "Гайд".', '<strong>Шаг 2:</strong> (Опционально) Нажмите <strong>Открыть папку</strong> рядом с "Вывод".', '<strong>Шаг 3:</strong> Выберите язык в меню <strong>"на:"</strong>.', '<strong>Шаг 4:</strong> Отметьте галочки. Рекомендуется: все отмечены.', '<strong>Шаг 5:</strong> Нажмите <strong>▶ Перевести</strong> и ждите.', '<strong>Шаг 6:</strong> Нажмите <strong>📂</strong> чтобы открыть папку.', '<strong>Шаг 7:</strong> Скопируйте файл в папку RestedXP.'],
+            s3h: "📁 Где найти гайды?", s3p: "В папке аддонов WoW:", s3p2: "Ищите файлы <strong>.lua</strong>.",
+            s4h: "📁 Куда положить переведённый гайд?", s4p: "В ту же папку что и оригиналы.", s4p2: "<strong>Важно:</strong> Сделайте резервную копию.",
+            s5h: "🌍 Поддерживаемые языки", s5li: ["🇪🇸 Испанский (Европа)","🇲🇽 Испанский (Лат. Америка)","🇧🇷 Португальский","🇩🇪 Немецкий","🇫🇷 Французский","🇷🇺 Русский","🇰🇷 Корейский","🇹🇼 Традиционный китайский","🇨🇳 Упрощённый китайский"],
+            s6h: "☑️ Что означают галочки?", s6li: ["<strong>NPC/Враги:</strong> Имена персонажей и монстров.","<strong>Предметы:</strong> Оружие и броня.","<strong>Объекты мира:</strong> Сундуки, растения.","<strong>Задания:</strong> Названия заданий.","<strong>Зоны:</strong> Регионы карты.","<strong>Подзоны:</strong> Города, пещеры.","<strong>Инструкции:</strong> Текст гайда.","<strong>Навыки:</strong> Заклинания и способности."],
+            s7h: "🔍 Что делает Проверить?", s7p: 'Проверяет формат. "OK" = безопасно использовать.',
+            s8h: "⚠️ Важно", s8li: ["Нужен <strong>интернет</strong> для свободного текста (Google Translate).","Первый раз медленно. Потом быстрее с кэшем.","Некоторые имена остаются на английском. Это нормально.","Всегда делайте <strong>резервную копию</strong>."],
+            close: "Закрыть"
+        },
+        ko: {
+            title: "❓ RXP Translator V5 — 도움말", s1h: "🎮 이 프로그램은 무엇인가요?", s1p: "RXP Translator는 World of Warcraft의 <strong>RestedXP</strong> 애드온 가이드를 번역하는 도구입니다.", s1p2: "RestedXP는 레벨업 방법을 단계별로 보여주는 애드온입니다. 원본 가이드는 영어입니다.",
+            s2h: "📋 어떻게 사용하나요?", s2li: ['<strong>1단계:</strong> "가이드" 옆 <strong>📁 폴더</strong>를 클릭하여 .lua 파일을 선택합니다.', '<strong>2단계:</strong> (선택) "출력" 옆 <strong>폴더 열기</strong>를 클릭합니다.', '<strong>3단계:</strong> <strong>"至:"</strong> 메뉴에서 언어를 선택합니다.', '<strong>4단계:</strong> 체크박스를 선택합니다. 권장: 모두 체크.', '<strong>5단계:</strong> <strong>▶ 번역</strong>을 클릭하고 기다립니다.', '<strong>6단계:</strong> <strong>📂</strong>를 클릭하여 폴더를 엽니다.', '<strong>7단계:</strong> 번역된 파일을 RestedXP 폴더에 복사합니다.'],
+            s3h: "📁 가이드를 어디서 찾나요?", s3p: "WoW 애드온 폴더에 있습니다:", s3p2: "<strong>.lua</strong> 확장자 파일을 찾으세요.",
+            s4h: "📁 번역된 가이드를 어디에 넣나요?", s4p: "원본 가이드와 같은 폴더에 넣으세요.", s4p2: "<strong>중요:</strong> 원본을 백업하세요.",
+            s5h: "🌍 지원 언어", s5li: ["🇪🇸 스페인어 (유럽)","🇲🇽 스페인어 (라틴 아메리카)","🇧🇷 포르투갈어","🇩🇪 독일어","🇫🇷 프랑스어","🇷🇺 러시아어","🇰🇷 한국어","🇹🇼 중국어 번체","🇨🇳 중국어 간체"],
+            s6h: "☑️ 체크박스는 무엇을 의미하나요?", s6li: ["<strong>NPC/적:</strong> 캐릭터와 몬스터 이름.","<strong>아이템:</strong> 무기와 방어구.","<strong>월드 오브젝트:</strong> 상자, 식물.","<strong>퀘스트:</strong> 퀘스트 이름.","<strong>지역:</strong> 지도 영역.","<strong>하위 지역:</strong> 마을, 동굴.","<strong>지시사항:</strong> 가이드 텍스트.","<strong>스킬:</strong> 주문과 능력."],
+            s7h: "🔍 검증은 무엇을 하나요?", s7p: '"OK"이면 형식 오류가 없어 안전합니다.',
+            s8h: "⚠️ 중요", s8li: ["자유 텍스트 번역에 <strong>인터넷</strong>이 필요합니다.","처음엔 느리지만 캐시로 빨라집니다.","일부 이름은 영어로 남을 수 있습니다. 정상입니다.","항상 <strong>백업</strong>하세요."],
+            close: "닫기"
+        },
+        "zh-tw": {
+            title: "❓ RXP Translator V5 — 說明", s1h: "🎮 這是什麼程式？", s1p: "RXP Translator 是一個將 <strong>RestedXP</strong> 指南翻譯成您語言的工具。", s1p2: "RestedXP 是一個顯示如何升級的插件。原始指南是英文的。",
+            s2h: "📋 如何使用？", s2li: ['<strong>步驟1：</strong>點擊「指南」旁的 <strong>📁 資料夾</strong>。', '<strong>步驟2：</strong>（可選）點擊「輸出」旁的 <strong>打開資料夾</strong>。', '<strong>步驟3：</strong>在 <strong>「至:」</strong> 選單中選擇語言。', '<strong>步驟4：</strong>勾選項目。建議：全部勾選。', '<strong>步驟5：</strong>點擊 <strong>▶ 翻譯</strong>並等待。', '<strong>步驟6：</strong>點擊 <strong>📂</strong>打開資料夾。', '<strong>步驟7：</strong>將檔案複製到 RestedXP 資料夾。'],
+            s3h: "📁 在哪裡找到指南？", s3p: "在 WoW 插件資料夾中：", s3p2: "尋找 <strong>.lua</strong> 檔案。",
+            s4h: "📁 翻譯後的指南放哪裡？", s4p: "與原始檔案相同的資料夾。", s4p2: "<strong>重要：</strong>備份原始檔案。",
+            s5h: "🌍 支援語言", s5li: ["🇪🇸 西班牙文（歐洲）","🇲🇽 西班牙文（拉丁美洲）","🇧🇷 葡萄牙文","🇩🇪 德文","🇫🇷 法文","🇷🇺 俄文","🇰🇷 韓文","🇹🇼 繁體中文","🇨🇳 簡體中文"],
+            s6h: "☑️ 核取方塊的意義？", s6li: ["<strong>NPC/敵人：</strong>角色和怪物名稱。","<strong>物品：</strong>武器和裝備。","<strong>世界物件：</strong>寶箱、植物。","<strong>任務：</strong>任務名稱。","<strong>區域：</strong>地圖區域。","<strong>子區域：</strong>城鎮、洞穴。","<strong>指示：</strong>指南文字。","<strong>技能：</strong>法術和能力。"],
+            s7h: "🔍 驗證做什麼？", s7p: '"OK" 表示格式正確，可以安全使用。',
+            s8h: "⚠️ 重要事項", s8li: ["自由文字翻譯需要<strong>網路</strong>。","第一次較慢，之後會快取加速。","部分名稱可能保持英文，這是正常的。","請務必<strong>備份</strong>原始檔案。"],
+            close: "關閉"
+        },
+        "zh-cn": {
+            title: "❓ RXP Translator V5 — 帮助", s1h: "🎮 这是什么程序？", s1p: "RXP Translator 是一个将 <strong>RestedXP</strong> 指南翻译成您语言的工具。", s1p2: "RestedXP 是一个显示如何升级的插件。原始指南是英文的。",
+            s2h: "📋 如何使用？", s2li: ['<strong>步骤1：</strong>点击「指南」旁的 <strong>📁 文件夹</strong>。', '<strong>步骤2：</strong>（可选）点击「输出」旁的 <strong>打开文件夹</strong>。', '<strong>步骤3：</strong>在 <strong>「至:」</strong> 菜单中选择语言。', '<strong>步骤4：</strong>勾选项目。建议：全部勾选。', '<strong>步骤5：</strong>点击 <strong>▶ 翻译</strong>并等待。', '<strong>步骤6：</strong>点击 <strong>📂</strong>打开文件夹。', '<strong>步骤7：</strong>将文件复制到 RestedXP 文件夹。'],
+            s3h: "📁 在哪里找到指南？", s3p: "在 WoW 插件文件夹中：", s3p2: "寻找 <strong>.lua</strong> 文件。",
+            s4h: "📁 翻译后的指南放哪里？", s4p: "与原始文件相同的文件夹。", s4p2: "<strong>重要：</strong>备份原始文件。",
+            s5h: "🌍 支持语言", s5li: ["🇪🇸 西班牙文（欧洲）","🇲🇽 西班牙文（拉丁美洲）","🇧🇷 葡萄牙文","🇩🇪 德文","🇫🇷 法文","🇷🇺 俄文","🇰🇷 韩文","🇹🇼 繁体中文","🇨🇳 简体中文"],
+            s6h: "☑️ 复选框的含义？", s6li: ["<strong>NPC/敌人：</strong>角色和怪物名称。","<strong>物品：</strong>武器和装备。","<strong>世界对象：</strong>宝箱、植物。","<strong>任务：</strong>任务名称。","<strong>区域：</strong>地图区域。","<strong>子区域：</strong>城镇、洞穴。","<strong>指示：</strong>指南文字。","<strong>技能：</strong>法术和能力。"],
+            s7h: "🔍 验证做什么？", s7p: '"OK" 表示格式正确，可以安全使用。',
+            s8h: "⚠️ 重要事项", s8li: ["自由文字翻译需要<strong>网络</strong>。","第一次较慢，之后会缓存加速。","部分名称可能保持英文，这是正常的。","请务必<strong>备份</strong>原始文件。"],
+            close: "关闭"
+        }
+    };
+
+    function renderHelp(lang) {
+        const h = helpContent[lang] || helpContent['es'];
+        let html = `<button class="help-x-btn" onclick="toggleHelp()" title="Cerrar">✕</button>`;
+        html += `<div class="help-title">${h.title}</div>`;
+        html += `<div class="help-section"><h3>${h.s1h}</h3><p>${h.s1p}</p><p>${h.s1p2}</p></div>`;
+        html += `<div class="help-section"><h3>${h.s2h}</h3><ul>${h.s2li.map(i=>'<li>'+i+'</li>').join('')}</ul></div>`;
+        html += `<div class="help-section"><h3>${h.s3h}</h3><p>${h.s3p}</p><p><code>C:\\World of Warcraft\\_classic_\\Interface\\AddOns\\RXPGuides\\Guides\\</code></p><p>${h.s3p2}</p></div>`;
+        html += `<div class="help-section"><h3>${h.s4h}</h3><p>${h.s4p}</p><p>${h.s4p2}</p></div>`;
+        html += `<div class="help-section"><h3>${h.s5h}</h3><ul>${h.s5li.map(i=>'<li>'+i+'</li>').join('')}</ul></div>`;
+        html += `<div class="help-section"><h3>${h.s6h}</h3><ul>${h.s6li.map(i=>'<li>'+i+'</li>').join('')}</ul></div>`;
+        html += `<div class="help-section"><h3>${h.s7h}</h3><p>${h.s7p}</p></div>`;
+        html += `<div class="help-section"><h3>${h.s8h}</h3><ul>${h.s8li.map(i=>'<li>'+i+'</li>').join('')}</ul></div>`;
+        html += `<button class="help-close" onclick="toggleHelp()">${h.close}</button>`;
+        document.getElementById('helpModalContent').innerHTML = html;
+    }
+
+    function toggleHelp() {
+        const overlay = document.getElementById('helpOverlay');
+        if (!overlay.classList.contains('active')) {
+            const lang = document.getElementById('languageSelect').value;
+            renderHelp(lang);
+        }
+        overlay.classList.toggle('active');
+    }
+
+    // ── Loading animation ──
+
+    function startLoading() {
+        document.getElementById('loadingIndicator').classList.add('active');
+    }
+
+    function stopLoading() {
+        document.getElementById('loadingIndicator').classList.remove('active');
+    }
+
+    function pulseLoading() {
+        // Visual pulse to confirm the app is alive
+        const el = document.getElementById('loadingIndicator');
+        el.style.opacity = '0.6';
+        setTimeout(() => { el.style.opacity = '1'; }, 200);
+    }
+
+    // ── Funciones de interfaz ──
+
+    function addLog(msg) {
+        const box = document.getElementById('logBox');
+        box.innerHTML += msg + '\n';
+        box.scrollTop = box.scrollHeight;
+    }
+
+    function updateProgress(pct, text) {
+        document.getElementById('progressBar').style.width = pct + '%';
+        document.getElementById('progressText').textContent = pct + '%';
+        if (text) document.getElementById('stats-text').textContent = text;
+    }
+
+    // ── Botones conectados a Python (QWebChannel) ──
+
+    let bridge = null;
+
+    function initBridge() {
+        if (typeof QWebChannel !== 'undefined') {
+            new QWebChannel(qt.webChannelTransport, function(channel) {
+                bridge = channel.objects.bridge;
+                addLog('✅ RXP Translator V5 — Listo');
+            });
+        }
+    }
+
+    async function selectGuide() {
+        if (!bridge) return;
+        const raw = await bridge.select_guide_files();
+        const result = JSON.parse(raw);
+        if (result.files.length > 0) {
+            document.getElementById('guidePath').textContent = result.names.join(', ');
+        }
+    }
+
+    async function selectOutput() {
+        if (!bridge) return;
+        const raw = await bridge.select_output_dir();
+        const result = JSON.parse(raw);
+        if (result.dir) document.getElementById('outputPath').textContent = result.dir;
+    }
+
+    function openOutput() { if (bridge) bridge.open_output_folder(); }
+
+    async function doTranslate() {
+        if (!bridge) return;
+        const locale = document.getElementById('targetLangSelect').value;
+        const cats = {};
+        ['npcs','items','world','quests','zones','subzones','instructions','skills'].forEach(k => {
+            cats[k] = document.getElementById('chk-'+k).checked;
+        });
+        document.getElementById('btnTranslate').classList.add('active');
+        await bridge.translate(locale, JSON.stringify(cats));
+        document.getElementById('btnTranslate').classList.remove('active');
+    }
+
+    async function doValidate() {
+        if (!bridge) return;
+        document.getElementById('btnValidate').classList.add('active');
+        await bridge.validate();
+        document.getElementById('btnValidate').classList.remove('active');
+    }
+
+    function closeApp() {
+        window.close();
+    }
+
+    function doStop() {
+        if (bridge) bridge.stop_translation();
+    }
+    
+    // ── Addon Interface Translation ──
+    async function selectAddonFolder() {
+        if (!bridge) return;
+        const raw = await bridge.select_addon_folder();
+        const result = JSON.parse(raw);
+        if (result.dir) document.getElementById('addonPath').textContent = result.dir;
+    }
+    
+    async function doTranslateAddon() {
+        if (!bridge) return;
+        const locale = document.getElementById('addonLangSelect').value;
+        document.getElementById('btnTranslateAddon').classList.add('active');
+        await bridge.translate_addon_interface(locale);
+        document.getElementById('btnTranslateAddon').classList.remove('active');
+    }
+
+    // ── Window drag via header ──
+    let isDragging = false;
+
+    document.addEventListener('mousedown', function(e) {
+        const header = document.querySelector('.header');
+        if (header && header.contains(e.target) && !e.target.closest('.header-controls')) {
+            isDragging = true;
+            if (bridge) bridge.start_drag();
+        }
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (isDragging && bridge) {
+            bridge.do_drag(e.screenX, e.screenY);
+        }
+    });
+
+    document.addEventListener('mouseup', function() {
+        if (isDragging) {
+            isDragging = false;
+            if (bridge) bridge.stop_drag();
+        }
+    });
+
+    // ── Seleccionar todo ──
+
+    document.getElementById('selectAllBtn').addEventListener('click', function() {
+        const checkboxes = document.querySelectorAll('.grid-2col input[type="checkbox"]');
+        const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+        checkboxes.forEach(cb => { cb.checked = !allChecked; });
+    });
+
+    // ── i18n ──
+
+    const translations = {
+        es: {
+            "lbl-guide": "Guía:", "lbl-output": "Salida:", "btn-folder": "📁 Carpeta",
+            "btn-open-folder": "Abrir Carpeta", "title-translate": "TRADUCIR", "lbl-to": "a:",
+            "chk-npcs": "NPCs/Enemigos", "chk-items": "Items", "chk-world": "Objetos mundo",
+            "chk-quests": "Misiones", "chk-zones": "Zonas", "chk-subzones": "Subzonas",
+            "chk-instructions": "Instrucciones", "chk-skills": "Habilidades",
+            "btn-select-all": "✨ Seleccionar todo ✨", "btn-translate-action": "▶ Traducir",
+            "btn-validate": "🔍 Validar", "log-title": "Log", "loading-text": "Procesando", "btn-stop": "⏹ Detener",
+            "title-addon-interface": "INTERFAZ DEL ADDON", "lbl-addon-folder": "Addon RXPGuides:",
+            "btn-addon-folder": "📁 Carpeta", "btn-translate-addon": "🌐 Traducir Interfaz del Addon"
+        },
+        en: {
+            "lbl-guide": "Guide:", "lbl-output": "Output:", "btn-folder": "📁 Folder",
+            "btn-open-folder": "Open Folder", "title-translate": "TRANSLATE", "lbl-to": "to:",
+            "chk-npcs": "NPCs/Enemies", "chk-items": "Items", "chk-world": "World Objects",
+            "chk-quests": "Quests", "chk-zones": "Zones", "chk-subzones": "Subzones",
+            "chk-instructions": "Instructions", "chk-skills": "Skills",
+            "btn-select-all": "✨ Select All ✨", "btn-translate-action": "▶ Translate",
+            "btn-validate": "🔍 Validate", "log-title": "Log", "loading-text": "Processing", "btn-stop": "⏹ Stop",
+            "title-addon-interface": "ADDON INTERFACE", "lbl-addon-folder": "RXPGuides Addon:",
+            "btn-addon-folder": "📁 Folder", "btn-translate-addon": "🌐 Translate Addon Interface"
+        },
+        pt: {
+            "lbl-guide": "Guia:", "lbl-output": "Saída:", "btn-folder": "📁 Pasta",
+            "btn-open-folder": "Abrir Pasta", "title-translate": "TRADUZIR", "lbl-to": "para:",
+            "chk-npcs": "NPCs/Inimigos", "chk-items": "Itens", "chk-world": "Objetos mundo",
+            "chk-quests": "Missões", "chk-zones": "Zonas", "chk-subzones": "Subzonas",
+            "chk-instructions": "Instruções", "chk-skills": "Habilidades",
+            "btn-select-all": "✨ Selecionar tudo ✨", "btn-translate-action": "▶ Traduzir",
+            "btn-validate": "🔍 Validar", "log-title": "Registro", "loading-text": "Processando", "btn-stop": "⏹ Parar",
+            "title-addon-interface": "INTERFACE DO ADDON", "lbl-addon-folder": "Addon RXPGuides:",
+            "btn-addon-folder": "📁 Pasta", "btn-translate-addon": "🌐 Traduzir Interface do Addon"
+        },
+        de: {
+            "lbl-guide": "Guide:", "lbl-output": "Ausgabe:", "btn-folder": "📁 Ordner",
+            "btn-open-folder": "Ordner Öffnen", "title-translate": "ÜBERSETZEN", "lbl-to": "nach:",
+            "chk-npcs": "NPCs/Feinde", "chk-items": "Gegenstände", "chk-world": "Weltobjekte",
+            "chk-quests": "Quests", "chk-zones": "Zonen", "chk-subzones": "Teilzonen",
+            "chk-instructions": "Anweisungen", "chk-skills": "Fähigkeiten",
+            "btn-select-all": "✨ Alles Auswählen ✨", "btn-translate-action": "▶ Übersetzen",
+            "btn-validate": "🔍 Validieren", "log-title": "Protokoll", "loading-text": "Verarbeitung", "btn-stop": "⏹ Stopp",
+            "title-addon-interface": "ADDON-OBERFLÄCHE", "lbl-addon-folder": "RXPGuides Addon:",
+            "btn-addon-folder": "📁 Ordner", "btn-translate-addon": "🌐 Addon-Oberfläche übersetzen"
+        },
+        fr: {
+            "lbl-guide": "Guide:", "lbl-output": "Sortie:", "btn-folder": "📁 Dossier",
+            "btn-open-folder": "Ouvrir Dossier", "title-translate": "TRADUIRE", "lbl-to": "vers:",
+            "chk-npcs": "PNJ/Ennemis", "chk-items": "Objets", "chk-world": "Objets du monde",
+            "chk-quests": "Quêtes", "chk-zones": "Zones", "chk-subzones": "Sous-zones",
+            "chk-instructions": "Instructions", "chk-skills": "Compétences",
+            "btn-select-all": "✨ Tout Sélectionner ✨", "btn-translate-action": "▶ Traduire",
+            "btn-validate": "🔍 Valider", "log-title": "Journal", "loading-text": "Traitement", "btn-stop": "⏹ Arrêter",
+            "title-addon-interface": "INTERFACE DE L'ADDON", "lbl-addon-folder": "Addon RXPGuides:",
+            "btn-addon-folder": "📁 Dossier", "btn-translate-addon": "🌐 Traduire l'interface de l'addon"
+        },
+        ru: {
+            "lbl-guide": "Гайд:", "lbl-output": "Вывод:", "btn-folder": "📁 Папка",
+            "btn-open-folder": "Открыть папку", "title-translate": "ПЕРЕВОД", "lbl-to": "на:",
+            "chk-npcs": "NPC/Враги", "chk-items": "Предметы", "chk-world": "Объекты мира",
+            "chk-quests": "Задания", "chk-zones": "Зоны", "chk-subzones": "Подзоны",
+            "chk-instructions": "Инструкции", "chk-skills": "Навыки",
+            "btn-select-all": "✨ Выбрать все ✨", "btn-translate-action": "▶ Перевести",
+            "btn-validate": "🔍 Проверить", "log-title": "Журнал", "loading-text": "Обработка", "btn-stop": "⏹ Стоп",
+            "title-addon-interface": "ИНТЕРФЕЙС АДДОНА", "lbl-addon-folder": "Аддон RXPGuides:",
+            "btn-addon-folder": "📁 Папка", "btn-translate-addon": "🌐 Перевести интерфейс аддона"
+        },
+        "zh-tw": {
+            "lbl-guide": "指南:", "lbl-output": "輸出:", "btn-folder": "📁 資料夾",
+            "btn-open-folder": "打開資料夾", "title-translate": "翻譯", "lbl-to": "至:",
+            "chk-npcs": "NPCs/敵人", "chk-items": "物品", "chk-world": "世界物件",
+            "chk-quests": "任務", "chk-zones": "區域", "chk-subzones": "子區域",
+            "chk-instructions": "指示", "chk-skills": "技能",
+            "btn-select-all": "✨ 全選 ✨", "btn-translate-action": "▶ 翻譯",
+            "btn-validate": "🔍 驗證", "log-title": "日誌", "loading-text": "處理中", "btn-stop": "⏹ 停止",
+            "title-addon-interface": "插件介面", "lbl-addon-folder": "RXPGuides 插件:",
+            "btn-addon-folder": "📁 資料夾", "btn-translate-addon": "🌐 翻譯插件介面"
+        },
+        "zh-cn": {
+            "lbl-guide": "指南:", "lbl-output": "输出:", "btn-folder": "📁 文件夹",
+            "btn-open-folder": "打开文件夹", "title-translate": "翻译", "lbl-to": "至:",
+            "chk-npcs": "NPCs/敌人", "chk-items": "物品", "chk-world": "世界对象",
+            "chk-quests": "任务", "chk-zones": "区域", "chk-subzones": "子区域",
+            "chk-instructions": "指示", "chk-skills": "技能",
+            "btn-select-all": "✨ 全选 ✨", "btn-translate-action": "▶ 翻译",
+            "btn-validate": "🔍 验证", "log-title": "日志", "loading-text": "处理中", "btn-stop": "⏹ 停止",
+            "title-addon-interface": "插件界面", "lbl-addon-folder": "RXPGuides 插件:",
+            "btn-addon-folder": "📁 文件夹", "btn-translate-addon": "🌐 翻译插件界面"
+        }
+    };
+
+    function applyLang(selectedLang) {
+        const dict = translations[selectedLang];
+        if (!dict) return;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (!dict[key]) return;
+            // Use textContent for simple labels, innerHTML only for help modal content
+            if (el.closest('#helpModalContent')) {
+                el.innerHTML = dict[key];
+            } else {
+                el.textContent = dict[key];
+            }
+        });
+    }
+
+    document.getElementById('languageSelect').addEventListener('change', function(e) {
+        const selectedLang = e.target.value;
+        applyLang(selectedLang);
+        if (bridge) bridge.set_language(selectedLang);
+    });
+
+    // ── Initialize QWebChannel ──
+    if (typeof qt !== 'undefined') {
+        initBridge();
+    } else {
+        // Fallback: wait for Qt to load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(initBridge, 100);
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,7157 @@
+{
+  "meta": {
+    "source": "Questie/Questie GitHub (Localization/Translations/Zones)",
+    "url": "https://github.com/Questie/Questie",
+    "locale": "esES/esMX",
+    "description": "Traducciones de zonas, subzonas, mazmorras y bandas de WoW.",
+    "total_entries": 1191
+  },
+  "zones": {
+    "The Hinterlands": {
+      "en": "The Hinterlands",
+      "es": "Tierras del Interior",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Stranglethorn Vale": {
+      "en": "Stranglethorn Vale",
+      "es": "Vega de Tuercespina",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Eastern Plaguelands": {
+      "en": "Eastern Plaguelands",
+      "es": "Tierras de la Peste del Este",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Duskwood": {
+      "en": "Duskwood",
+      "es": "Bosque del Ocaso",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Blasted Lands": {
+      "en": "Blasted Lands",
+      "es": "Las Tierras Devastadas",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Blackrock Mountain": {
+      "en": "Blackrock Mountain",
+      "es": "Montaña Roca Negra",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Redridge Mountains": {
+      "en": "Redridge Mountains",
+      "es": "Montañas Crestagrana",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Arathi Highlands": {
+      "en": "Arathi Highlands",
+      "es": "Tierras Altas de Arathi",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Westfall": {
+      "en": "Westfall",
+      "es": "Páramos de Poniente",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Badlands": {
+      "en": "Badlands",
+      "es": "Tierras Inhóspitas",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Searing Gorge": {
+      "en": "Searing Gorge",
+      "es": "La Garganta de Fuego",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Burning Steppes": {
+      "en": "Burning Steppes",
+      "es": "Las Estepas Ardientes",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Tirisfal Glades": {
+      "en": "Tirisfal Glades",
+      "es": "Claros de Tirisfal",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Elwynn Forest": {
+      "en": "Elwynn Forest",
+      "es": "Bosque de Elwynn",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Wetlands": {
+      "en": "Wetlands",
+      "es": "Los Humedales",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Western Plaguelands": {
+      "en": "Western Plaguelands",
+      "es": "Tierras de la Peste del Oeste",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Stormwind City": {
+      "en": "Stormwind City",
+      "es": "Ciudad de Ventormenta",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Silverpine Forest": {
+      "en": "Silverpine Forest",
+      "es": "Bosque de Argénteos",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Ironforge": {
+      "en": "Ironforge",
+      "es": "Forjaz",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Undercity": {
+      "en": "Undercity",
+      "es": "Entrañas",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Deeprun Tram": {
+      "en": "Deeprun Tram",
+      "es": "Tranvía Subterráneo",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Hillsbrad Foothills": {
+      "en": "Hillsbrad Foothills",
+      "es": "Laderas de Trabalomas",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Deadwind Pass": {
+      "en": "Deadwind Pass",
+      "es": "Paso de la Muerte",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Swamp of Sorrows": {
+      "en": "Swamp of Sorrows",
+      "es": "Pantano de las Penas",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Alterac Mountains": {
+      "en": "Alterac Mountains",
+      "es": "Montañas de Alterac",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Northern Stranglethorn": {
+      "en": "Northern Stranglethorn",
+      "es": "Norte de la Vega de Tuercespina",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "The Cape of Stranglethorn": {
+      "en": "The Cape of Stranglethorn",
+      "es": "El Cabo de Tuercespina",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Tol Barad Peninsula": {
+      "en": "Tol Barad Peninsula",
+      "es": "Península de Tol Barad",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Kelp'thar Forest": {
+      "en": "Kelp'thar Forest",
+      "es": "Bosque Kelp'thar",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Shimmering Expanse": {
+      "en": "Shimmering Expanse",
+      "es": "Extensión Bruñida",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Abyssal Depths": {
+      "en": "Abyssal Depths",
+      "es": "Profundidades Abisales",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Coldridge Valley": {
+      "en": "Coldridge Valley",
+      "es": "Valle de Crestanevada",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Twilight Highlands": {
+      "en": "Twilight Highlands",
+      "es": "Tierras Altas Crepusculares",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Gilneas City": {
+      "en": "Gilneas City",
+      "es": "Ciudad de Gilneas",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Ruins of Gilneas": {
+      "en": "Ruins of Gilneas",
+      "es": "Ruinas de Gilneas",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Deathknell": {
+      "en": "Deathknell",
+      "es": "Camposanto",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "New Tinkertown": {
+      "en": "New Tinkertown",
+      "es": "Nueva Ciudad Manitas",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Hillsbrad": {
+      "en": "Hillsbrad",
+      "es": "Trabalomas",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "New Avalon": {
+      "en": "New Avalon",
+      "es": "Nuevo Avalon",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Eastern Kingdoms": {
+      "en": "Eastern Kingdoms",
+      "es": "Reinos del Este",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Dalaran Crater": {
+      "en": "Dalaran Crater",
+      "es": "Cráter de Dalaran",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Northshire Valley": {
+      "en": "Northshire Valley",
+      "es": "Valle de Villanorte",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Northshire": {
+      "en": "Northshire",
+      "es": "Villanorte",
+      "source": "questie_github",
+      "file": "EasternKingdoms"
+    },
+    "Moonglade": {
+      "en": "Moonglade",
+      "es": "Claro de la Luna",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Thousand Needles": {
+      "en": "Thousand Needles",
+      "es": "Las Mil Agujas",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Timbermaw Hold": {
+      "en": "Timbermaw Hold",
+      "es": "Bastión de los Fauces de Madera",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Winterspring": {
+      "en": "Winterspring",
+      "es": "Cuna del Invierno",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Ashenvale": {
+      "en": "Ashenvale",
+      "es": "Vallefresno",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Un'Goro Crater": {
+      "en": "Un'Goro Crater",
+      "es": "Cráter de Un'Goro",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Dustwallow Marsh": {
+      "en": "Dustwallow Marsh",
+      "es": "Marjal Revolcafango",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Felwood": {
+      "en": "Felwood",
+      "es": "Frondavil",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Darkshore": {
+      "en": "Darkshore",
+      "es": "Costa Oscura",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "The Barrens": {
+      "en": "The Barrens",
+      "es": "Los Baldíos",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Thunder Bluff": {
+      "en": "Thunder Bluff",
+      "es": "Cima del Trueno",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Stonetalon Mountains": {
+      "en": "Stonetalon Mountains",
+      "es": "Sierra Espolón",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Northern Barrens": {
+      "en": "Northern Barrens",
+      "es": "Los Baldíos del Norte",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Southern Barrens": {
+      "en": "Southern Barrens",
+      "es": "Los Baldíos del Sur",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Mount Hyjal": {
+      "en": "Mount Hyjal",
+      "es": "Monte Hyjal",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "The Steam Pools": {
+      "en": "The Steam Pools",
+      "es": "Las Charcas Vaporosas",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Shadowglen": {
+      "en": "Shadowglen",
+      "es": "Cañada Umbría",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Ahn'Qiraj: The Fallen Kingdom": {
+      "en": "Ahn'Qiraj: The Fallen Kingdom",
+      "es": "Ahn'Qiraj: El Reino Caído",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Valley of Trials": {
+      "en": "Valley of Trials",
+      "es": "Valle de los Retos",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Echo Isles": {
+      "en": "Echo Isles",
+      "es": "Islas del Eco",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Ruins of Uldum": {
+      "en": "Ruins of Uldum",
+      "es": "Ruinas de Uldum",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Red Cloud Mesa": {
+      "en": "Red Cloud Mesa",
+      "es": "Mesa de la Nube Roja",
+      "source": "questie_github",
+      "file": "Kalimdor"
+    },
+    "Wrathscale Lair": {
+      "en": "Wrathscale Lair",
+      "es": "Guarida Escama de Cólera",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Wayne's Refuge": {
+      "en": "Wayne's Refuge",
+      "es": "Refugio de Wayne",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Tranquil Shore": {
+      "en": "Tranquil Shore",
+      "es": "Orilla Tranquila",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Auren Falls": {
+      "en": "Auren Falls",
+      "es": "Cascadas Auren",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Coilskar Point": {
+      "en": "Coilskar Point",
+      "es": "Alto Cicatriz Espiral",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Sacred Grove": {
+      "en": "The Sacred Grove",
+      "es": "La Arboleda Sagrada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sun's Reach Armory": {
+      "en": "Sun's Reach Armory",
+      "es": "Arsenal de Tramo del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Wizard Row": {
+      "en": "Wizard Row",
+      "es": "Pasaje del Zahorí",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Portal Clearing": {
+      "en": "Portal Clearing",
+      "es": "Portal del Claro",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Bloodoath": {
+      "en": "The Bloodoath",
+      "es": "El Juramento de Sangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Reaver's Fall": {
+      "en": "Reaver's Fall",
+      "es": "Caída del Atracador Vil",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ring of Observance": {
+      "en": "Ring of Observance",
+      "es": "Círculo de la Observancia",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Lake Sunspring": {
+      "en": "Lake Sunspring",
+      "es": "Lago Primasol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Northmaul Tower": {
+      "en": "Northmaul Tower",
+      "es": "Torre Quiebranorte",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Town Square": {
+      "en": "Town Square",
+      "es": "Plaza de la Ciudad",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Aldor Rise": {
+      "en": "Aldor Rise",
+      "es": "Alto Aldor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Vindicator's Rest": {
+      "en": "Vindicator's Rest",
+      "es": "El Reposo del Vindicador",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ruins of Baa'ri": {
+      "en": "Ruins of Baa'ri",
+      "es": "Ruinas de Baa'ri",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Invasion Point: Overlord": {
+      "en": "Invasion Point: Overlord",
+      "es": "Punto de Invasión: Señor Supremo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Blackwind Lake": {
+      "en": "Blackwind Lake",
+      "es": "Lago Vientonegro",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ammen Fields": {
+      "en": "Ammen Fields",
+      "es": "Campos Ammen",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Windyreed Village": {
+      "en": "Windyreed Village",
+      "es": "Aldea Junco Alabeado",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Umbrafen Lake": {
+      "en": "Umbrafen Lake",
+      "es": "Lago Umbropantano",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ruins of Silvermoon": {
+      "en": "Ruins of Silvermoon",
+      "es": "Ruinas de Lunargenta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Scrap Field": {
+      "en": "The Scrap Field",
+      "es": "El Campo de Sobras",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Derelict Manor": {
+      "en": "Derelict Manor",
+      "es": "Masión Derelicta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Stormspire": {
+      "en": "The Stormspire",
+      "es": "La Flecha de la Tormenta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Cryo-Core": {
+      "en": "The Cryo-Core",
+      "es": "El Crionúcleo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sanctum of the Moon": {
+      "en": "Sanctum of the Moon",
+      "es": "Sagrario de la Luna",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Blackwind Valley": {
+      "en": "Blackwind Valley",
+      "es": "Valle Vientonegro",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Throne of the Elements": {
+      "en": "Throne of the Elements",
+      "es": "El Trono de los Elementos",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Forge Camp: Rage": {
+      "en": "Forge Camp: Rage",
+      "es": "Campamento Forja: Ira",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Toryl Estate": {
+      "en": "Toryl Estate",
+      "es": "Los Dominios Toryl",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Low Path": {
+      "en": "The Low Path",
+      "es": "El Paso Bajo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Wyrmskull Tunnel": {
+      "en": "Wyrmskull Tunnel",
+      "es": "Túnel Calavermis",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Bone Wastes": {
+      "en": "The Bone Wastes",
+      "es": "El Vertedero de Huesos",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Obsidia's Perch": {
+      "en": "Obsidia's Perch",
+      "es": "Nido de Obsidia",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Invasion Point: Destroyer": {
+      "en": "Invasion Point: Destroyer",
+      "es": "Punto de Invasión: Destructor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Stadium": {
+      "en": "The Stadium",
+      "es": "El Estadium",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sha'naari Wastes": {
+      "en": "Sha'naari Wastes",
+      "es": "Ruinas Sha'naari",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Kil'sorrow Fortress": {
+      "en": "Kil'sorrow Fortress",
+      "es": "Fortaleza Mata'penas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Celestial Ridge": {
+      "en": "Celestial Ridge",
+      "es": "Cresta Celestial",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ruins of Karabor": {
+      "en": "Ruins of Karabor",
+      "es": "Ruinas de Karabor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Skulking Row": {
+      "en": "Skulking Row",
+      "es": "El Frontal de la Muerte",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shadow Ridge": {
+      "en": "Shadow Ridge",
+      "es": "Cresta de las Sombras",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Nestlewood Thicket": {
+      "en": "Nestlewood Thicket",
+      "es": "Matorral Cubrebosque",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Nestlewood Hills": {
+      "en": "Nestlewood Hills",
+      "es": "Colinas Cubrebosque",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Traitor's Cove": {
+      "en": "Traitor's Cove",
+      "es": "Cala del Traidor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Auren Ridge": {
+      "en": "Auren Ridge",
+      "es": "Cresta Auren",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Dustquill Ravine": {
+      "en": "Dustquill Ravine",
+      "es": "Barranco Pluma Polvorienta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Reskk": {
+      "en": "Veil Reskk",
+      "es": "Velo Reskk",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Proving Grounds": {
+      "en": "The Proving Grounds",
+      "es": "Terreno de Pruebas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Darkcrest Shore": {
+      "en": "Darkcrest Shore",
+      "es": "Playa Crestanegra",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Menagerie Wreckage": {
+      "en": "Menagerie Wreckage",
+      "es": "Restos del Arca",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bloodmyst Isle": {
+      "en": "Bloodmyst Isle",
+      "es": "Isla Bruma de Sangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bonechewer Ruins": {
+      "en": "Bonechewer Ruins",
+      "es": "Ruinas Mascahuesos",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Azuremyst Isle": {
+      "en": "Azuremyst Isle",
+      "es": "Isla Bruma Azur",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Moonwing Den": {
+      "en": "Moonwing Den",
+      "es": "Túmulo Lunala",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Legion Front": {
+      "en": "The Legion Front",
+      "es": "La Avanzadilla de la Legión",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Elemental Plateau": {
+      "en": "Elemental Plateau",
+      "es": "Meseta Elemental",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Tel'athion's Camp": {
+      "en": "Tel'athion's Camp",
+      "es": "Campamento de Tel'athion",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bristlelimb Village": {
+      "en": "Bristlelimb Village",
+      "es": "Aldea Brazolanudo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Wildhammer Stronghold": {
+      "en": "Wildhammer Stronghold",
+      "es": "Bastión Martillo Salvaje",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Goldenmist Village": {
+      "en": "Goldenmist Village",
+      "es": "Aldea de Bruma Dorada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Wrathscale Point": {
+      "en": "Wrathscale Point",
+      "es": "Punto Escama de Cólera",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Trogma's Claim": {
+      "en": "Trogma's Claim",
+      "es": "La Llamada de Trogma",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Barrier Hills": {
+      "en": "The Barrier Hills",
+      "es": "Las Colinas Barrera",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Blade's Edge Mountains": {
+      "en": "Blade's Edge Mountains",
+      "es": "Montañas Filospada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Crumbling Waste": {
+      "en": "The Crumbling Waste",
+      "es": "Las Ruinas Desmoronadas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Zangarmarsh": {
+      "en": "Zangarmarsh",
+      "es": "Marisma de Zangar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Terokkar Forest": {
+      "en": "Terokkar Forest",
+      "es": "Bosque de Terokkar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Sin'loren": {
+      "en": "The Sin'loren",
+      "es": "El Sin'loren",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Expedition Point": {
+      "en": "Expedition Point",
+      "es": "Punta de Expedición",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Farstrider Enclave": {
+      "en": "Farstrider Enclave",
+      "es": "Enclave del Errante",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Thunderlord Stronghold": {
+      "en": "Thunderlord Stronghold",
+      "es": "Bastión Señor del Trueno",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Toshley's Station": {
+      "en": "Toshley's Station",
+      "es": "Estación de Toshley",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Elrendar River": {
+      "en": "Elrendar River",
+      "es": "Río Elrendar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Forge Base: Gehenna": {
+      "en": "Forge Base: Gehenna",
+      "es": "Base Forja: Gehenna",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Fallen Sky Ridge": {
+      "en": "Fallen Sky Ridge",
+      "es": "Cresta Cielo Estrellado",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Fairbreeze Village": {
+      "en": "Fairbreeze Village",
+      "es": "Aldea Brisa Pura",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Amani Catacombs": {
+      "en": "Amani Catacombs",
+      "es": "Catacumbas Amani",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Arklon Ruins": {
+      "en": "Arklon Ruins",
+      "es": "Ruinas Arklon",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sungraze Peak": {
+      "en": "Sungraze Peak",
+      "es": "Cima Rasguño de Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Amani Pass": {
+      "en": "Amani Pass",
+      "es": "Paso de Amani",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Dragonspine Ridge": {
+      "en": "Dragonspine Ridge",
+      "es": "Cresta Espinazo de Dragón",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Socrethar's Seat": {
+      "en": "Socrethar's Seat",
+      "es": "Trono de Socrethar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Silmyr Lake": {
+      "en": "Silmyr Lake",
+      "es": "Lago Silmyr",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Hatchet Hills": {
+      "en": "Hatchet Hills",
+      "es": "Colinas Hacha",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Auchenai Grounds": {
+      "en": "Auchenai Grounds",
+      "es": "Tierras Auchenai",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Broken Hill": {
+      "en": "Broken Hill",
+      "es": "Cerro Tábido",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Mag'har Post": {
+      "en": "Mag'har Post",
+      "es": "Puesto Mag'har",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Honor Hold": {
+      "en": "Honor Hold",
+      "es": "Bastión del Honor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Netherstone": {
+      "en": "Netherstone",
+      "es": "Piedra Abisal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Lake Elrendar": {
+      "en": "Lake Elrendar",
+      "es": "Lago Elrendar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Scryer's Tier": {
+      "en": "Scryer's Tier",
+      "es": "Grada del Arúspice",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Saltheril's Haven": {
+      "en": "Saltheril's Haven",
+      "es": "Refugio de Saltheril",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Arklonis Ridge": {
+      "en": "Arklonis Ridge",
+      "es": "Cresta Arklonis",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Supply Caravan": {
+      "en": "Supply Caravan",
+      "es": "Caravana de Provisiones",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Underlight Mines": {
+      "en": "Underlight Mines",
+      "es": "Minas Sondaluz",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shalandis Isle": {
+      "en": "Shalandis Isle",
+      "es": "Isla Shalandis",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Howling Ziggurat": {
+      "en": "Howling Ziggurat",
+      "es": "Zigurat Aullante",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bleeding Ziggurat": {
+      "en": "Bleeding Ziggurat",
+      "es": "Zigurat Sangrante",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Singing Ridge": {
+      "en": "Singing Ridge",
+      "es": "Cresta Canto",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Overlook": {
+      "en": "The Overlook",
+      "es": "La Dominancia",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Lashh": {
+      "en": "Veil Lashh",
+      "es": "Velo Lashh",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Deatholme": {
+      "en": "Deatholme",
+      "es": "Muerthogar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shadowmoon Village": {
+      "en": "Shadowmoon Village",
+      "es": "Aldea Sombraluna",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Duskwither Grounds": {
+      "en": "Duskwither Grounds",
+      "es": "Tierras Ocaso Marchito",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Dawnstar Spire": {
+      "en": "Dawnstar Spire",
+      "es": "Aguja de la Estrella del Alba",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Duskwither Spire": {
+      "en": "Duskwither Spire",
+      "es": "Aguja Ocaso Marchito",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sanctum of the Sun": {
+      "en": "Sanctum of the Sun",
+      "es": "Sagrario del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Circle of Blood": {
+      "en": "Circle of Blood",
+      "es": "Anillo de Sangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Windrunner Village": {
+      "en": "Windrunner Village",
+      "es": "Aldea Brisaveloz",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Dawning Lane": {
+      "en": "Dawning Lane",
+      "es": "Calle del Alba",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Talon Stand": {
+      "en": "Talon Stand",
+      "es": "Alto de la Garra",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Lake Ere'Noru": {
+      "en": "Lake Ere'Noru",
+      "es": "Lago Ere'Noru",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Huntress of the Sun": {
+      "en": "Huntress of the Sun",
+      "es": "Cazadora del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Azurebreeze Coast": {
+      "en": "Azurebreeze Coast",
+      "es": "Costa Bris Azur",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Silvermoon City": {
+      "en": "Silvermoon City",
+      "es": "Ciudad de Lunargenta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Void Ridge": {
+      "en": "Void Ridge",
+      "es": "Cresta del Vacío",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Falthrien Academy": {
+      "en": "Falthrien Academy",
+      "es": "Academia Falthrien",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Sunspire": {
+      "en": "The Sunspire",
+      "es": "La Aguja del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Twisting Nether": {
+      "en": "Twisting Nether",
+      "es": "El Vacío Abisal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Hellfire Peninsula": {
+      "en": "Hellfire Peninsula",
+      "es": "Península del Fuego Infernal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Invasion Point: Cataclysm": {
+      "en": "Invasion Point: Cataclysm",
+      "es": "Punto de Invasión: Cataclismo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Altar of Shadows": {
+      "en": "The Altar of Shadows",
+      "es": "El Altar de las Sombras",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Forge Camp: Fear": {
+      "en": "Forge Camp: Fear",
+      "es": "Campamento Forja: Miedo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Ala'rak": {
+      "en": "Veil Ala'rak",
+      "es": "Velo Ala'rak",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Laughing Skull Ruins": {
+      "en": "Laughing Skull Ruins",
+      "es": "Ruinas Riecráneos",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shadowmoon Valley": {
+      "en": "Shadowmoon Valley",
+      "es": "Valle Sombraluna",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Scorched Grove": {
+      "en": "The Scorched Grove",
+      "es": "La Arboleda Agostada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Living Wood": {
+      "en": "The Living Wood",
+      "es": "El Bosque Viviente",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Lower Veil Shil'ak": {
+      "en": "Lower Veil Shil'ak",
+      "es": "Velo Shil'ak Bajo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Invasion Point: Annihilator": {
+      "en": "Invasion Point: Annihilator",
+      "es": "Punto de invasión: Aniquilador",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Soulgrinder's Barrow": {
+      "en": "Soulgrinder's Barrow",
+      "es": "Túmulo de Moledor de Almas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Thuron's Livery": {
+      "en": "Thuron's Livery",
+      "es": "Caballería de Thuron",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Felspark Ravine": {
+      "en": "Felspark Ravine",
+      "es": "Barranco Burbujas Viles",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Andilien Estate": {
+      "en": "Andilien Estate",
+      "es": "Dominios Andilien",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Spirit Fields": {
+      "en": "Spirit Fields",
+      "es": "Campos de Espíritus",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Forge Camp: Mageddon": {
+      "en": "Forge Camp: Mageddon",
+      "es": "Campamento Forja: Mageddon",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Skethyl Mountains": {
+      "en": "Skethyl Mountains",
+      "es": "Montañas Skethyl",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Expedition Armory": {
+      "en": "Expedition Armory",
+      "es": "Armería de Expedición",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "East Sanctum": {
+      "en": "East Sanctum",
+      "es": "Sagrario del Este",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Drain": {
+      "en": "The Drain",
+      "es": "El Vaciado",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ammen Vale": {
+      "en": "Ammen Vale",
+      "es": "Valle Ammen",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shrine of Dath'Remar": {
+      "en": "Shrine of Dath'Remar",
+      "es": "Santuario de Dath'Remar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Netherweb Ridge": {
+      "en": "Netherweb Ridge",
+      "es": "Cresta Red Abisal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Voidwind Plateau": {
+      "en": "Voidwind Plateau",
+      "es": "Meseta del Viento del Vacío",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ango'rosh Grounds": {
+      "en": "Ango'rosh Grounds",
+      "es": "Dominios Ango'rosh",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Deathforge Tower": {
+      "en": "Deathforge Tower",
+      "es": "Torre de la Forja Muerta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Lithic": {
+      "en": "Veil Lithic",
+      "es": "Velo Lítico",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Slag Watch": {
+      "en": "Slag Watch",
+      "es": "Vigía de la Escoria",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Serpent Lake": {
+      "en": "Serpent Lake",
+      "es": "Lago Serpiente",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "North Sanctum": {
+      "en": "North Sanctum",
+      "es": "Sagrario del Norte",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Farstrider Retreat": {
+      "en": "Farstrider Retreat",
+      "es": "El Retiro del Errante",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Dead Mire": {
+      "en": "The Dead Mire",
+      "es": "El Lodo Muerto",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Spawning Glen": {
+      "en": "The Spawning Glen",
+      "es": "La Cañada Emergente",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Magisters Gate": {
+      "en": "Magisters Gate",
+      "es": "Puerta Magister",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Tower of the Damned": {
+      "en": "Tower of the Damned",
+      "es": "Torre de los Condenados",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sunsail Anchorage": {
+      "en": "Sunsail Anchorage",
+      "es": "Fondeadero Vela del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Shalas": {
+      "en": "Veil Shalas",
+      "es": "Velo Shalas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Blacksilt Shore": {
+      "en": "Blacksilt Shore",
+      "es": "Costa Cienonegro",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Isle of Tribulations": {
+      "en": "Isle of Tribulations",
+      "es": "Isla de las Tribulaciones",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Ring of Blood": {
+      "en": "The Ring of Blood",
+      "es": "El Círculo de Sangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Golden Strand": {
+      "en": "Golden Strand",
+      "es": "La Ensenada Dorada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Orebor Harborage": {
+      "en": "Orebor Harborage",
+      "es": "Puerto Orebor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Rivendark's Perch": {
+      "en": "Rivendark's Perch",
+      "es": "Nido de Desgarro Oscuro",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Insidion's Perch": {
+      "en": "Insidion's Perch",
+      "es": "Nido de Insidion",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bash'ir Landing": {
+      "en": "Bash'ir Landing",
+      "es": "Alto Bash'ir",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The North Sea": {
+      "en": "The North Sea",
+      "es": "El Mar del Norte",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Feralfen Village": {
+      "en": "Feralfen Village",
+      "es": "Aldea Feropantano",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Terokk's Rest": {
+      "en": "Terokk's Rest",
+      "es": "Sosiego de Terokk",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Kirin'Var Village": {
+      "en": "Kirin'Var Village",
+      "es": "Poblado Kirin'Var",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Dragonmaw Fortress": {
+      "en": "Dragonmaw Fortress",
+      "es": "Fortaleza Faucedraco",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Manaforge Duro": {
+      "en": "Manaforge Duro",
+      "es": "Forja de Maná Duro",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Grangol'var Village": {
+      "en": "Grangol'var Village",
+      "es": "Poblado Grangol'var",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Skyguard Outpost": {
+      "en": "Skyguard Outpost",
+      "es": "Avanzada de la Guardia del Cielo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Vim'gol's Circle": {
+      "en": "Vim'gol's Circle",
+      "es": "Anillo de Vim'gol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sorrow Wing Point": {
+      "en": "Sorrow Wing Point",
+      "es": "Punta Alapenas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Vekhaar Stand": {
+      "en": "Vekhaar Stand",
+      "es": "Alto Vekhaar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Furywing's Perch": {
+      "en": "Furywing's Perch",
+      "es": "Nido de Alafuria",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sunspring Post": {
+      "en": "Sunspring Post",
+      "es": "Puesto Primasol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Zeppelin Crash": {
+      "en": "Zeppelin Crash",
+      "es": "Zepelín Caído",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Thornfang Hill": {
+      "en": "Thornfang Hill",
+      "es": "Colina Colmillespinado",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Razorthorn Rise": {
+      "en": "Razorthorn Rise",
+      "es": "Alto Rajaespina",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Netherstorm": {
+      "en": "Netherstorm",
+      "es": "Tormenta Abisal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sha'tari Outpost": {
+      "en": "Sha'tari Outpost",
+      "es": "Avanzada Sha'tari",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Shadow Stair": {
+      "en": "The Shadow Stair",
+      "es": "La Escalera Umbría",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Wyrmscar Island": {
+      "en": "Wyrmscar Island",
+      "es": "Isla Cicatriz de Vermis",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Hellfire Basin": {
+      "en": "Hellfire Basin",
+      "es": "Cuenca del Fuego Infernal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Eversong Woods": {
+      "en": "Eversong Woods",
+      "es": "Bosque Canción Eterna",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Umbrafen Village": {
+      "en": "Umbrafen Village",
+      "es": "Aldea Umbropantano",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Northwind Cleft": {
+      "en": "Northwind Cleft",
+      "es": "Grieta del Viento Norte",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Circle of Blood Arena": {
+      "en": "Circle of Blood Arena",
+      "es": "Arena del Anillo de Sangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Eclipsion Fields": {
+      "en": "Eclipsion Fields",
+      "es": "Campos Eclipsianos",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Evergrove": {
+      "en": "Evergrove",
+      "es": "Soto Eterno",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Crimson Watch": {
+      "en": "Crimson Watch",
+      "es": "Atalaya Carmesí",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Vortex Fields": {
+      "en": "The Vortex Fields",
+      "es": "Los Campos del Vórtice",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Stonebreaker Hold": {
+      "en": "Stonebreaker Hold",
+      "es": "Bastión Rompepedras",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Daggerfen Village": {
+      "en": "Daggerfen Village",
+      "es": "Aldea Dagapantano",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Magma Fields": {
+      "en": "Magma Fields",
+      "es": "Campos de Magma",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Blackwind Landing": {
+      "en": "Blackwind Landing",
+      "es": "Alto de los Vientonegro",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Swamprat Post": {
+      "en": "Swamprat Post",
+      "es": "Avanzada Rata del Pantano",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Scalding Pools": {
+      "en": "The Scalding Pools",
+      "es": "Las Pozas Escaldantes",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Netherwing Pass": {
+      "en": "Netherwing Pass",
+      "es": "Desfiladero del Ala Abisal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ghostlands": {
+      "en": "Ghostlands",
+      "es": "Tierras Fantasma",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Gor'gaz Outpost": {
+      "en": "Gor'gaz Outpost",
+      "es": "Avanzada Gor'gaz",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Lower City": {
+      "en": "Lower City",
+      "es": "Bajo Arrabal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Allerian Post": {
+      "en": "Allerian Post",
+      "es": "Puesto Allerian",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Scalewing Shelf": {
+      "en": "Scalewing Shelf",
+      "es": "Plataforma Alaescama",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Silvermyst Isle": {
+      "en": "Silvermyst Isle",
+      "es": "Isla Bruma de Plata",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Fetid Pool": {
+      "en": "The Fetid Pool",
+      "es": "La Poza Fétida",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Mag'har Grounds": {
+      "en": "Mag'har Grounds",
+      "es": "Dominios Mag'har",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Haal'eshi Gorge": {
+      "en": "Haal'eshi Gorge",
+      "es": "Garganta Haal'eshi",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Halaani Basin": {
+      "en": "Halaani Basin",
+      "es": "Cuenca Halaani",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sanctum of the Stars": {
+      "en": "Sanctum of the Stars",
+      "es": "Sagrario de las Estrellas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sketh'lon Wreckage": {
+      "en": "Sketh'lon Wreckage",
+      "es": "Ruinas de Sketh'lon",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Skith": {
+      "en": "Veil Skith",
+      "es": "Velo Skith",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bladespire Grounds": {
+      "en": "Bladespire Grounds",
+      "es": "Dominios Aguja del Filo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Wyrmskull Bridge": {
+      "en": "Wyrmskull Bridge",
+      "es": "Puente Calavermis",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Path of Conquest": {
+      "en": "The Path of Conquest",
+      "es": "El Sendero de la Conquista",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Altar of Damnation": {
+      "en": "The Altar of Damnation",
+      "es": "El Altar de Condenación",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Tempest Rift": {
+      "en": "The Tempest Rift",
+      "es": "La Falla de la Tempestad",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Forge Camp: Terror": {
+      "en": "Forge Camp: Terror",
+      "es": "Campamento Forja: Terror",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Boulder'mok": {
+      "en": "Boulder'mok",
+      "es": "Peña'mok",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shattered Plains": {
+      "en": "Shattered Plains",
+      "es": "Llanuras Devastadas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bleeding Hollow Ruins": {
+      "en": "Bleeding Hollow Ruins",
+      "es": "Ruinas Foso Sangrante",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Southmaul Tower": {
+      "en": "Southmaul Tower",
+      "es": "Torre Quiebrasur",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Plain of Shards": {
+      "en": "Plain of Shards",
+      "es": "Llanura de los Fragmentos",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Raastok Glade": {
+      "en": "Raastok Glade",
+      "es": "Claro Raastok",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Blade Tooth Canyon": {
+      "en": "Blade Tooth Canyon",
+      "es": "Cañón Dientespada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shatter Point": {
+      "en": "Shatter Point",
+      "es": "Puesto Devastación",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Altar of Sha'tar": {
+      "en": "Altar of Sha'tar",
+      "es": "Altar de Sha'tar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ruins of Farahlon": {
+      "en": "Ruins of Farahlon",
+      "es": "Ruinas de Farahlon",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bloodcurse Isle": {
+      "en": "Bloodcurse Isle",
+      "es": "Isla Sangre Maldita",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Moongraze Woods": {
+      "en": "Moongraze Woods",
+      "es": "Bosque Pasto Lunar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sporewind Lake": {
+      "en": "Sporewind Lake",
+      "es": "Lago Espora Volante",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Shepherd's Gate": {
+      "en": "The Shepherd's Gate",
+      "es": "La Puerta del Pastor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Fairbridge Strand": {
+      "en": "Fairbridge Strand",
+      "es": "Playa Puentegrato",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Runestone Shan'dor": {
+      "en": "Runestone Shan'dor",
+      "es": "Piedra Rúnica Shan'dor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Runestone Falithas": {
+      "en": "Runestone Falithas",
+      "es": "Piedra Rúnica Falithas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Den of Haal'esh": {
+      "en": "Den of Haal'esh",
+      "es": "Cubil de Haal'esh",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Telaari Basin": {
+      "en": "Telaari Basin",
+      "es": "Cuenca Telaari",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Netherwing Mines": {
+      "en": "Netherwing Mines",
+      "es": "Minas del Ala Abisal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Living Grove": {
+      "en": "The Living Grove",
+      "es": "La Arboleda Viviente",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ruins of Enkaat": {
+      "en": "Ruins of Enkaat",
+      "es": "Ruinas de Enkaat",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Temple of Telhamat": {
+      "en": "Temple of Telhamat",
+      "es": "Templo de Telhamat",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Stonewall Canyon": {
+      "en": "Stonewall Canyon",
+      "es": "Cañón de la Muralla",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Mystwood": {
+      "en": "Mystwood",
+      "es": "Bosque Bruma",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Lost Fold": {
+      "en": "The Lost Fold",
+      "es": "El Aprisco Perdido",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Aeris Landing": {
+      "en": "Aeris Landing",
+      "es": "Desembarco Aeris",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Chapel Yard": {
+      "en": "Chapel Yard",
+      "es": "Patio de la Capilla",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The High Path": {
+      "en": "The High Path",
+      "es": "El Paso Elevado",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bristlelimb Enclave": {
+      "en": "Bristlelimb Enclave",
+      "es": "Enclave Brazolanudo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sun's Reach Sanctum": {
+      "en": "Sun's Reach Sanctum",
+      "es": "Sagrario de Tramo del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veridian Point": {
+      "en": "Veridian Point",
+      "es": "Punta Veridiana",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Bloodwash": {
+      "en": "The Bloodwash",
+      "es": "La Playa de Sangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Warp Piston": {
+      "en": "The Warp Piston",
+      "es": "El Pistón de Distorsión",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Windyreed Pass": {
+      "en": "Windyreed Pass",
+      "es": "Paso Junco Alabeado",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Dead Scar": {
+      "en": "The Dead Scar",
+      "es": "La Cicatriz Muerta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Forge Camp: Anger": {
+      "en": "Forge Camp: Anger",
+      "es": "Campamento Forja: Inquina",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Oronok's Farm": {
+      "en": "Oronok's Farm",
+      "es": "Granja de Oronok",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Lagoon": {
+      "en": "The Lagoon",
+      "es": "La Laguna",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Stair of Destiny": {
+      "en": "The Stair of Destiny",
+      "es": "Los Peldaños del Destino",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Stonebreaker Camp": {
+      "en": "Stonebreaker Camp",
+      "es": "Campamento Rompepedras",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Firewing Point": {
+      "en": "Firewing Point",
+      "es": "Alto Ala de Fuego",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Upper Veil Shil'ak": {
+      "en": "Upper Veil Shil'ak",
+      "es": "Velo Shil'ak Alto",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Terrace of Light": {
+      "en": "Terrace of Light",
+      "es": "Bancal de la Luz",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Midrealm Post": {
+      "en": "Midrealm Post",
+      "es": "Puesto de la Tierra Media",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Cenarion Watchpost": {
+      "en": "Cenarion Watchpost",
+      "es": "Puesto de Vigilancia Cenarion",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Writhing Mound": {
+      "en": "Writhing Mound",
+      "es": "Alcor Tortuoso",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Arena Floor": {
+      "en": "Arena Floor",
+      "es": "El Suelo de la Arena",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Carrion Hill": {
+      "en": "Carrion Hill",
+      "es": "Colina Carroña",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Tomb of Lights": {
+      "en": "Tomb of Lights",
+      "es": "Tumba de las Luces",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Hidden Reef": {
+      "en": "The Hidden Reef",
+      "es": "El Arrecife Oculto",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Path of Glory": {
+      "en": "The Path of Glory",
+      "es": "El Camino a la Gloria",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Darkcrest Enclave": {
+      "en": "Darkcrest Enclave",
+      "es": "Enclave de la Cumbre Oscura",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Rhaze": {
+      "en": "Veil Rhaze",
+      "es": "Velo Rhaze",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sunfire Point": {
+      "en": "Sunfire Point",
+      "es": "Punta del Fuego Solar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Geezle's Camp": {
+      "en": "Geezle's Camp",
+      "es": "Campamento de Geezle",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Dragonmaw Skyway": {
+      "en": "Dragonmaw Skyway",
+      "es": "Ruta Aérea Faucedraco",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Refugee Caravan": {
+      "en": "Refugee Caravan",
+      "es": "Caravana de Refugiados",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Eco-Dome Midrealm": {
+      "en": "Eco-Dome Midrealm",
+      "es": "Ecodomo de la Tierra Media",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Derelict Caravan": {
+      "en": "Derelict Caravan",
+      "es": "Caravana Derelicta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Spinebreaker Post": {
+      "en": "Spinebreaker Post",
+      "es": "Avanzada Rompeloma",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Camp of Boom": {
+      "en": "Camp of Boom",
+      "es": "Campamento de Bum",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Wildwind Path": {
+      "en": "Wildwind Path",
+      "es": "Senda Ventosalvaje",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Access Shaft Zeon": {
+      "en": "Access Shaft Zeon",
+      "es": "Eje de Acceso Zeon",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Middenvale": {
+      "en": "Middenvale",
+      "es": "Mediavega",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Odesyus' Landing": {
+      "en": "Odesyus' Landing",
+      "es": "Desembarco de Odesyus",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ethereum Staging Grounds": {
+      "en": "Ethereum Staging Grounds",
+      "es": "Punto de Escala Etereum",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Eco-Dome Sutheron": {
+      "en": "Eco-Dome Sutheron",
+      "es": "Ecodomo Sutheron",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Black Temple": {
+      "en": "The Black Temple",
+      "es": "El Templo Oscuro",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Eco-Dome Farfield": {
+      "en": "Eco-Dome Farfield",
+      "es": "Ecodomo Campolejano",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Stillwhisper Pond": {
+      "en": "Stillwhisper Pond",
+      "es": "Charca Plácido Susurro",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Gyro-Plank Bridge": {
+      "en": "Gyro-Plank Bridge",
+      "es": "Puente Girolámina",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bladed Gulch": {
+      "en": "Bladed Gulch",
+      "es": "Barranco del Filo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Azure Watch": {
+      "en": "Azure Watch",
+      "es": "Avanzada Azur",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Crystal Spine": {
+      "en": "Crystal Spine",
+      "es": "Espina de Cristal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Elrendar Falls": {
+      "en": "Elrendar Falls",
+      "es": "Cascadas Elrendar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shadow Tomb": {
+      "en": "Shadow Tomb",
+      "es": "Tumba Umbría",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Southwind Cleft": {
+      "en": "Southwind Cleft",
+      "es": "Grieta del Viento Sur",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Broken Wilds": {
+      "en": "Broken Wilds",
+      "es": "Landas Tábidas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Falconwing Square": {
+      "en": "Falconwing Square",
+      "es": "Plaza Alalcón",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ammen Ford": {
+      "en": "Ammen Ford",
+      "es": "Vado Ammen",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Thalassian Pass": {
+      "en": "Thalassian Pass",
+      "es": "Desfiladero Thalassiano",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bladespire Outpost": {
+      "en": "Bladespire Outpost",
+      "es": "Avanzada Aguja del Filo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Allerian Stronghold": {
+      "en": "Allerian Stronghold",
+      "es": "Bastión Allerian",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Silting Shore": {
+      "en": "Silting Shore",
+      "es": "La Costa de Cieno",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Commons Hall": {
+      "en": "Commons Hall",
+      "es": "Cámara del Pueblo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Churning Gulch": {
+      "en": "Churning Gulch",
+      "es": "Garganta Bulliciosa",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Violet Tower": {
+      "en": "The Violet Tower",
+      "es": "Torre Violeta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Draenethyst Mine": {
+      "en": "Draenethyst Mine",
+      "es": "Mina Draenetista",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Borune Ruins": {
+      "en": "Borune Ruins",
+      "es": "Ruinas Borune",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Elrendar Crossing": {
+      "en": "Elrendar Crossing",
+      "es": "Cruce Elrendar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sunfury Hold": {
+      "en": "Sunfury Hold",
+      "es": "Bastión Furia del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Clan Watch": {
+      "en": "Clan Watch",
+      "es": "Avanzada del Clan",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Pod Wreckage": {
+      "en": "Pod Wreckage",
+      "es": "El Cementerio de Cápsulas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Path of Anguish": {
+      "en": "The Path of Anguish",
+      "es": "El Camino del Tormento",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Razorthorn Trail": {
+      "en": "Razorthorn Trail",
+      "es": "Senda Rajaespina",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bloodscale Enclave": {
+      "en": "Bloodscale Enclave",
+      "es": "Enclave Escamas de Sangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Heap": {
+      "en": "The Heap",
+      "es": "La Pila",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shartuul's Transporter": {
+      "en": "Shartuul's Transporter",
+      "es": "Transportador de Shartuul",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Tuluman's Landing": {
+      "en": "Tuluman's Landing",
+      "es": "Alto de Tuluman",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Emberglade": {
+      "en": "Emberglade",
+      "es": "El Claro de Ascuas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Forge Base: Oblivion": {
+      "en": "Forge Base: Oblivion",
+      "es": "Base Forja: Olvido",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Isle of Quel'Danas": {
+      "en": "Isle of Quel'Danas",
+      "es": "Isla de Quel'Danas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Harr'ik": {
+      "en": "Veil Harr'ik",
+      "es": "Velo Harr'ik",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Manaforge Ara": {
+      "en": "Manaforge Ara",
+      "es": "Forja de Maná Ara",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Abyssal Shelf": {
+      "en": "The Abyssal Shelf",
+      "es": "La Plataforma Abisal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "West Sanctum": {
+      "en": "West Sanctum",
+      "es": "Sagrario del Oeste",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Mok'Nathal Village": {
+      "en": "Mok'Nathal Village",
+      "es": "Aldea Mok'Nathal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Raven's Wood": {
+      "en": "Raven's Wood",
+      "es": "Bosque del Cuervo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Crash Site": {
+      "en": "Crash Site",
+      "es": "Lugar del Accidente",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Eco-Dome Skyperch": {
+      "en": "Eco-Dome Skyperch",
+      "es": "Ecodomo Altocielo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bloodmaul Ravine": {
+      "en": "Bloodmaul Ravine",
+      "es": "Barranco Machacasangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Spinebreaker Mountains": {
+      "en": "Spinebreaker Mountains",
+      "es": "Montañas Rompeloma",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Blood Watch": {
+      "en": "Blood Watch",
+      "es": "Avanzada de Sangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bladespire Hold": {
+      "en": "Bladespire Hold",
+      "es": "Bastión Aguja del Filo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Protectorate Watch Post": {
+      "en": "Protectorate Watch Post",
+      "es": "Avanzada del Protectorado",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ridge of Madness": {
+      "en": "Ridge of Madness",
+      "es": "Cresta de la Locura",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Boha'mu Ruins": {
+      "en": "Boha'mu Ruins",
+      "es": "Ruinas Boha'mu",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bloodmaul Outpost": {
+      "en": "Bloodmaul Outpost",
+      "es": "Avanzada Machacasangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Razor Ridge": {
+      "en": "Razor Ridge",
+      "es": "Loma Tajo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Quagg Ridge": {
+      "en": "Quagg Ridge",
+      "es": "Cresta Quagg",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Cosmowrench": {
+      "en": "Cosmowrench",
+      "es": "Cosmotirón",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Vortex Pinnacle": {
+      "en": "Vortex Pinnacle",
+      "es": "Cumbre del Vórtice",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Death's Door": {
+      "en": "Death's Door",
+      "es": "Puerta de la Muerte",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Silvermoon's Pride": {
+      "en": "Silvermoon's Pride",
+      "es": "Orgullo de Lunargenta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Fel Pits": {
+      "en": "The Fel Pits",
+      "es": "Las Fosas Viles",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Laughing Skull Courtyard": {
+      "en": "Laughing Skull Courtyard",
+      "es": "Patio Riecráneos",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Ruuan": {
+      "en": "Veil Ruuan",
+      "es": "Velo Ruuan",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Misty Ridge": {
+      "en": "Misty Ridge",
+      "es": "Cresta Brumosa",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Crimson Reach": {
+      "en": "The Crimson Reach",
+      "es": "El Tramo Carmesí",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ruuan Weald": {
+      "en": "Ruuan Weald",
+      "es": "Foresta de Ruuan",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Daggermaw Canyon": {
+      "en": "Daggermaw Canyon",
+      "es": "Cañón Faucedaga",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Abandoned Armory": {
+      "en": "Abandoned Armory",
+      "es": "Armería Abandonada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Eclipse Point": {
+      "en": "Eclipse Point",
+      "es": "Punta Eclipse",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Warden's Cage": {
+      "en": "Warden's Cage",
+      "es": "Jaula de la Guardiana",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shattered Sun Staging Area": {
+      "en": "Shattered Sun Staging Area",
+      "es": "Zona de escala de Sol Devastado",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bloodscale Grounds": {
+      "en": "Bloodscale Grounds",
+      "es": "Tierras Escamas de Sangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "East Supply Caravan": {
+      "en": "East Supply Caravan",
+      "es": "Caravana de Provisiones del Este",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Warp Fields": {
+      "en": "The Warp Fields",
+      "es": "Los Campos Alabeados",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bladewood": {
+      "en": "Bladewood",
+      "es": "Bosquespada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Spinebreaker Pass": {
+      "en": "Spinebreaker Pass",
+      "es": "Desfiladero Rompeloma",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Shienor": {
+      "en": "Veil Shienor",
+      "es": "Velo Shienor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sunstrider Isle": {
+      "en": "Sunstrider Isle",
+      "es": "Isla del Caminante del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Twin Spire Ruins": {
+      "en": "Twin Spire Ruins",
+      "es": "Ruinas de las Agujas Gemelas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Northern Rampart": {
+      "en": "Northern Rampart",
+      "es": "Muralla Norte",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Southern Rampart": {
+      "en": "Southern Rampart",
+      "es": "Muralla Sur",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Forge Camp: Hate": {
+      "en": "Forge Camp: Hate",
+      "es": "Campamento Forja: Odio",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Cenarion Post": {
+      "en": "Cenarion Post",
+      "es": "Puesto Cenarion",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ango'rosh Stronghold": {
+      "en": "Ango'rosh Stronghold",
+      "es": "Bastión Ango'rosh",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Pools of Aggonar": {
+      "en": "Pools of Aggonar",
+      "es": "Pozas de Aggonar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Jagged Ridge": {
+      "en": "Jagged Ridge",
+      "es": "Cresta Dentada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ancestral Grounds": {
+      "en": "Ancestral Grounds",
+      "es": "Tierras Ancestrales",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Stair of Doom": {
+      "en": "The Stair of Doom",
+      "es": "La Escalera Maldita",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Hand of Gul'dan": {
+      "en": "The Hand of Gul'dan",
+      "es": "La Mano de Gul'dan",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sun's Reach Harbor": {
+      "en": "Sun's Reach Harbor",
+      "es": "Puerto de Tramo del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sha'tari Base Camp": {
+      "en": "Sha'tari Base Camp",
+      "es": "Campamento Sha'tari",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Suncrown Village": {
+      "en": "Suncrown Village",
+      "es": "Aldea Corona del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Exodar": {
+      "en": "The Exodar",
+      "es": "El Exodar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Razaan's Landing": {
+      "en": "Razaan's Landing",
+      "es": "Zona de Aterrizaje Razaan",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Cenarion Refuge": {
+      "en": "Cenarion Refuge",
+      "es": "Refugio Cenarion",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Silverline Lake": {
+      "en": "Silverline Lake",
+      "es": "Lago Lineargenta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Foul Pool": {
+      "en": "The Foul Pool",
+      "es": "La Poza del Hediondo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ata'mal Terrace": {
+      "en": "Ata'mal Terrace",
+      "es": "Bancal de Ata'mal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Marshlight Lake": {
+      "en": "Marshlight Lake",
+      "es": "Lago Luz Pantanosa",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Throne of Kil'jaeden": {
+      "en": "Throne of Kil'jaeden",
+      "es": "Trono de Kil'Jaeden",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Trelleum Mine": {
+      "en": "Trelleum Mine",
+      "es": "Mina Trelleum",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Valley of Bones": {
+      "en": "Valley of Bones",
+      "es": "Valle de los Huesos",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Shattrath City": {
+      "en": "Shattrath City",
+      "es": "Ciudad de Shattrath",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Ring of Trials": {
+      "en": "The Ring of Trials",
+      "es": "El Círculo de los Retos",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Vector Coil": {
+      "en": "The Vector Coil",
+      "es": "La Espiral Vectorial",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Funggor Cavern": {
+      "en": "Funggor Cavern",
+      "es": "Caverna Funggor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Nesingwary Safari": {
+      "en": "Nesingwary Safari",
+      "es": "Safari Nesingwary",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Legion Hold": {
+      "en": "Legion Hold",
+      "es": "Bastión de la Legión",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Dragonmaw Base Camp": {
+      "en": "Dragonmaw Base Camp",
+      "es": "Campamento Faucedraco",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Illidari Point": {
+      "en": "Illidari Point",
+      "es": "Alto Illidari",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Cenarion Thicket": {
+      "en": "Cenarion Thicket",
+      "es": "Matorral Cenarion",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Dawning Square": {
+      "en": "The Dawning Square",
+      "es": "La Plaza Crepuscular",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Cursed Hollow": {
+      "en": "Cursed Hollow",
+      "es": "Hoya Maldita",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Greengill Coast": {
+      "en": "Greengill Coast",
+      "es": "Costa Branquia Verde",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Warmaul Hill": {
+      "en": "Warmaul Hill",
+      "es": "Colina Mazo de Guerra",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sporeggar": {
+      "en": "Sporeggar",
+      "es": "Esporaggar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Dawnstar Village": {
+      "en": "Dawnstar Village",
+      "es": "Poblado Estrella del Alba",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Skysong Lake": {
+      "en": "Skysong Lake",
+      "es": "Lago Son Celeste",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Forge Camp: Wrath": {
+      "en": "Forge Camp: Wrath",
+      "es": "Campamento Forja: Cólera",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Bloodcursed Reef": {
+      "en": "The Bloodcursed Reef",
+      "es": "El Arrecife Sangre Maldita",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Hewn Bog": {
+      "en": "Hewn Bog",
+      "es": "Ciénaga Talada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ragefeather Ridge": {
+      "en": "Ragefeather Ridge",
+      "es": "Loma Plumira",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Blackwing Coven": {
+      "en": "Blackwing Coven",
+      "es": "Aquelarre Alanegra",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Stillpine Hold": {
+      "en": "Stillpine Hold",
+      "es": "Bastión Semprepino",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Valaar's Berth": {
+      "en": "Valaar's Berth",
+      "es": "Atracadero de Valaar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Zangar Ridge": {
+      "en": "Zangar Ridge",
+      "es": "Loma de Zangar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Windrunner Spire": {
+      "en": "Windrunner Spire",
+      "es": "Aguja Brisaveloz",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Tides' Hollow": {
+      "en": "Tides' Hollow",
+      "es": "Hoya de la Marea",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Manaforge Ultris": {
+      "en": "Manaforge Ultris",
+      "es": "Forja de Maná Ultris",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Netherwing Fields": {
+      "en": "Netherwing Fields",
+      "es": "Campos del Ala Abisal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Veil Vekh": {
+      "en": "Veil Vekh",
+      "es": "Velo Vekh",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Coilskar Cistern": {
+      "en": "Coilskar Cistern",
+      "es": "Cisterna Cicatriz Espiral",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Twilight Ridge": {
+      "en": "The Twilight Ridge",
+      "es": "La Cresta del Crepúsculo",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Deathforge": {
+      "en": "The Deathforge",
+      "es": "La Forja Muerta",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Netherwing Ledge": {
+      "en": "Netherwing Ledge",
+      "es": "Arrecife del Ala Abisal",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Burning Blade Ruins": {
+      "en": "Burning Blade Ruins",
+      "es": "Ruinas Filo Ardiente",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Wildwind Peak": {
+      "en": "Wildwind Peak",
+      "es": "Cima Ventosalvaje",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Feth's Way": {
+      "en": "Feth's Way",
+      "es": "Camino de Feth",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Razorthorn Shelf": {
+      "en": "Razorthorn Shelf",
+      "es": "Saliente Rajaespina",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Dragons' End": {
+      "en": "Dragons' End",
+      "es": "Cabo del Dragón",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ruins of Loreth'Aran": {
+      "en": "Ruins of Loreth'Aran",
+      "es": "Ruinas de Loreth'Aran",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Dawnchaser": {
+      "en": "The Dawnchaser",
+      "es": "El Cazador del Albor",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Blades' Run": {
+      "en": "Blades' Run",
+      "es": "Camino de las Espadas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Beryl Coast": {
+      "en": "Beryl Coast",
+      "es": "Costa Beryl",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Manaforge Coruu": {
+      "en": "Manaforge Coruu",
+      "es": "Forja de Maná Coruu",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Falcon Watch": {
+      "en": "Falcon Watch",
+      "es": "Avanzada del Halcón",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Goldenbough Pass": {
+      "en": "Goldenbough Pass",
+      "es": "Desfiladero Ramadorada",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Sun Forge": {
+      "en": "The Sun Forge",
+      "es": "La Forja del Sol",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Ruins of Sha'naar": {
+      "en": "Ruins of Sha'naar",
+      "es": "Ruinas de Sha'naar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Area 52": {
+      "en": "Area 52",
+      "es": "Área 52",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Broken Hills": {
+      "en": "The Broken Hills",
+      "es": "Las Colinas Quebradas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Pod Cluster": {
+      "en": "Pod Cluster",
+      "es": "La Maraña de Cápsulas",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "The Great Fissure": {
+      "en": "The Great Fissure",
+      "es": "La Gran Fisura",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Amberweb Pass": {
+      "en": "Amberweb Pass",
+      "es": "Paso de Redámbar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Manaforge B'naar": {
+      "en": "Manaforge B'naar",
+      "es": "Forja de Maná B'naar",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Bloodmaul Camp": {
+      "en": "Bloodmaul Camp",
+      "es": "Campamento Machacasangre",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Lake Jorune": {
+      "en": "Lake Jorune",
+      "es": "Lago Jorune",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Sketh'lon Base Camp": {
+      "en": "Sketh'lon Base Camp",
+      "es": "Campamento Sketh'lon",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Mag'hari Procession": {
+      "en": "Mag'hari Procession",
+      "es": "Procesión Mag'hari",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Kessel's Crossing": {
+      "en": "Kessel's Crossing",
+      "es": "Encrucijada de Kessel",
+      "source": "questie_github",
+      "file": "Outland"
+    },
+    "Grizzly Hills": {
+      "en": "Grizzly Hills",
+      "es": "Colinas Pardas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Grizzlemaw": {
+      "en": "Grizzlemaw",
+      "es": "Fauceparda",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Howling Fjord": {
+      "en": "Howling Fjord",
+      "es": "Fiordo Aquilonal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Crystalsong Forest": {
+      "en": "Crystalsong Forest",
+      "es": "Bosque Canto de Cristal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Frozen Sea": {
+      "en": "The Frozen Sea",
+      "es": "El Mar Gélido",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Daggercap Bay": {
+      "en": "Daggercap Bay",
+      "es": "Bahía Cubredaga",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wyrmskull Village": {
+      "en": "Wyrmskull Village",
+      "es": "Poblado Calavermis",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Nifflevar": {
+      "en": "Nifflevar",
+      "es": "Nafsavar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Falls of Ymiron": {
+      "en": "Falls of Ymiron",
+      "es": "Cataratas de Ymiron",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Echo Reach": {
+      "en": "Echo Reach",
+      "es": "Risco del Eco",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Isle of Spears": {
+      "en": "The Isle of Spears",
+      "es": "La Isla de las Lanzas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Kamagua": {
+      "en": "Kamagua",
+      "es": "Komawa",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Garvan's Reef": {
+      "en": "Garvan's Reef",
+      "es": "Arrecife de Garvan",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Scalawag Point": {
+      "en": "Scalawag Point",
+      "es": "Cabo Pillastre",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "New Agamand": {
+      "en": "New Agamand",
+      "es": "Nuevo Agamand",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Ancient Lift": {
+      "en": "The Ancient Lift",
+      "es": "El Antiguo Elevador",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Westguard Turret": {
+      "en": "Westguard Turret",
+      "es": "Torreta de la Guardia Oeste",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Halgrind": {
+      "en": "Halgrind",
+      "es": "Haltorboll",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Laughing Stand": {
+      "en": "The Laughing Stand",
+      "es": "La Playa Rompeolas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Baelgun's Excavation Site": {
+      "en": "Baelgun's Excavation Site",
+      "es": "Excavación de Baelgun",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Explorers' League Outpost": {
+      "en": "Explorers' League Outpost",
+      "es": "Avanzada de la Liga de Expedicionarios",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Westguard Keep": {
+      "en": "Westguard Keep",
+      "es": "Fortaleza de la Guardia Oeste",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Steel Gate": {
+      "en": "Steel Gate",
+      "es": "Las Puertas de Acero",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vengeance Landing": {
+      "en": "Vengeance Landing",
+      "es": "Campo Venganza",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Fort Wildervar": {
+      "en": "Fort Wildervar",
+      "es": "Fuerte Vildervar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vileprey Village": {
+      "en": "Vileprey Village",
+      "es": "Poblado Presavil",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ivald's Ruin": {
+      "en": "Ivald's Ruin",
+      "es": "Ruinas de Ivald",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Tomb of the Lost Kings": {
+      "en": "Tomb of the Lost Kings",
+      "es": "Tumba de los Reyes Perdidos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Camp Winterhoof": {
+      "en": "Camp Winterhoof",
+      "es": "Campamento Pezuña Invernal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Development Land": {
+      "en": "Development Land",
+      "es": "Tierra de Desarrollo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Mightstone Quarry": {
+      "en": "Mightstone Quarry",
+      "es": "Cantera de Piedra de Poderío",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bloodspore Plains": {
+      "en": "Bloodspore Plains",
+      "es": "Llanuras Sanguiespora",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Amber Ledge": {
+      "en": "Amber Ledge",
+      "es": "El Saliente Ámbar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Coldarra": {
+      "en": "Coldarra",
+      "es": "Gelidar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Westrift": {
+      "en": "The Westrift",
+      "es": "La Falla Oeste",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Transitus Stair": {
+      "en": "The Transitus Stair",
+      "es": "La Escalera de Tránsito",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Coast of Echoes": {
+      "en": "Coast of Echoes",
+      "es": "Costa de los Ecos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Riplash Strand": {
+      "en": "Riplash Strand",
+      "es": "Litoral Tralladón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Riplash Ruins": {
+      "en": "Riplash Ruins",
+      "es": "Ruinas Tralladón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Coast of Idols": {
+      "en": "Coast of Idols",
+      "es": "Costa de los Ídolos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Valiance Keep": {
+      "en": "Valiance Keep",
+      "es": "Fortaleza Denuedo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Winterfin Village": {
+      "en": "Winterfin Village",
+      "es": "Poblado Aleta Invernal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Taunka'le Village": {
+      "en": "Taunka'le Village",
+      "es": "Poblado Taunka'le",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Magnamoth Caverns": {
+      "en": "Magnamoth Caverns",
+      "es": "Cavernas Magnamoth",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Coldrock Quarry": {
+      "en": "Coldrock Quarry",
+      "es": "Cantera Frioescollo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Njord's Breath Bay": {
+      "en": "Njord's Breath Bay",
+      "es": "Bahía Aliento de Njord",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Kaskala": {
+      "en": "Kaskala",
+      "es": "Kashala",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ember Clutch": {
+      "en": "Ember Clutch",
+      "es": "Encierro Ámbar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Derelict Strand": {
+      "en": "Derelict Strand",
+      "es": "Playa Derelicta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Frozen Glade": {
+      "en": "The Frozen Glade",
+      "es": "El Claro Helado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Vibrant Glade": {
+      "en": "The Vibrant Glade",
+      "es": "El Claro Vibrante",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Twisted Glade": {
+      "en": "The Twisted Glade",
+      "es": "El Claro Retorcido",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Rivenwood": {
+      "en": "Rivenwood",
+      "es": "El Bosque Hendido",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Caldemere Lake": {
+      "en": "Caldemere Lake",
+      "es": "Lago Caldemere",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Utgarde Catacombs": {
+      "en": "Utgarde Catacombs",
+      "es": "Catacumbas de Utgarde",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Shield Hill": {
+      "en": "Shield Hill",
+      "es": "Colina Escudo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Lake Cauldros": {
+      "en": "Lake Cauldros",
+      "es": "Lago Caldros",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Cauldros Isle": {
+      "en": "Cauldros Isle",
+      "es": "Isla Caldros",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bleeding Vale": {
+      "en": "Bleeding Vale",
+      "es": "Vega Sangrante",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Giants' Run": {
+      "en": "Giants' Run",
+      "es": "El Paso del Gigante",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Apothecary Camp": {
+      "en": "Apothecary Camp",
+      "es": "Campamento de los Boticarios",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ember Spear Tower": {
+      "en": "Ember Spear Tower",
+      "es": "Torre Lanza Ámbar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Shattered Straits": {
+      "en": "Shattered Straits",
+      "es": "Estrecho Devastado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Gjalerhorn": {
+      "en": "Gjalerhorn",
+      "es": "Gjalercorn",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frostblade Peak": {
+      "en": "Frostblade Peak",
+      "es": "Pico Filoescarcha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "West Spear Tower": {
+      "en": "West Spear Tower",
+      "es": "Torre Lanza del Oeste",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "North Spear Tower": {
+      "en": "North Spear Tower",
+      "es": "Torre Lanza del Norte",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Chillmere Coast": {
+      "en": "Chillmere Coast",
+      "es": "Costafría",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Whisper Gulch": {
+      "en": "Whisper Gulch",
+      "es": "Garganta Susurro",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sub zone": {
+      "en": "Sub zone",
+      "es": "Subzona",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Winter's Terrace": {
+      "en": "Winter's Terrace",
+      "es": "Bancal del Invierno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Waking Halls": {
+      "en": "The Waking Halls",
+      "es": "Las Salas del Despertar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sorlof's Strand": {
+      "en": "Sorlof's Strand",
+      "es": "Playa de Sorlof",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frostblade Pass": {
+      "en": "Frostblade Pass",
+      "es": "Paso Filoescarcha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Winterfin Caverns": {
+      "en": "Winterfin Caverns",
+      "es": "Cavernas Aleta Invernal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Glimmer Bay": {
+      "en": "Glimmer Bay",
+      "es": "Bahía Titileo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Winterfin Retreat": {
+      "en": "Winterfin Retreat",
+      "es": "Refugio Aleta Invernal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Culling of Stratholme": {
+      "en": "The Culling of Stratholme",
+      "es": "La Matanza de Stratholme",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sands of Nasam": {
+      "en": "Sands of Nasam",
+      "es": "Arenas de Nasam",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Krom's Landing": {
+      "en": "Krom's Landing",
+      "es": "Puerto de Krom",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Nasam's Talon": {
+      "en": "Nasam's Talon",
+      "es": "Garfa de Nasam",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Echo Cove": {
+      "en": "Echo Cove",
+      "es": "Cala del Eco",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Beryl Point": {
+      "en": "Beryl Point",
+      "es": "Alto de Berilo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Garrosh's Landing": {
+      "en": "Garrosh's Landing",
+      "es": "Desembarco de Garrosh",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Warsong Jetty": {
+      "en": "Warsong Jetty",
+      "es": "Malecón Grito de Guerra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Fizzcrank Airstrip": {
+      "en": "Fizzcrank Airstrip",
+      "es": "Pista de Aterrizaje de Palanqueta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Lake Kum'uya": {
+      "en": "Lake Kum'uya",
+      "es": "Lago Kum'uya",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Farshire Fields": {
+      "en": "Farshire Fields",
+      "es": "Campos de Lindeallá",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Farshire": {
+      "en": "Farshire",
+      "es": "Lindeallá",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Farshire Lighthouse": {
+      "en": "Farshire Lighthouse",
+      "es": "Faro de Lindeallá",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Death's Stand": {
+      "en": "Death's Stand",
+      "es": "Confín de la Muerte",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Abandoned Reach": {
+      "en": "The Abandoned Reach",
+      "es": "El Tramo Abandonado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Scalding Pools": {
+      "en": "Scalding Pools",
+      "es": "Pozas Escaldantes",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Transitus Shield": {
+      "en": "Transitus Shield",
+      "es": "Escudo de Tránsito",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bor'gorok Outpost": {
+      "en": "Bor'gorok Outpost",
+      "es": "Avanzada Bor'gorok",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Dens of Dying": {
+      "en": "The Dens of Dying",
+      "es": "Los Cubiles de los Moribundos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Temple City of En'kilah": {
+      "en": "Temple City of En'kilah",
+      "es": "Ciudad Templo de En'kilah",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Wailing Ziggurat": {
+      "en": "The Wailing Ziggurat",
+      "es": "El Zigurat de los Lamentos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Steeljaw's Caravan": {
+      "en": "Steeljaw's Caravan",
+      "es": "Caravana de Quijacero",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Warsong Hold": {
+      "en": "Warsong Hold",
+      "es": "Bastión Grito de Guerra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Plains of Nasam": {
+      "en": "Plains of Nasam",
+      "es": "Llanuras de Nasam",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ruins of Eldra'nath": {
+      "en": "Ruins of Eldra'nath",
+      "es": "Ruinas de Eldra'nath",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Charred Rise": {
+      "en": "Charred Rise",
+      "es": "Alto Carbonizado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Blistering Pool": {
+      "en": "Blistering Pool",
+      "es": "Poza Virulenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frozen Reach": {
+      "en": "Frozen Reach",
+      "es": "Tramo Helado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Torp's Farm": {
+      "en": "Torp's Farm",
+      "es": "Granja de Torp",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Warsong Granary": {
+      "en": "Warsong Granary",
+      "es": "Granero Grito de Guerra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Warsong Slaughterhouse": {
+      "en": "Warsong Slaughterhouse",
+      "es": "Matadero Grito de Guerra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Warsong Farms Outpost": {
+      "en": "Warsong Farms Outpost",
+      "es": "Avanzada de las Granjas Grito de Guerra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "West Point Station": {
+      "en": "West Point Station",
+      "es": "Estación de la Punta Oeste",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Mid Point Station": {
+      "en": "Mid Point Station",
+      "es": "Estación de la Punta Central",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "South Point Station": {
+      "en": "South Point Station",
+      "es": "Estación de la Punta Sur",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "D.E.H.T.A. Encampment": {
+      "en": "D.E.H.T.A. Encampment",
+      "es": "Campamento D.E.H.T.A.",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Kaw's Roost": {
+      "en": "Kaw's Roost",
+      "es": "Percha de Kaw",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Moa'ki Harbor": {
+      "en": "Moa'ki Harbor",
+      "es": "Puerto Moa'ki",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Indu'le Village": {
+      "en": "Indu'le Village",
+      "es": "Poblado Indu'le",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Snowfall Glade": {
+      "en": "Snowfall Glade",
+      "es": "Claro Avalancha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Half Shell": {
+      "en": "The Half Shell",
+      "es": "La Media Concha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Surge Needle": {
+      "en": "Surge Needle",
+      "es": "Aguja de Flujo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Moonrest Gardens": {
+      "en": "Moonrest Gardens",
+      "es": "Jardines Reposo Lunar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Stars' Rest": {
+      "en": "Stars' Rest",
+      "es": "Reposo Estelar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Westfall Brigade Encampment": {
+      "en": "Westfall Brigade Encampment",
+      "es": "Campamento de la Brigada de los Páramos de Poniente",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Lothalor Woodlands": {
+      "en": "Lothalor Woodlands",
+      "es": "Bosque Lothalor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Icemist Falls": {
+      "en": "Icemist Falls",
+      "es": "Cataratas Bruma de Hielo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Pit of Narjun": {
+      "en": "The Pit of Narjun",
+      "es": "El Foso de Narjun",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Lake Indu'le": {
+      "en": "Lake Indu'le",
+      "es": "Lago Indu'le",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ruby Dragonshrine": {
+      "en": "Ruby Dragonshrine",
+      "es": "Santuario de Dragones Rubí",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Fordragon Hold": {
+      "en": "Fordragon Hold",
+      "es": "Bastión de Fordragón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Kor'kron Vanguard": {
+      "en": "Kor'kron Vanguard",
+      "es": "Vanguardia Kor'kron",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Court of Skulls": {
+      "en": "The Court of Skulls",
+      "es": "La Corte de las Calaveras",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Galakrond's Rest": {
+      "en": "Galakrond's Rest",
+      "es": "Reposo de Galakrond",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Wicked Coil": {
+      "en": "The Wicked Coil",
+      "es": "La Espiral Maldita",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bronze Dragonshrine": {
+      "en": "Bronze Dragonshrine",
+      "es": "Santuario de Dragones Bronce",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Mirror of Dawn": {
+      "en": "The Mirror of Dawn",
+      "es": "El Espejo del Alba",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wintergarde Keep": {
+      "en": "Wintergarde Keep",
+      "es": "Fortaleza de Hibergarde",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wintergarde Mine": {
+      "en": "Wintergarde Mine",
+      "es": "Mina de Hibergarde",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Emerald Dragonshrine": {
+      "en": "Emerald Dragonshrine",
+      "es": "Santuario de Dragones Esmeralda",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "New Hearthglen": {
+      "en": "New Hearthglen",
+      "es": "Nueva Vega del Amparo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Crusader's Landing": {
+      "en": "Crusader's Landing",
+      "es": "El Tramo del Cruzado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Azure Dragonshrine": {
+      "en": "Azure Dragonshrine",
+      "es": "Santuario de Dragones Azur",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Forgotten Shore": {
+      "en": "The Forgotten Shore",
+      "es": "La Orilla Olvidada",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Venomspite": {
+      "en": "Venomspite",
+      "es": "Rencor Venenoso",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Crystal Vice": {
+      "en": "The Crystal Vice",
+      "es": "Vicio de Cristal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Carrion Fields": {
+      "en": "The Carrion Fields",
+      "es": "Los Campos de Carroña",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Onslaught Base Camp": {
+      "en": "Onslaught Base Camp",
+      "es": "Campamento del Embate",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Thorson's Post": {
+      "en": "Thorson's Post",
+      "es": "Puesto de Thorson",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Light's Trust": {
+      "en": "Light's Trust",
+      "es": "Confianza de la Luz",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frostmourne Cavern": {
+      "en": "Frostmourne Cavern",
+      "es": "Caverna Agonía de Escarcha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Scarlet Point": {
+      "en": "Scarlet Point",
+      "es": "Punta Escarlata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ice Heart Cavern": {
+      "en": "Ice Heart Cavern",
+      "es": "Caverna Corazón de Hielo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wintergrasp": {
+      "en": "Wintergrasp",
+      "es": "Conquista del Invierno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Kili'ua's Atoll": {
+      "en": "Kili'ua's Atoll",
+      "es": "Atolón de Kili'ua",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Silverbrook": {
+      "en": "Silverbrook",
+      "es": "Arroyoplata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vordrassil's Heart": {
+      "en": "Vordrassil's Heart",
+      "es": "Corazón de Vordrassil",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vordrassil's Limb": {
+      "en": "Vordrassil's Limb",
+      "es": "Extremidad de Vordrassil",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Amberpine Lodge": {
+      "en": "Amberpine Lodge",
+      "es": "Refugio Pino Ámbar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Solstice Village": {
+      "en": "Solstice Village",
+      "es": "Poblado Solsticio",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Conquest Hold": {
+      "en": "Conquest Hold",
+      "es": "Bastión de la Conquista",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Voldrune": {
+      "en": "Voldrune",
+      "es": "Runavold",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Granite Springs": {
+      "en": "Granite Springs",
+      "es": "Manantial de Granito",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Camp Oneqwah": {
+      "en": "Camp Oneqwah",
+      "es": "Campamento Oneqwah",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Eastwind Shore": {
+      "en": "Eastwind Shore",
+      "es": "Playa Viento Este",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Boulder Hills": {
+      "en": "Boulder Hills",
+      "es": "Colinas Pedrusco",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Rage Fang Shrine": {
+      "en": "Rage Fang Shrine",
+      "es": "Santuario Colmillo Iracundo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Drakil'jin Ruins": {
+      "en": "Drakil'jin Ruins",
+      "es": "Ruinas de Drakil'jin",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Blackriver Logging Camp": {
+      "en": "Blackriver Logging Camp",
+      "es": "Aserradero Río Negro",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Heart's Blood Shrine": {
+      "en": "Heart's Blood Shrine",
+      "es": "Santuario Sangre de Corazón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Hollowstone Mine": {
+      "en": "Hollowstone Mine",
+      "es": "Mina Piedrahueca",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Blue Sky Logging Grounds": {
+      "en": "Blue Sky Logging Grounds",
+      "es": "Aserradero Cielo Azul",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Maw of Neltharion": {
+      "en": "Maw of Neltharion",
+      "es": "Fauces de Neltharion",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Briny Pinnacle": {
+      "en": "The Briny Pinnacle",
+      "es": "El Pináculo Salobre",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Glittering Strand": {
+      "en": "Glittering Strand",
+      "es": "Orilla Resplandeciente",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dragon's Fall": {
+      "en": "Dragon's Fall",
+      "es": "Caída del Dragón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Oculus": {
+      "en": "The Oculus",
+      "es": "El Oculus",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Prospector's Point": {
+      "en": "Prospector's Point",
+      "es": "Altozano del Prospector",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Coldwind Heights": {
+      "en": "Coldwind Heights",
+      "es": "Altos Viento Helado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Redwood Trading Post": {
+      "en": "Redwood Trading Post",
+      "es": "Puesto de Venta de Madera Roja",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vengeance Pass": {
+      "en": "Vengeance Pass",
+      "es": "Paso Venganza",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dawn's Reach": {
+      "en": "Dawn's Reach",
+      "es": "Tramo del Alba",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Heartwood Trading Post": {
+      "en": "Heartwood Trading Post",
+      "es": "Puesto de Venta de Duramen",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Evergreen Trading Post": {
+      "en": "Evergreen Trading Post",
+      "es": "Puesto de Venta de Siempreverde",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Spruce Point Post": {
+      "en": "Spruce Point Post",
+      "es": "Puesto del Altozano de Píceas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "White Pine Trading Post": {
+      "en": "White Pine Trading Post",
+      "es": "Puesto de Venta de Pino Blanco",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Aspen Grove Post": {
+      "en": "Aspen Grove Post",
+      "es": "Puesto de la Alameda",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Forest's Edge Post": {
+      "en": "Forest's Edge Post",
+      "es": "Puesto Fronterizo del Bosque",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Eldritch Heights": {
+      "en": "Eldritch Heights",
+      "es": "Cumbres de Eldritch",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Venture Bay": {
+      "en": "Venture Bay",
+      "es": "Bahía Ventura",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wintergarde Crypt": {
+      "en": "Wintergarde Crypt",
+      "es": "Cripta de Hibergarde",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bloodmoon Isle": {
+      "en": "Bloodmoon Isle",
+      "es": "Isla Luna de Sangre",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Shadowfang Tower": {
+      "en": "Shadowfang Tower",
+      "es": "Torre de Colmillo Oscuro",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wintergarde Mausoleum": {
+      "en": "Wintergarde Mausoleum",
+      "es": "Mausoleo de Hibergarde",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Duskhowl Den": {
+      "en": "Duskhowl Den",
+      "es": "Cubil Aúllaocaso",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Conquest Pit": {
+      "en": "The Conquest Pit",
+      "es": "El Foso de la Conquista",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Path of Iron": {
+      "en": "The Path of Iron",
+      "es": "La Senda de Hierro",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ruins of Tethys": {
+      "en": "Ruins of Tethys",
+      "es": "Ruinas de Tethys",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Silverbrook Hills": {
+      "en": "Silverbrook Hills",
+      "es": "Colinas de Arroyoplata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Broken Bluffs": {
+      "en": "The Broken Bluffs",
+      "es": "Riscos Quebrados",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "7th Legion Front": {
+      "en": "7th Legion Front",
+      "es": "Frente de la Séptima Legión",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Dragon Wastes": {
+      "en": "The Dragon Wastes",
+      "es": "Baldío del Dragón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ruins of Drak'Zin": {
+      "en": "Ruins of Drak'Zin",
+      "es": "Ruinas de Drak'Zin",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Drak'Mar Lake": {
+      "en": "Drak'Mar Lake",
+      "es": "Lago Drak'Mar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dragonspine Tributary": {
+      "en": "Dragonspine Tributary",
+      "es": "Afluente del Espinazo del Dragón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Thorvald's Camp": {
+      "en": "Thorvald's Camp",
+      "es": "Campamento de Thorvald",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ghostblade Post": {
+      "en": "Ghostblade Post",
+      "es": "Puesto del Filo Fantasmal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ashwood Post": {
+      "en": "Ashwood Post",
+      "es": "Puesto Fresno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Lydell's Ambush": {
+      "en": "Lydell's Ambush",
+      "es": "Emboscada de Lydell",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Harkor's Camp": {
+      "en": "Harkor's Camp",
+      "es": "Campamento de Harkor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vordrassil Pass": {
+      "en": "Vordrassil Pass",
+      "es": "Paso de Vordrassil",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ruuna's Camp": {
+      "en": "Ruuna's Camp",
+      "es": "Campamento de Ruuna",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Shrine of Scales": {
+      "en": "Shrine of Scales",
+      "es": "Santuario de Escamas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Drak'atal Passage": {
+      "en": "Drak'atal Passage",
+      "es": "Pasaje de Drak'atal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Argent Stand": {
+      "en": "The Argent Stand",
+      "es": "El Confín Argenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Altar of Sseratus": {
+      "en": "Altar of Sseratus",
+      "es": "Altar de Sseratus",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Drak'Sotra Fields": {
+      "en": "Drak'Sotra Fields",
+      "es": "Campos Drak'Sotra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Avalanche": {
+      "en": "The Avalanche",
+      "es": "La Avalancha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Nesingwary Base Camp": {
+      "en": "Nesingwary Base Camp",
+      "es": "Campamento Base de Nesingwary",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Seabreach Flow": {
+      "en": "The Seabreach Flow",
+      "es": "El Flujo de la Brecha del Mar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Bones of Nozronn": {
+      "en": "The Bones of Nozronn",
+      "es": "Los Huesos de Nozronn",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Kartak's Hold": {
+      "en": "Kartak's Hold",
+      "es": "Bastión de Kartak",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sparktouched Haven": {
+      "en": "Sparktouched Haven",
+      "es": "Retiro Pavesa",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Path of the Lifewarden": {
+      "en": "The Path of the Lifewarden",
+      "es": "La Senda del Guardián de Vida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Plaguelands: The Scarlet Enclave": {
+      "en": "Plaguelands: The Scarlet Enclave",
+      "es": "Tierras de la Peste: El Enclave Escarlata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Mistwhisper Refuge": {
+      "en": "Mistwhisper Refuge",
+      "es": "Refugio Susurraneblina",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Glimmering Pillar": {
+      "en": "The Glimmering Pillar",
+      "es": "El Pilar Iluminado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Spearborn Encampment": {
+      "en": "Spearborn Encampment",
+      "es": "Campamento Lanzonato",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Reliquary of Agony": {
+      "en": "Reliquary of Agony",
+      "es": "Relicario de Agonía",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ebon Watch": {
+      "en": "Ebon Watch",
+      "es": "Puesto de Vigilancia de Ébano",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Thrym's End": {
+      "en": "Thrym's End",
+      "es": "Fin de Thrym",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Reliquary of Pain": {
+      "en": "Reliquary of Pain",
+      "es": "Relicario de Dolor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Rageclaw Den": {
+      "en": "Rageclaw Den",
+      "es": "Guarida de Garrafuria",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Light's Breach": {
+      "en": "Light's Breach",
+      "es": "Brecha de la Luz",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Pools of Zha'Jin": {
+      "en": "Pools of Zha'Jin",
+      "es": "Pozas de Zha'Jin",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Amphitheater of Anguish": {
+      "en": "Amphitheater of Anguish",
+      "es": "Anfiteatro de la Angustia",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Altar of Rhunok": {
+      "en": "Altar of Rhunok",
+      "es": "Altar de Rhunok",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Altar of Har'koa": {
+      "en": "Altar of Har'koa",
+      "es": "Altar de Har'koa",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Pools of Jin'Alai": {
+      "en": "Pools of Jin'Alai",
+      "es": "Pozas de Jin'Alai",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Altar of Quetz'lun": {
+      "en": "Altar of Quetz'lun",
+      "es": "Altar de Quetz'lun",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Altar of Mam'toth": {
+      "en": "Altar of Mam'toth",
+      "es": "Altar de Mam'toth",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Acherus: The Ebon Hold": {
+      "en": "Acherus: The Ebon Hold",
+      "es": "Acherus: El Bastión de Ébano",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "New Avalon Fields": {
+      "en": "New Avalon Fields",
+      "es": "Campos de Nuevo Avalon",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "New Avalon Orchard": {
+      "en": "New Avalon Orchard",
+      "es": "Huerto de Nuevo Avalon",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "New Avalon Town Hall": {
+      "en": "New Avalon Town Hall",
+      "es": "Concejo de Nuevo Avalon",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Havenshire": {
+      "en": "Havenshire",
+      "es": "Villa Refugio",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Havenshire Farms": {
+      "en": "Havenshire Farms",
+      "es": "Granjas de Villa Refugio",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Havenshire Lumber Mill": {
+      "en": "Havenshire Lumber Mill",
+      "es": "Serrería de Villa Refugio",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Havenshire Stables": {
+      "en": "Havenshire Stables",
+      "es": "Establos de Villa Refugio",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Scarlet Hold": {
+      "en": "Scarlet Hold",
+      "es": "El Bastión Escarlata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Chapel of the Crimson Flame": {
+      "en": "Chapel of the Crimson Flame",
+      "es": "Capilla de la Llama Carmesí",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Light's Point Tower": {
+      "en": "Light's Point Tower",
+      "es": "Torre de la Punta de la Luz",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Light's Point": {
+      "en": "Light's Point",
+      "es": "Punta de la Luz",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Crypt of Remembrance": {
+      "en": "Crypt of Remembrance",
+      "es": "Cripta de los Recuerdos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Noxious Glade": {
+      "en": "The Noxious Glade",
+      "es": "El Claro Ponzoñoso",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Tyr's Hand": {
+      "en": "Tyr's Hand",
+      "es": "Mano de Tyr",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "King's Harbor": {
+      "en": "King's Harbor",
+      "es": "Puerto del Rey",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Scarlet Overlook": {
+      "en": "Scarlet Overlook",
+      "es": "Mirador Escarlata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Light's Hope Chapel": {
+      "en": "Light's Hope Chapel",
+      "es": "Capilla de la Esperanza de la Luz",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sinner's Folly": {
+      "en": "Sinner's Folly",
+      "es": "Locura del Pecador",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Pestilent Scar": {
+      "en": "Pestilent Scar",
+      "es": "Cicatriz Pestilente",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Browman Mill": {
+      "en": "Browman Mill",
+      "es": "Molino Cejifrente",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Havenshire Mine": {
+      "en": "Havenshire Mine",
+      "es": "Mina de Villa Refugio",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ursoc's Den": {
+      "en": "Ursoc's Den",
+      "es": "El Cubil de Ursoc",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Bonefields": {
+      "en": "The Bonefields",
+      "es": "Los Campos de Huesos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dorian's Outpost": {
+      "en": "Dorian's Outpost",
+      "es": "Avanzada de Dorian",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Mam'toth Crater": {
+      "en": "Mam'toth Crater",
+      "es": "Cráter de Mam'toth",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Zol'Maz Stronghold": {
+      "en": "Zol'Maz Stronghold",
+      "es": "Bastión de Zol'Maz",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Rageclaw Lake": {
+      "en": "Rageclaw Lake",
+      "es": "Lago de Garrafuria",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Savage Thicket": {
+      "en": "The Savage Thicket",
+      "es": "El Matorral Silvestre",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "New Avalon Forge": {
+      "en": "New Avalon Forge",
+      "es": "Forja de Nuevo Avalon",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dalaran Arena": {
+      "en": "Dalaran Arena",
+      "es": "Arena de Dalaran",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Westguard Inn": {
+      "en": "Westguard Inn",
+      "es": "Taberna de Guardia Oeste",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Waygate": {
+      "en": "Waygate",
+      "es": "Puerta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Shaper's Terrace": {
+      "en": "The Shaper's Terrace",
+      "es": "El Bancal del Creador",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Strand of the Ancients": {
+      "en": "Strand of the Ancients",
+      "es": "Playa de los Ancestros",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bittertide Lake": {
+      "en": "Bittertide Lake",
+      "es": "Lago Olamarga",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Suntouched Pillar": {
+      "en": "The Suntouched Pillar",
+      "es": "El Pilar Toquesol",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frigid Breach": {
+      "en": "Frigid Breach",
+      "es": "Brecha Gélida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Swindlegrin's Dig": {
+      "en": "Swindlegrin's Dig",
+      "es": "Excavación de Timomueca",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Stormwright's Shelf": {
+      "en": "The Stormwright's Shelf",
+      "es": "La Plataforma del Tormentoso",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Death's Hand Encampment": {
+      "en": "Death's Hand Encampment",
+      "es": "Campamento Mano de la Muerte",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Scarlet Tavern": {
+      "en": "Scarlet Tavern",
+      "es": "Taberna Escarlata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Nozzlerust Post": {
+      "en": "Nozzlerust Post",
+      "es": "Puesto Boquilla Oxidada",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Farshire Mine": {
+      "en": "Farshire Mine",
+      "es": "Mina de Lindeallá",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Mosslight Pillar": {
+      "en": "The Mosslight Pillar",
+      "es": "El Pilar Musgoluz",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Saragosa's Landing": {
+      "en": "Saragosa's Landing",
+      "es": "Alto de Saragosa",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vengeance Lift": {
+      "en": "Vengeance Lift",
+      "es": "Elevador de Venganza",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Balejar Watch": {
+      "en": "Balejar Watch",
+      "es": "Avanzada Balejar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "New Agamand Inn": {
+      "en": "New Agamand Inn",
+      "es": "Posada de Nuevo Agamand",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Passage of Lost Fiends": {
+      "en": "Passage of Lost Fiends",
+      "es": "Pasaje de los Malignos Perdidos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Ring of Valor": {
+      "en": "The Ring of Valor",
+      "es": "El Círculo del Valor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Hall of the Frostwolf": {
+      "en": "Hall of the Frostwolf",
+      "es": "Cámara de los Lobo Gélido",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Hall of the Stormpike": {
+      "en": "Hall of the Stormpike",
+      "es": "Cámara de los Pico Tormenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Stormwind Harbor": {
+      "en": "Stormwind Harbor",
+      "es": "Puerto de Ventormenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Makers' Overlook": {
+      "en": "The Makers' Overlook",
+      "es": "El Mirador de los Creadores",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Makers' Perch": {
+      "en": "The Makers' Perch",
+      "es": "El Pedestal de los Creadores",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Scarlet Tower": {
+      "en": "Scarlet Tower",
+      "es": "Torre Escarlata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Onslaught Harbor": {
+      "en": "Onslaught Harbor",
+      "es": "Puerto del Embate",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Snowblind Hills": {
+      "en": "Snowblind Hills",
+      "es": "Colinas Veloneve",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Snowblind Terrace": {
+      "en": "Snowblind Terrace",
+      "es": "Bancal Veloneve",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Brunnhildar Village": {
+      "en": "Brunnhildar Village",
+      "es": "Poblado Brunnhildar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sifreldar Village": {
+      "en": "Sifreldar Village",
+      "es": "Poblado Sifreldar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Forlorn Mine": {
+      "en": "The Forlorn Mine",
+      "es": "La Mina Desolada",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bor's Breath River": {
+      "en": "Bor's Breath River",
+      "es": "Río del Aliento de Bor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Argent Vanguard": {
+      "en": "Argent Vanguard",
+      "es": "Vanguardia Argenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frosthold": {
+      "en": "Frosthold",
+      "es": "Fuerte Escarcha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Grom'arsh Crash-Site": {
+      "en": "Grom'arsh Crash-Site",
+      "es": "Lugar del accidente de Grom'arsh",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Temple of Storms": {
+      "en": "Temple of Storms",
+      "es": "Templo de las Tormentas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Engine of the Makers": {
+      "en": "Engine of the Makers",
+      "es": "Motor de los Creadores",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Foot Steppes": {
+      "en": "The Foot Steppes",
+      "es": "Las Estepas Inferiores",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dragonspine Peaks": {
+      "en": "Dragonspine Peaks",
+      "es": "Cumbres Espinazo de Dragón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Narvir's Cradle": {
+      "en": "Narvir's Cradle",
+      "es": "Cuna de Narvir",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Valley of Ancient Winters": {
+      "en": "Valley of Ancient Winters",
+      "es": "Valle de los Viejos Inviernos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frostfield Lake": {
+      "en": "Frostfield Lake",
+      "es": "Lago Campo de Escarcha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Thunderfall": {
+      "en": "Thunderfall",
+      "es": "Truenotoño",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Camp Tunka'lo": {
+      "en": "Camp Tunka'lo",
+      "es": "Campamento Tunka'lo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Brann's Base-Camp": {
+      "en": "Brann's Base-Camp",
+      "es": "Campamento base de Brann",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Gate of Echoes": {
+      "en": "Gate of Echoes",
+      "es": "Puerta de los Ecos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Plain of Echoes": {
+      "en": "Plain of Echoes",
+      "es": "Llanura de los Ecos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Terrace of the Makers": {
+      "en": "Terrace of the Makers",
+      "es": "Bancal de los Creadores",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Gate of Lightning": {
+      "en": "Gate of Lightning",
+      "es": "Puerta de los Rayos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Path of the Titans": {
+      "en": "Path of the Titans",
+      "es": "Senda de los Titanes",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Loken's Bargain": {
+      "en": "Loken's Bargain",
+      "es": "Acuerdo de Loken",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bor's Fall": {
+      "en": "Bor's Fall",
+      "es": "Caída de Bor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bor's Breath": {
+      "en": "Bor's Breath",
+      "es": "Aliento de Bor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Rohemdal Pass": {
+      "en": "Rohemdal Pass",
+      "es": "Paso de Rohemdal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Storm Foundry": {
+      "en": "The Storm Foundry",
+      "es": "La Fundición de la Tormenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Hibernal Cavern": {
+      "en": "Hibernal Cavern",
+      "es": "Caverna Hibernal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Voldrune Dwelling": {
+      "en": "Voldrune Dwelling",
+      "es": "Morada Runavold",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Torseg's Rest": {
+      "en": "Torseg's Rest",
+      "es": "Reposo de Torseg",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sparksocket Minefield": {
+      "en": "Sparksocket Minefield",
+      "es": "Campo de Minas Encajebujía",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ricket's Folly": {
+      "en": "Ricket's Folly",
+      "es": "Locura de Ricket",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Garm's Bane": {
+      "en": "Garm's Bane",
+      "es": "Pesadilla de Garm",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Garm's Rise": {
+      "en": "Garm's Rise",
+      "es": "Alto de Garm",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Crystalweb Cavern": {
+      "en": "Crystalweb Cavern",
+      "es": "Caverna Red de Cristal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Temple of Life": {
+      "en": "Temple of Life",
+      "es": "Templo de la Vida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Temple of Order": {
+      "en": "Temple of Order",
+      "es": "Templo del Orden",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Temple of Winter": {
+      "en": "Temple of Winter",
+      "es": "Templo del Invierno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Temple of Invention": {
+      "en": "Temple of Invention",
+      "es": "Templo de la Invención",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Death's Rise": {
+      "en": "Death's Rise",
+      "es": "Ascenso de la Muerte",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Dead Fields": {
+      "en": "The Dead Fields",
+      "es": "Los Campos Muertos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dargath's Demise": {
+      "en": "Dargath's Demise",
+      "es": "Óbito de Dargath",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Hidden Hollow": {
+      "en": "The Hidden Hollow",
+      "es": "La Hondonada Oculta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bernau's Happy Fun Land": {
+      "en": "Bernau's Happy Fun Land",
+      "es": "El Maravilloso Mundo de Bernau",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frostgrip's Hollow": {
+      "en": "Frostgrip's Hollow",
+      "es": "Hondonada Puño Helado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Frigid Tomb": {
+      "en": "The Frigid Tomb",
+      "es": "La Tumba Gélida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Twin Shores": {
+      "en": "Twin Shores",
+      "es": "Las Playas Gemelas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Zim'bo's Hideout": {
+      "en": "Zim'bo's Hideout",
+      "es": "Guarida de Zim'bo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Abandoned Camp": {
+      "en": "Abandoned Camp",
+      "es": "Campamento Abandonado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Shadow Vault": {
+      "en": "The Shadow Vault",
+      "es": "La Cámara de las Sombras",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Winter's Breath Lake": {
+      "en": "Winter's Breath Lake",
+      "es": "Lago Aliento Invernal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Forgotten Overlook": {
+      "en": "The Forgotten Overlook",
+      "es": "El Mirador Olvidado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Jintha'kalar Passage": {
+      "en": "Jintha'kalar Passage",
+      "es": "Pasaje de Jintha'kalar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Arriga Footbridge": {
+      "en": "Arriga Footbridge",
+      "es": "Pasarela de Arriga",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Lost Passage": {
+      "en": "The Lost Passage",
+      "es": "El Pasaje Perdido",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bouldercrag's Refuge": {
+      "en": "Bouldercrag's Refuge",
+      "es": "Refugio de Pedruscón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Inventor's Library": {
+      "en": "The Inventor's Library",
+      "es": "La Biblioteca del Inventor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Frozen Mine": {
+      "en": "The Frozen Mine",
+      "es": "La Mina Gélida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frostfloe Deep": {
+      "en": "Frostfloe Deep",
+      "es": "Hondonada Témpano Gélido",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Howling Hollow": {
+      "en": "The Howling Hollow",
+      "es": "La Hondonada Aullante",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Crusader Forward Camp": {
+      "en": "Crusader Forward Camp",
+      "es": "Puesto de Avanzada de los Cruzados",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Stormcrest": {
+      "en": "Stormcrest",
+      "es": "Crestormenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Bonesnap's Camp": {
+      "en": "Bonesnap's Camp",
+      "es": "Campamento Cascahueso",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ufrang's Hall": {
+      "en": "Ufrang's Hall",
+      "es": "Sala de Ufrang",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Obsidian Sanctum": {
+      "en": "The Obsidian Sanctum",
+      "es": "El Sagrario Obsidiana",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ahn'kahet: The Old Kingdom": {
+      "en": "Ahn'kahet: The Old Kingdom",
+      "es": "Ahn'kahet: El Antiguo Reino",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Fjorn's Anvil": {
+      "en": "Fjorn's Anvil",
+      "es": "Yunque de Fjorn",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Savage Ledge": {
+      "en": "Savage Ledge",
+      "es": "Cornisa Salvaje",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Halls of the Ancestors": {
+      "en": "Halls of the Ancestors",
+      "es": "Salas de los Ancestros",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Blighted Pool": {
+      "en": "The Blighted Pool",
+      "es": "La Poza Contagiada",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Eye of Eternity": {
+      "en": "The Eye of Eternity",
+      "es": "El Ojo de la Eternidad",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Argent Vanguard": {
+      "en": "The Argent Vanguard",
+      "es": "La Vanguardia Argenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Mimir's Workshop": {
+      "en": "Mimir's Workshop",
+      "es": "Taller de Mimir",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ironwall Dam": {
+      "en": "Ironwall Dam",
+      "es": "Presa del Muro de Hierro",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Valley of Echoes": {
+      "en": "Valley of Echoes",
+      "es": "Valle de los Ecos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Breach": {
+      "en": "The Breach",
+      "es": "La Brecha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Scourgeholme": {
+      "en": "Scourgeholme",
+      "es": "Ciudad de la Plaga",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Broken Front": {
+      "en": "The Broken Front",
+      "es": "El Frente Roto",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Mord'rethar: The Death Gate": {
+      "en": "Mord'rethar: The Death Gate",
+      "es": "Mord'rethar: La Puerta de la Muerte",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Bombardment": {
+      "en": "The Bombardment",
+      "es": "El Bombardeo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Skybreaker": {
+      "en": "The Skybreaker",
+      "es": "El Rompecielos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Orgrim's Hammer": {
+      "en": "Orgrim's Hammer",
+      "es": "Martillo de Orgrim",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Saronite Mines": {
+      "en": "Saronite Mines",
+      "es": "Minas de Saronita",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Conflagration": {
+      "en": "The Conflagration",
+      "es": "La Conflagración",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ironwall Rampart": {
+      "en": "Ironwall Rampart",
+      "es": "Fortificación del Muro de Hierro",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Weeping Quarry": {
+      "en": "Weeping Quarry",
+      "es": "Cantera Llorosa",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Corp'rethar: The Horror Gate": {
+      "en": "Corp'rethar: The Horror Gate",
+      "es": "Corp'rethar: La Puerta del Horror",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Malykriss: The Vile Hold": {
+      "en": "Malykriss: The Vile Hold",
+      "es": "Malykriss: El Bastión Inmundo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Cathedral of Darkness": {
+      "en": "Cathedral of Darkness",
+      "es": "Catedral de la Oscuridad",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Icecrown Glacier": {
+      "en": "Icecrown Glacier",
+      "es": "Glaciar Corona de Hielo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Underhalls": {
+      "en": "The Underhalls",
+      "es": "Las Cámaras Subterráneas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Njorndar Village": {
+      "en": "Njorndar Village",
+      "es": "Poblado Njorndar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Balargarde Fortress": {
+      "en": "Balargarde Fortress",
+      "es": "Fortaleza de Balargarde",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Kul'galar Keep": {
+      "en": "Kul'galar Keep",
+      "es": "Fortaleza de Kul'galar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Crimson Cathedral": {
+      "en": "The Crimson Cathedral",
+      "es": "La Catedral Carmesí",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sanctum of Reanimation": {
+      "en": "Sanctum of Reanimation",
+      "es": "Sagrario de Reanimación",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Fleshwerks": {
+      "en": "The Fleshwerks",
+      "es": "La Factoría de Carne",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vengeance Landing Inn": {
+      "en": "Vengeance Landing Inn",
+      "es": "Taberna de Campo Venganza",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wildervar Mine": {
+      "en": "Wildervar Mine",
+      "es": "Mina de Vildervar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Pit of the Fang": {
+      "en": "The Pit of the Fang",
+      "es": "El Foso del Colmillo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frosthowl Cavern": {
+      "en": "Frosthowl Cavern",
+      "es": "Caverna Aúllaescarcha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Valley of Lost Hope": {
+      "en": "The Valley of Lost Hope",
+      "es": "El Valle de la Esperanza Perdida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Valley of Fallen Heroes": {
+      "en": "The Valley of Fallen Heroes",
+      "es": "El Valle de los Héroes Caídos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vanguard Infirmary": {
+      "en": "Vanguard Infirmary",
+      "es": "Enfermería de la Vanguardia",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Hall of the Shaper": {
+      "en": "Hall of the Shaper",
+      "es": "Sala del Creador",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Temple of Wisdom": {
+      "en": "Temple of Wisdom",
+      "es": "Templo de Sabiduría",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Death's Breach": {
+      "en": "Death's Breach",
+      "es": "Brecha de la Muerte",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Abandoned Mine": {
+      "en": "Abandoned Mine",
+      "es": "Mina Abandonada",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ruins of the Scarlet Enclave": {
+      "en": "Ruins of the Scarlet Enclave",
+      "es": "Ruinas de El Enclave Escarlata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Halls of Stone": {
+      "en": "Halls of Stone",
+      "es": "Cámaras de Piedra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Halls of Lightning": {
+      "en": "Halls of Lightning",
+      "es": "Cámaras de Relámpagos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Great Tree": {
+      "en": "The Great Tree",
+      "es": "El Gran Árbol",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Mirror of Twilight": {
+      "en": "The Mirror of Twilight",
+      "es": "El Espejo del Crepúsculo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Twilight Rivulet": {
+      "en": "The Twilight Rivulet",
+      "es": "El Riachuelo Crepuscular",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Decrepit Flow": {
+      "en": "The Decrepit Flow",
+      "es": "La Corriente Decrépita",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Forlorn Woods": {
+      "en": "Forlorn Woods",
+      "es": "El Bosque Desolado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ruins of Shandaral": {
+      "en": "Ruins of Shandaral",
+      "es": "Ruinas de Shandaral",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Azure Front": {
+      "en": "The Azure Front",
+      "es": "El Frente Azur",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Violet Stand": {
+      "en": "Violet Stand",
+      "es": "El Confín Violeta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Unbound Thicket": {
+      "en": "The Unbound Thicket",
+      "es": "El Matorral Desatado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sunreaver's Command": {
+      "en": "Sunreaver's Command",
+      "es": "Dominio de los Atracasol",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Windrunner's Overlook": {
+      "en": "Windrunner's Overlook",
+      "es": "Mirador Brisaveloz",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Underbelly": {
+      "en": "The Underbelly",
+      "es": "Los Bajos Fondos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Violet Hold": {
+      "en": "The Violet Hold",
+      "es": "El Bastión Violeta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Eventide": {
+      "en": "The Eventide",
+      "es": "El Manto de la Noche",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Circle of Wills": {
+      "en": "Circle of Wills",
+      "es": "Círculo de Voluntades",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Silverwing Flag Room": {
+      "en": "Silverwing Flag Room",
+      "es": "Sala de la Bandera de Brisa de Plata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Warsong Flag Room": {
+      "en": "Warsong Flag Room",
+      "es": "Sala de la Bandera Grito de Guerra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Crusaders' Pinnacle": {
+      "en": "Crusaders' Pinnacle",
+      "es": "Pináculo de los Cruzados",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Windy Bluffs": {
+      "en": "Windy Bluffs",
+      "es": "Riscos Ventosos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Blackwatch": {
+      "en": "Blackwatch",
+      "es": "La Guardia Negra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Gimorak's Den": {
+      "en": "Gimorak's Den",
+      "es": "Guarida de Gimorak",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Pit of Fiends": {
+      "en": "The Pit of Fiends",
+      "es": "El Foso de los Mefistos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Battlescar Spire": {
+      "en": "Battlescar Spire",
+      "es": "Cumbre Marca de Guerra",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Hall of Horrors": {
+      "en": "Hall of Horrors",
+      "es": "Cámara de los Horrores",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Circle of Suffering": {
+      "en": "The Circle of Suffering",
+      "es": "El Círculo de Sufrimiento",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Rise of Suffering": {
+      "en": "Rise of Suffering",
+      "es": "Alto del Sufrimiento",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Krasus' Landing": {
+      "en": "Krasus' Landing",
+      "es": "Alto de Krasus",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sewer Exit Pipe": {
+      "en": "Sewer Exit Pipe",
+      "es": "Tubería de salida de las cloacas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dalaran Island": {
+      "en": "Dalaran Island",
+      "es": "Isla de Dalaran",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Force Interior": {
+      "en": "Force Interior",
+      "es": "Fuerza Interior",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Gate of the Red Sun": {
+      "en": "Gate of the Red Sun",
+      "es": "Puerta del Sol Rojo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Gate of the Blue Sapphire": {
+      "en": "Gate of the Blue Sapphire",
+      "es": "Puerta del Zafiro Azul",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Gate of the Green Emerald": {
+      "en": "Gate of the Green Emerald",
+      "es": "Puerta de la Esmeralda Verde",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Gate of the Purple Amethyst": {
+      "en": "Gate of the Purple Amethyst",
+      "es": "Puerta de la Amatista Púrpura",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Gate of the Yellow Moon": {
+      "en": "Gate of the Yellow Moon",
+      "es": "Puerta de la Luna Amarilla",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Courtyard of the Ancients": {
+      "en": "Courtyard of the Ancients",
+      "es": "Patio de los Ancestros",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Landing Beach": {
+      "en": "Landing Beach",
+      "es": "Playa de Desembarco",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dalaran City": {
+      "en": "Dalaran City",
+      "es": "Ciudad de Dalaran",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Violet Citadel Spire": {
+      "en": "The Violet Citadel Spire",
+      "es": "Aguja de La Ciudadela Violeta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Naz'anak: The Forgotten Depths": {
+      "en": "Naz'anak: The Forgotten Depths",
+      "es": "Naz'anak: Las Profundidades Olvidadas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sunreaver's Sanctuary": {
+      "en": "Sunreaver's Sanctuary",
+      "es": "Santuario Atracasol",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Elevator": {
+      "en": "Elevator",
+      "es": "Elevador",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Antonidas Memorial": {
+      "en": "Antonidas Memorial",
+      "es": "Monumento de Antonidas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Violet Citadel": {
+      "en": "The Violet Citadel",
+      "es": "La Ciudadela Violeta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Magus Commerce Exchange": {
+      "en": "Magus Commerce Exchange",
+      "es": "Mercado de Magos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "First Legion Forward Camp": {
+      "en": "First Legion Forward Camp",
+      "es": "Puesto de Avanzada de la Primera Legión",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Hall of the Conquered Kings": {
+      "en": "Hall of the Conquered Kings",
+      "es": "Cámara de los Reyes Conquistados",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Befouled Terrace": {
+      "en": "Befouled Terrace",
+      "es": "Bancal Infecto",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Desecrated Altar": {
+      "en": "The Desecrated Altar",
+      "es": "El Altar Profanado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Shimmering Bog": {
+      "en": "Shimmering Bog",
+      "es": "Ciénaga Bruñida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Fallen Temple of Ahn'kahet": {
+      "en": "Fallen Temple of Ahn'kahet",
+      "es": "Templo Caído de Ahn'kahet",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Halls of Binding": {
+      "en": "Halls of Binding",
+      "es": "Sala de Vínculos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Winter's Heart": {
+      "en": "Winter's Heart",
+      "es": "Corazón del Invierno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Broodmother's Nest": {
+      "en": "The Broodmother's Nest",
+      "es": "El Nido de la Madre de Linaje",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dalaran Floating Rocks": {
+      "en": "Dalaran Floating Rocks",
+      "es": "Rocas Flotantes de Dalaran",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Raptor Pens": {
+      "en": "Raptor Pens",
+      "es": "Cercado de Raptores",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Noxious Pass": {
+      "en": "The Noxious Pass",
+      "es": "El Paso Ponzoñoso",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Vargoth's Retreat": {
+      "en": "Vargoth's Retreat",
+      "es": "Reposo de Vargoth",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Violet Citadel Balcony": {
+      "en": "Violet Citadel Balcony",
+      "es": "Balcón de la Ciudadela Violeta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Band of Variance": {
+      "en": "Band of Variance",
+      "es": "Anillo de Discrepancia",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Band of Acceleration": {
+      "en": "Band of Acceleration",
+      "es": "Anillo de Aceleración",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Band of Transmutation": {
+      "en": "Band of Transmutation",
+      "es": "Anillo de Transmutación",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Band of Alignment": {
+      "en": "Band of Alignment",
+      "es": "Anillo de Alineación",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Ashwood Lake": {
+      "en": "Ashwood Lake",
+      "es": "Lago Fresno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Iron Concourse": {
+      "en": "Iron Concourse",
+      "es": "Explanada de Hierro",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Formation Grounds": {
+      "en": "Formation Grounds",
+      "es": "Campo de Formación",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Razorscale's Aerie": {
+      "en": "Razorscale's Aerie",
+      "es": "Nidal de Tajoescama",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Colossal Forge": {
+      "en": "The Colossal Forge",
+      "es": "La Forja Colosal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Scrapyard": {
+      "en": "The Scrapyard",
+      "es": "La Chatarrería",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Conservatory of Life": {
+      "en": "The Conservatory of Life",
+      "es": "El Invernadero de Vida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Archivum": {
+      "en": "The Archivum",
+      "es": "El Archivum",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Argent Tournament Grounds": {
+      "en": "Argent Tournament Grounds",
+      "es": "Campos del Torneo Argenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Tournament": {
+      "en": "Tournament",
+      "es": "Torneo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Expedition Base Camp": {
+      "en": "Expedition Base Camp",
+      "es": "Campamento Base de la Expedición",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Cooper Residence": {
+      "en": "The Cooper Residence",
+      "es": "La Residencia Cooper",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Ring of Champions": {
+      "en": "The Ring of Champions",
+      "es": "La Liza de los Campeones",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Aspirants' Ring": {
+      "en": "The Aspirants' Ring",
+      "es": "La Liza de los Aspirantes",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Argent Valiants' Ring": {
+      "en": "The Argent Valiants' Ring",
+      "es": "La Liza de los Valerosos Argenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Alliance Valiants' Ring": {
+      "en": "The Alliance Valiants' Ring",
+      "es": "La Liza de los Valerosos de la Alianza",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Horde Valiants' Ring": {
+      "en": "The Horde Valiants' Ring",
+      "es": "La Liza de los Valerosos de la Horda",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Argent Pavilion": {
+      "en": "Argent Pavilion",
+      "es": "Pabellón Argenta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sunreaver Pavilion": {
+      "en": "Sunreaver Pavilion",
+      "es": "Pabellón Atracasol",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Silver Covenant Pavilion": {
+      "en": "Silver Covenant Pavilion",
+      "es": "Pabellón de El Pacto de Plata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Forlorn Cavern": {
+      "en": "The Forlorn Cavern",
+      "es": "La Caverna Abandonada",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Quel'Delar's Rest": {
+      "en": "Quel'Delar's Rest",
+      "es": "Reposo de Quel'Delar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Isle of Conquest": {
+      "en": "Isle of Conquest",
+      "es": "Isla de la Conquista",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Trial of the Crusader": {
+      "en": "Trial of the Crusader",
+      "es": "Prueba del Cruzado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Trial of the Champion": {
+      "en": "Trial of the Champion",
+      "es": "Prueba del Campeón",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Runeweaver Square": {
+      "en": "Runeweaver Square",
+      "es": "Plaza Tejerruna",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Silver Enclave": {
+      "en": "The Silver Enclave",
+      "es": "El Enclave de Plata",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Isle of Conquest No Man's Land": {
+      "en": "Isle of Conquest No Man's Land",
+      "es": "Tierra de Nadie de Isla de la Conquista",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Deathspeaker's Watch": {
+      "en": "Deathspeaker's Watch",
+      "es": "Avanzada del Portavoz de la Muerte",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Workshop": {
+      "en": "Workshop",
+      "es": "Taller",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Quarry": {
+      "en": "Quarry",
+      "es": "Cantera",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Docks": {
+      "en": "Docks",
+      "es": "Muelles",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Refinery": {
+      "en": "Refinery",
+      "es": "Refinería",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Horde Keep": {
+      "en": "Horde Keep",
+      "es": "Fortaleza de la Horda",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Alliance Keep": {
+      "en": "Alliance Keep",
+      "es": "Fortaleza de la Alianza",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Sea Reaver's Run": {
+      "en": "The Sea Reaver's Run",
+      "es": "La Travesía del Atracamar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Transport: Alliance Gunship": {
+      "en": "Transport: Alliance Gunship",
+      "es": "Transporte: Nave de Guerra de la Alianza",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Transport: Horde Gunship": {
+      "en": "Transport: Horde Gunship",
+      "es": "Transporte: Nave de Guerra de la Horda",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Hrothgar's Landing": {
+      "en": "Hrothgar's Landing",
+      "es": "Desembarco de Hrothgar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Forge of Souls": {
+      "en": "The Forge of Souls",
+      "es": "La Forja de Almas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Pit of Saron": {
+      "en": "Pit of Saron",
+      "es": "Foso de Saron",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Halls of Reflection": {
+      "en": "Halls of Reflection",
+      "es": "Cámaras de Reflexión",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Transport: Alliance Gunship (IGB)": {
+      "en": "Transport: Alliance Gunship (IGB)",
+      "es": "Transporte: Nave de Guerra de la Alianza",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Transport: Horde Gunship (IGB)": {
+      "en": "Transport: Horde Gunship (IGB)",
+      "es": "Transporte: Nave de Guerra de la Horda",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Frost Queen's Lair": {
+      "en": "The Frost Queen's Lair",
+      "es": "La Guarida de la Reina de Escarcha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Putricide's Laboratory of Alchemical Horrors and Fun": {
+      "en": "Putricide's Laboratory of Alchemical Horrors and Fun",
+      "es": "Laboratorio Horrores y Risas Alquímicas de Putricidio",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Crimson Hall": {
+      "en": "The Crimson Hall",
+      "es": "La Sala Carmesí",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Frozen Throne": {
+      "en": "The Frozen Throne",
+      "es": "El Trono Helado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Sanctum of Blood": {
+      "en": "The Sanctum of Blood",
+      "es": "El Sagrario de Sangre",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Dark Approach": {
+      "en": "The Dark Approach",
+      "es": "El Trayecto Oscuro",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Scourgelord's Command": {
+      "en": "Scourgelord's Command",
+      "es": "Dominio del Señor de la Plaga",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Shadow Throne": {
+      "en": "The Shadow Throne",
+      "es": "El Trono de las Sombras",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Hidden Passage": {
+      "en": "The Hidden Passage",
+      "es": "El Pasaje Oculto",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frostmourne": {
+      "en": "Frostmourne",
+      "es": "Agonía de Escarcha",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Ruby Sanctum": {
+      "en": "The Ruby Sanctum",
+      "es": "El Sagrario Rubí",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Borean Tundra": {
+      "en": "Borean Tundra",
+      "es": "Tundra Boreal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Icecrown": {
+      "en": "Icecrown",
+      "es": "Corona de Hielo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sholazar Basin": {
+      "en": "Sholazar Basin",
+      "es": "Cuenca de Sholazar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dragonblight": {
+      "en": "Dragonblight",
+      "es": "Cementerio de Dragones",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Battle for Wintergrasp": {
+      "en": "Battle for Wintergrasp",
+      "es": "Batalla por Conquista del Invierno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Westspark Workshop": {
+      "en": "Westspark Workshop",
+      "es": "Taller Chispa Occidental",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Steppe of Life": {
+      "en": "The Steppe of Life",
+      "es": "Las Estepas de la Vida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Eastspark Workshop": {
+      "en": "Eastspark Workshop",
+      "es": "Taller Chispa Oriental",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Chilled Quagmire": {
+      "en": "The Chilled Quagmire",
+      "es": "El Cenagal Escalofrío",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Forest of Shadows": {
+      "en": "The Forest of Shadows",
+      "es": "El Bosque de las Sombras",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Glacial Falls": {
+      "en": "Glacial Falls",
+      "es": "Cascadas Glaciales",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Cauldron of Flames": {
+      "en": "The Cauldron of Flames",
+      "es": "El Caldero de Llamas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Winter's Edge Tower": {
+      "en": "Winter's Edge Tower",
+      "es": "Torre Filoinvierno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Flamewatch Tower": {
+      "en": "Flamewatch Tower",
+      "es": "Torre de la Guardia en Llamas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Western Bridge": {
+      "en": "Western Bridge",
+      "es": "Puente Occidental",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Central Bridge": {
+      "en": "Central Bridge",
+      "es": "Puente Central",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wintergrasp Fortress": {
+      "en": "Wintergrasp Fortress",
+      "es": "Fortaleza de Conquista del Invierno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Sunken Ring": {
+      "en": "The Sunken Ring",
+      "es": "El Anillo Sumergido",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Eastern Bridge": {
+      "en": "Eastern Bridge",
+      "es": "Puente Oriental",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Broken Temple": {
+      "en": "The Broken Temple",
+      "es": "El Templo Quebrado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Shadowsight Tower": {
+      "en": "Shadowsight Tower",
+      "es": "Torre de la Vista de las Sombras",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Lifeblood Pillar": {
+      "en": "The Lifeblood Pillar",
+      "es": "El Pilar Sangrevida",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Lost Lands": {
+      "en": "The Lost Lands",
+      "es": "Las Tierras Perdidas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Skyreach Pillar": {
+      "en": "The Skyreach Pillar",
+      "es": "El Pilar del Trecho Celestial",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Hardknuckle Clearing": {
+      "en": "Hardknuckle Clearing",
+      "es": "Claro Callonudillo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sapphire Hive": {
+      "en": "Sapphire Hive",
+      "es": "Enjambre Zafiro",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wintergrasp River": {
+      "en": "Wintergrasp River",
+      "es": "Río Conquista del Invierno",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frenzyheart River": {
+      "en": "Frenzyheart River",
+      "es": "Río Corazón Frenético",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Sundered Shard": {
+      "en": "The Sundered Shard",
+      "es": "El Fragmento Hendido",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Frenzyheart Hill": {
+      "en": "Frenzyheart Hill",
+      "es": "Colina Corazón Frenético",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Rainspeaker Rapids": {
+      "en": "Rainspeaker Rapids",
+      "es": "Rápidos de Hablalluvia",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Lakeside Landing": {
+      "en": "Lakeside Landing",
+      "es": "Pista del Lago",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "River's Heart": {
+      "en": "River's Heart",
+      "es": "Corazón del Río",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Rainspeaker Canopy": {
+      "en": "Rainspeaker Canopy",
+      "es": "Canope de Hablalluvia",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Blight Line": {
+      "en": "The Blight Line",
+      "es": "La Línea de Añublo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Wildgrowth Mangal": {
+      "en": "Wildgrowth Mangal",
+      "es": "Manglar Silvestre",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Mosswalker Village": {
+      "en": "Mosswalker Village",
+      "es": "Poblado Caminamoho",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Borean Wall": {
+      "en": "The Borean Wall",
+      "es": "La Muralla Boreal",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "North Point Station": {
+      "en": "North Point Station",
+      "es": "Estación de la Punta Norte",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Spire of Pain": {
+      "en": "Spire of Pain",
+      "es": "Aguja de Dolor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Spire of Decay": {
+      "en": "Spire of Decay",
+      "es": "Aguja de Putrefacción",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Spire of Blood": {
+      "en": "Spire of Blood",
+      "es": "Aguja de Sangre",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Festering Pools": {
+      "en": "Festering Pools",
+      "es": "Pozas Purulentas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Steam Springs": {
+      "en": "Steam Springs",
+      "es": "Manantiales de Vapor",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Flood Plains": {
+      "en": "The Flood Plains",
+      "es": "Llanuras Anegadas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Geyser Fields": {
+      "en": "The Geyser Fields",
+      "es": "Los Campos de Géiseres",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Fizzcrank Pumping Station": {
+      "en": "Fizzcrank Pumping Station",
+      "es": "Estación de Bombeo de Palanqueta",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Court of Bones": {
+      "en": "The Court of Bones",
+      "es": "El Patio de los Huesos",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Icemist Village": {
+      "en": "Icemist Village",
+      "es": "Poblado Bruma de Hielo",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Westwind Refugee Camp": {
+      "en": "Westwind Refugee Camp",
+      "es": "Campo de Refugiados de Viento Oeste",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Obsidian Dragonshrine": {
+      "en": "Obsidian Dragonshrine",
+      "es": "Santuario de Dragones Obsidiana",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Agmar's Hammer": {
+      "en": "Agmar's Hammer",
+      "es": "Martillo de Agmar",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Coldwind Pass": {
+      "en": "Coldwind Pass",
+      "es": "Pasaje Viento Helado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Angrathar the Wrathgate": {
+      "en": "Angrathar the Wrathgate",
+      "es": "Angrathar la Puerta de Cólera",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Aldur'thar: The Desolation Gate": {
+      "en": "Aldur'thar: The Desolation Gate",
+      "es": "Aldur'thar: La Puerta de la Desolación",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Silent Vigil": {
+      "en": "Silent Vigil",
+      "es": "Vigía Silencioso",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "The Storm Peaks": {
+      "en": "The Storm Peaks",
+      "es": "Cumbres Tormentosas",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Snowdrift Plains": {
+      "en": "Snowdrift Plains",
+      "es": "Llanuras Ventisquero",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Sindragosa's Fall": {
+      "en": "Sindragosa's Fall",
+      "es": "Caída de Sindragosa",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Uncharted Territory": {
+      "en": "Uncharted Territory",
+      "es": "Territorio inexplorado",
+      "source": "questie_github",
+      "file": "Northrend"
+    },
+    "Dire Maul": {
+      "en": "Dire Maul",
+      "es": "La Masacre",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Auchenai Crypts": {
+      "en": "Auchenai Crypts",
+      "es": "Criptas Auchenai",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Blackrock Spire": {
+      "en": "Blackrock Spire",
+      "es": "Cumbre de Roca Negra",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Upper Blackrock Spire": {
+      "en": "Upper Blackrock Spire",
+      "es": "Cumbre de Roca Negra Superior",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Lower Blackrock Spire": {
+      "en": "Lower Blackrock Spire",
+      "es": "Cumbre de Roca Negra Inferior",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Old Hillsbrad Foothills": {
+      "en": "Old Hillsbrad Foothills",
+      "es": "Antiguas Laderas de Trabalomas",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Scarlet Monastery": {
+      "en": "Scarlet Monastery",
+      "es": "Monasterio Escarlata",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Underbog": {
+      "en": "The Underbog",
+      "es": "La Sotiénaga",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Black Morass": {
+      "en": "The Black Morass",
+      "es": "La Ciénaga Negra",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Hellfire Ramparts": {
+      "en": "Hellfire Ramparts",
+      "es": "Murallas del Fuego Infernal",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Mana-Tombs": {
+      "en": "Mana-Tombs",
+      "es": "Tumbas de Maná",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Wailing Caverns": {
+      "en": "Wailing Caverns",
+      "es": "Cuevas de los Lamentos",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Shadow Labyrinth": {
+      "en": "Shadow Labyrinth",
+      "es": "Laberinto de las Sombras",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Coilfang Reservoir": {
+      "en": "Coilfang Reservoir",
+      "es": "Reserva Colmillo Torcido",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Deadmines": {
+      "en": "The Deadmines",
+      "es": "Las Minas de la Muerte",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Sethekk Halls": {
+      "en": "Sethekk Halls",
+      "es": "Salas Sethekk",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Razorfen Downs": {
+      "en": "Razorfen Downs",
+      "es": "Zahúrda Rajacieno",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Ragefire Chasm": {
+      "en": "Ragefire Chasm",
+      "es": "Sima Ígnea",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Steamvault": {
+      "en": "The Steamvault",
+      "es": "La Cámara de Vapor",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Blackfathom Deeps": {
+      "en": "Blackfathom Deeps",
+      "es": "Cavernas de Brazanegra",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Temple of Atal'Hakkar": {
+      "en": "The Temple of Atal'Hakkar",
+      "es": "El Templo de Atal'Hakkar",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Sunken Temple": {
+      "en": "Sunken Temple",
+      "es": "Templo Sumergido",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Caverns of Time": {
+      "en": "Caverns of Time",
+      "es": "Cavernas del Tiempo",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Blood Furnace": {
+      "en": "The Blood Furnace",
+      "es": "El Horno de Sangre",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Shadowfang Keep": {
+      "en": "Shadowfang Keep",
+      "es": "Castillo de Colmillo Oscuro",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Stockade": {
+      "en": "The Stockade",
+      "es": "Las Mazmorras",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Razorfen Kraul": {
+      "en": "Razorfen Kraul",
+      "es": "Horado Rajacieno",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Slave Pens": {
+      "en": "The Slave Pens",
+      "es": "Recinto de los Esclavos",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Mechanar": {
+      "en": "The Mechanar",
+      "es": "El Mechanar",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Hellfire Citadel": {
+      "en": "Hellfire Citadel",
+      "es": "Ciudadela del Fuego Infernal",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Shattered Halls": {
+      "en": "The Shattered Halls",
+      "es": "Las Salas Arrasadas",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Blackrock Depths": {
+      "en": "Blackrock Depths",
+      "es": "Profundidades de Roca Negra",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Botanica": {
+      "en": "The Botanica",
+      "es": "El Invernáculo",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Arcatraz": {
+      "en": "The Arcatraz",
+      "es": "El Arcatraz",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Magisters' Terrace": {
+      "en": "Magisters' Terrace",
+      "es": "Bancal del Magister",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Utgarde Keep": {
+      "en": "Utgarde Keep",
+      "es": "Fortaleza de Utgarde",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Drak'Tharon Keep": {
+      "en": "Drak'Tharon Keep",
+      "es": "Fortaleza de Drak'Tharon",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Utgarde Pinnacle": {
+      "en": "Utgarde Pinnacle",
+      "es": "Pináculo de Utgarde",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Nexus": {
+      "en": "The Nexus",
+      "es": "El Nexo",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Frozen Halls": {
+      "en": "The Frozen Halls",
+      "es": "Las Cámaras Heladas",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Throne of the Tides": {
+      "en": "Throne of the Tides",
+      "es": "Trono de las Mareas",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Lost City of the Tol'vir": {
+      "en": "The Lost City of the Tol'vir",
+      "es": "Ciudad Perdida de los Tol'vir",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Lost City of the Tol'vir": {
+      "en": "Lost City of the Tol'vir",
+      "es": "Ciudad Perdida de los Tol'vir",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Halls of Origination": {
+      "en": "Halls of Origination",
+      "es": "Cámaras de los Orígenes",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Stonecore": {
+      "en": "The Stonecore",
+      "es": "El Núcleo Pétreo",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Blackrock Caverns": {
+      "en": "Blackrock Caverns",
+      "es": "Cavernas Roca Negra",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "The Vortex Pinnacle": {
+      "en": "The Vortex Pinnacle",
+      "es": "La Cumbre del Vórtice",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "End Time": {
+      "en": "End Time",
+      "es": "Fin de los Días",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Hour of Twilight": {
+      "en": "Hour of Twilight",
+      "es": "Hora del Crepúsculo",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Well of Eternity": {
+      "en": "Well of Eternity",
+      "es": "Pozo de la Eternidad",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Mogu'shan Palace": {
+      "en": "Mogu'shan Palace",
+      "es": "Palacio Mogu'shan",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Stormstout Brewery": {
+      "en": "Stormstout Brewery",
+      "es": "Cervecería del Trueno",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Siege of Niuzao Temple": {
+      "en": "Siege of Niuzao Temple",
+      "es": "Asedio del Templo de Niuzao",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Temple of the Jade Serpent": {
+      "en": "Temple of the Jade Serpent",
+      "es": "Templo del Dragón de Jade",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Scarlet Halls": {
+      "en": "Scarlet Halls",
+      "es": "Cámaras Escarlata",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Shado-Pan Monastery": {
+      "en": "Shado-Pan Monastery",
+      "es": "Monasterio del Shadopan",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Gate of the Setting Sun": {
+      "en": "Gate of the Setting Sun",
+      "es": "Puerta del Sol Poniente",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Bizmo's Brawlpub": {
+      "en": "Bizmo's Brawlpub",
+      "es": "Club de Lucha de Bizmo",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Brawl'gar Arena": {
+      "en": "Brawl'gar Arena",
+      "es": "Arena Liza'gar",
+      "source": "questie_github",
+      "file": "Dungeons"
+    },
+    "Molten Core": {
+      "en": "Molten Core",
+      "es": "Núcleo de Magma",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Blackwing Lair": {
+      "en": "Blackwing Lair",
+      "es": "Guarida de Alanegra",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Onyxia's Lair": {
+      "en": "Onyxia's Lair",
+      "es": "Guarida de Onyxia",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Ruins of Ahn'Qiraj": {
+      "en": "Ruins of Ahn'Qiraj",
+      "es": "Ruinas de Ahn'Qiraj",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Gruul's Lair": {
+      "en": "Gruul's Lair",
+      "es": "Guarida de Gruul",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Magtheridon's Lair": {
+      "en": "Magtheridon's Lair",
+      "es": "Guarida de Magtheridon",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Serpentshrine Cavern": {
+      "en": "Serpentshrine Cavern",
+      "es": "Caverna Santuario Serpiente",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Tempest Keep": {
+      "en": "Tempest Keep",
+      "es": "El Castillo de la Tempestad",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Hyjal Summit": {
+      "en": "Hyjal Summit",
+      "es": "La Cima Hyjal",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Black Temple": {
+      "en": "Black Temple",
+      "es": "El Templo Oscuro",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Sunwell Plateau": {
+      "en": "Sunwell Plateau",
+      "es": "Meseta de La Fuente del Sol",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Wyrmrest Temple": {
+      "en": "Wyrmrest Temple",
+      "es": "Templo del Reposo del Dragón",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Vault of Archavon": {
+      "en": "Vault of Archavon",
+      "es": "La Cámara de Archavon",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Argent Tournament": {
+      "en": "Argent Tournament",
+      "es": "Campos del Torneo Argenta",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Icecrown Citadel": {
+      "en": "Icecrown Citadel",
+      "es": "Ciudadela de la Corona de Hielo",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Baradin Hold": {
+      "en": "Baradin Hold",
+      "es": "Bastión de Baradin",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "The Bastion of Twilight": {
+      "en": "The Bastion of Twilight",
+      "es": "El Bastión del Crepúsculo",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Throne of the Four Winds": {
+      "en": "Throne of the Four Winds",
+      "es": "Trono de los Cuatro Vientos",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Firelands": {
+      "en": "Firelands",
+      "es": "Tierras de Fuego",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Blackwing Descent": {
+      "en": "Blackwing Descent",
+      "es": "Descenso de Alanegra",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Dragon Soul": {
+      "en": "Dragon Soul",
+      "es": "Alma de Dragón",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Scarlet Enclave": {
+      "en": "Scarlet Enclave",
+      "es": "Enclave Escarlata",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Mogu'shan Vaults": {
+      "en": "Mogu'shan Vaults",
+      "es": "Cámaras Mogu'shan",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Heart of Fear": {
+      "en": "Heart of Fear",
+      "es": "Corazón del Miedo",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Terrace of Endless Spring": {
+      "en": "Terrace of Endless Spring",
+      "es": "Veranda de la Primavera Eterna",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Throne of Thunder": {
+      "en": "Throne of Thunder",
+      "es": "Solio del Trueno",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Siege of Orgrimmar": {
+      "en": "Siege of Orgrimmar",
+      "es": "Asedio de Orgrimmar",
+      "source": "questie_github",
+      "file": "Raids"
+    },
+    "Warsong Gulch": {
+      "en": "Warsong Gulch",
+      "es": "Garganta Grito de Guerra",
+      "source": "questie_github",
+      "file": "Battlegrounds"
+    },
+    "Alterac Valley": {
+      "en": "Alterac Valley",
+      "es": "Valle de Alterac",
+      "source": "questie_github",
+      "file": "Battlegrounds"
+    },
+    "Arathi Basin": {
+      "en": "Arathi Basin",
+      "es": "Cuenca de Arathi",
+      "source": "questie_github",
+      "file": "Battlegrounds"
+    },
+    "Eye of the Storm": {
+      "en": "Eye of the Storm",
+      "es": "Ojo de la Tormenta",
+      "source": "questie_github",
+      "file": "Battlegrounds"
+    }
+  }
+}

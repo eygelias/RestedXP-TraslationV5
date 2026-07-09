@@ -1,0 +1,12 @@
+{
+  "quests": {},
+  "npcs": {},
+  "items": {},
+  "objects": {},
+  "zones": {},
+  "spells": {},
+  "terms": {},
+  "_info": {
+    "uso": "Agrega correcciones manuales por nombre inglés. Ejemplo: \"zones\": {\"Old Town\": \"Casco Antiguo\"}."
+  }
+}

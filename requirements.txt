@@ -1,0 +1,4 @@
+PyQt5>=5.15.0
+PyQtWebEngine>=5.15.0
+deep-translator>=1.11.0
+pyinstaller>=6.0
