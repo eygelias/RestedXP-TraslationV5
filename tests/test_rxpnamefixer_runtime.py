@@ -28,6 +28,12 @@ class RuntimeIntegrationTests(unittest.TestCase):
         self.assertIn("UpdateTargetFrame", LUA)
         self.assertIn("C_Timer.NewTicker", LUA)
 
+    def test_never_maps_only_remaining_mob_to_arbitrary_target(self):
+        self.assertNotIn("if #candidates == 1 then", LUA)
+        self.assertIn("if not trustedID and FirstToken(wrong) ~= FirstToken(correct)", LUA)
+        self.assertIn('CacheUnit("mouseover")', LUA)
+        self.assertNotIn('LearnFromUnit("mouseover")', LUA)
+
     def test_shared_typo_is_learned_and_applied_to_every_target(self):
         self.assertIn("RXPNameFixerDB.wordOverrides", LUA)
         self.assertIn("LearnWordOverride", LUA)

@@ -1,12 +1,12 @@
 -- RXPNameFixer.lua
 -- Sincroniza RestedXP con nombres reales del cliente WoW en tiempo real.
--- v2.2 - Propaga typos compartidos entre nombres del mismo grupo de mobs.
+-- v2.3 - Nunca reasigna entidades distintas sin ID exacto.
 
 local ADDON_NAME = ...
 local AceAddon = LibStub and LibStub("AceAddon-3.0", true)
 local addon = AceAddon and AceAddon:GetAddon("RXPGuides", true)
 if not addon then
-    print("|cffff0000RXP Name Fixer v2.2|r: no encontró AceAddon RXPGuides")
+    print("|cffff0000RXP Name Fixer v2.3|r: no encontró AceAddon RXPGuides")
     return
 end
 
@@ -62,6 +62,23 @@ local function ExtractID(value)
     if type(value) == "number" then return value end
     if type(value) ~= "string" then return nil end
     return tonumber(value:match("::(%d+)$") or value:match("^(%d+)$"))
+end
+
+local function FirstToken(value)
+    local name = StripEntry(value)
+    return type(name) == "string" and strlower(name):match("^%S+") or nil
+end
+
+-- Eliminar aprendizajes v2.2 que mezclaron entidades distintas sin ID.
+local invalidOverrides = {}
+for wrong, correct in pairs(overrides) do
+    if FirstToken(wrong) ~= FirstToken(correct) then
+        table.insert(invalidOverrides, {wrong, correct})
+    end
+end
+for _, entry in ipairs(invalidOverrides) do
+    Log("PURGE", entry[1] .. " -/-> " .. entry[2], "entidades distintas sin ID")
+    overrides[entry[1]] = nil
 end
 
 local function ResolveName(name)
@@ -232,10 +249,14 @@ local function LearnWordOverride(wrong, correct, silent)
     return true
 end
 
-local function LearnOverride(wrong, correct, reason)
+local function LearnOverride(wrong, correct, reason, trustedID)
     wrong, correct = StripEntry(wrong), StripEntry(correct)
     if type(wrong) ~= "string" or type(correct) ~= "string" then return false end
     if wrong == "" or correct == "" or wrong == correct then return false end
+    if not trustedID and FirstToken(wrong) ~= FirstToken(correct) then
+        Log("REJECT", wrong .. " -/-> " .. correct, "sin ID exacto")
+        return false
+    end
     if overrides[wrong] == correct then
         LearnWordOverride(wrong, correct, true)
         return false
@@ -273,7 +294,7 @@ local function LearnByElementID(id, realName)
                 for _, value in pairs(list) do
                     if ExtractID(value) == id then
                         local wrong = StripEntry(value)
-                        if LearnOverride(wrong, realName, "ID " .. id) then learned = true end
+                        if LearnOverride(wrong, realName, "ID " .. id, true) then learned = true end
                     end
                 end
             end
@@ -293,9 +314,6 @@ local function LearnFromUnit(unit)
     if ContainsName(lists, realName) then return false end
     local candidates = CollectNames(lists)
     if #candidates == 0 then return false end
-    if #candidates == 1 then
-        return LearnOverride(candidates[1], realName, "único objetivo activo, ID " .. id)
-    end
 
     local best, bestScore, secondScore
     bestScore, secondScore = 0, 0
@@ -456,7 +474,7 @@ frame:SetScript("OnEvent", function(_, event, arg1)
     if event == "PLAYER_TARGET_CHANGED" then
         C_Timer.After(0, function() RefreshRuntime("target") end)
     elseif event == "UPDATE_MOUSEOVER_UNIT" then
-        C_Timer.After(0, function() LearnFromUnit("mouseover"); SyncTargetMacro() end)
+        C_Timer.After(0, function() CacheUnit("mouseover"); SyncTargetMacro() end)
     elseif event == "NAME_PLATE_UNIT_ADDED" then
         CacheUnit(arg1)
     elseif event == "PLAYER_ENTERING_WORLD" then
@@ -482,7 +500,7 @@ SlashCmdList.RXPNAMEFIXER = function(message)
         for _ in pairs(namesByID) do cached = cached + 1 end
         for _ in pairs(overrides) do learned = learned + 1 end
         for _ in pairs(wordOverrides) do wordCount = wordCount + 1 end
-        print("|cff00ff00RXP Name Fixer v2.2|r ACTIVO")
+        print("|cff00ff00RXP Name Fixer v2.3|r ACTIVO")
         print("  Cache NPC: " .. cached .. " | Overrides: " .. learned .. " | Palabras: " .. wordCount)
         print("  Capturas: " .. stats.captures .. " | Aprendidos: " .. stats.learned)
         print("  Macros: " .. stats.macro .. " | Textos: " .. stats.text)
@@ -520,5 +538,5 @@ end
 for wrong, correct in pairs(overrides) do LearnWordOverride(wrong, correct, true) end
 
 InstallHooks()
-Log("SYSTEM", "RXP Name Fixer v2.2 cargado")
-print("|cff00ff00RXP Name Fixer v2.2|r ACTIVO — corrección por nombre y typo compartido")
+Log("SYSTEM", "RXP Name Fixer v2.3 cargado")
+print("|cff00ff00RXP Name Fixer v2.3|r ACTIVO — solo corrige entidades verificadas")
