@@ -28,6 +28,11 @@ class RuntimeIntegrationTests(unittest.TestCase):
         self.assertIn("UpdateTargetFrame", LUA)
         self.assertIn("C_Timer.NewTicker", LUA)
 
+    def test_low_priority_star_prefix_is_idempotent(self):
+        self.assertIn('gsub("^[%+%*]+", "")', LUA)
+        self.assertIn('value:match("^%*+")', LUA)
+        self.assertNotIn('value:sub(1, 1) == "*"', LUA)
+
     def test_never_maps_only_remaining_mob_to_arbitrary_target(self):
         self.assertNotIn("if #candidates == 1 then", LUA)
         self.assertIn("if not trustedID and FirstToken(wrong) ~= FirstToken(correct)", LUA)

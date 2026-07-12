@@ -1,12 +1,12 @@
 -- RXPNameFixer.lua
 -- Sincroniza RestedXP con nombres reales del cliente WoW en tiempo real.
--- v2.3 - Nunca reasigna entidades distintas sin ID exacto.
+-- v2.4 - Normaliza prefijo interno * de baja prioridad sin acumularlo.
 
 local ADDON_NAME = ...
 local AceAddon = LibStub and LibStub("AceAddon-3.0", true)
 local addon = AceAddon and AceAddon:GetAddon("RXPGuides", true)
 if not addon then
-    print("|cffff0000RXP Name Fixer v2.3|r: no encontró AceAddon RXPGuides")
+    print("|cffff0000RXP Name Fixer v2.4|r: no encontró AceAddon RXPGuides")
     return
 end
 
@@ -54,8 +54,15 @@ end
 
 local function StripEntry(value)
     if type(value) ~= "string" then return value end
-    local name = value:match("^%+?(.+)::%d+$") or value
-    return name:gsub("^%+", "")
+    local name = value:match("^[%+%*]*(.+)::%d+$") or value
+    return name:gsub("^[%+%*]+", "")
+end
+
+local function PreserveLowPriority(value, fixed)
+    if fixed and type(value) == "string" and value:match("^%*+") then
+        return "*" .. fixed
+    end
+    return fixed
 end
 
 local function ExtractID(value)
@@ -339,7 +346,7 @@ local function ApplyOverridesToLists()
     for _, list in ipairs(GetTargetLists()) do
         if type(list) == "table" then
             for key, value in pairs(list) do
-                local fixed = ResolveName(value)
+                local fixed = PreserveLowPriority(value, ResolveName(value))
                 if type(fixed) == "string" and fixed ~= value then
                     list[key] = fixed
                     changed = true
@@ -361,7 +368,7 @@ local function ApplyOverridesToSteps()
                 for index, value in pairs(list) do
                     local id = ExtractID(value)
                     local fixed = id and GetNameByID(id) or ResolveName(value)
-                    if fixed and type(value) == "string" and value:sub(1, 1) == "*" then fixed = "*" .. fixed end
+                    fixed = PreserveLowPriority(value, fixed)
                     if fixed and fixed ~= value then list[index] = fixed; changed = true end
                 end
             end
@@ -500,7 +507,7 @@ SlashCmdList.RXPNAMEFIXER = function(message)
         for _ in pairs(namesByID) do cached = cached + 1 end
         for _ in pairs(overrides) do learned = learned + 1 end
         for _ in pairs(wordOverrides) do wordCount = wordCount + 1 end
-        print("|cff00ff00RXP Name Fixer v2.3|r ACTIVO")
+        print("|cff00ff00RXP Name Fixer v2.4|r ACTIVO")
         print("  Cache NPC: " .. cached .. " | Overrides: " .. learned .. " | Palabras: " .. wordCount)
         print("  Capturas: " .. stats.captures .. " | Aprendidos: " .. stats.learned)
         print("  Macros: " .. stats.macro .. " | Textos: " .. stats.text)
@@ -538,5 +545,5 @@ end
 for wrong, correct in pairs(overrides) do LearnWordOverride(wrong, correct, true) end
 
 InstallHooks()
-Log("SYSTEM", "RXP Name Fixer v2.3 cargado")
-print("|cff00ff00RXP Name Fixer v2.3|r ACTIVO — solo corrige entidades verificadas")
+Log("SYSTEM", "RXP Name Fixer v2.4 cargado")
+print("|cff00ff00RXP Name Fixer v2.4|r ACTIVO — prefijos y entidades seguros")
