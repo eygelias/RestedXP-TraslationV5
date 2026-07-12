@@ -249,7 +249,7 @@ Copiar a:
 C:\Program Files (x86)\World of Warcraft\_anniversary_\Interface\AddOns\RXPNameFixer\
 ```
 
-Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` para cargar v2.1:
+Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` para cargar v2.2:
 
 ```text
 /reload
@@ -257,12 +257,13 @@ Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` p
 /rxpnf test
 ```
 
-Después no requiere `/reload` al cambiar de paso, objetivo o zona. RXPNameFixer v2.1:
+Después no requiere `/reload` al cambiar de paso, objetivo o zona. RXPNameFixer v2.2:
 
 - Hookea directamente `addon.targeting.UpdateMacro` (RXPGuides guarda `EditMacro` en un local).
 - Obtiene el objeto privado real mediante `AceAddon:GetAddon("RXPGuides")`; `_G.RXPGuides` solo es la API pública vacía.
 - Lee listas reales mediante `addon.targeting.GetCurrentTargets()`.
 - Aprende nombre correcto al seleccionar/mouseover NPC, priorizando ID exacto.
+- Si descubre un typo compartido (`Umbropantano` → `Umbrapantano`), lo propaga a todos los mobs del grupo.
 - Corrige macro `RXPTargeting`, listas internas y texto activo.
 - Actualiza Target Frame y difiere cambios si estás en combate.
 - Revisa cambios cada 0.75 s.

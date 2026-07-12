@@ -28,6 +28,13 @@ class RuntimeIntegrationTests(unittest.TestCase):
         self.assertIn("UpdateTargetFrame", LUA)
         self.assertIn("C_Timer.NewTicker", LUA)
 
+    def test_shared_typo_is_learned_and_applied_to_every_target(self):
+        self.assertIn("RXPNameFixerDB.wordOverrides", LUA)
+        self.assertIn("LearnWordOverride", LUA)
+        self.assertIn("wordOverrides[word]", LUA)
+        self.assertIn("for wrong, correct in pairs(overrides)", LUA)
+        self.assertIn('wordOverrides["Umbropantano"] = "Umbrapantano"', LUA)
+
     def test_tooltip_created_once_not_per_lookup(self):
         self.assertEqual(LUA.count('CreateFrame("GameTooltip", "RXPNameFixerTooltip"'), 1)
         self.assertIn("id and GetNameByID(id) or ResolveName(value)", LUA)

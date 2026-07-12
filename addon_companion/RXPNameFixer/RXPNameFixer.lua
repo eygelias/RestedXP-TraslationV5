@@ -1,12 +1,12 @@
 -- RXPNameFixer.lua
 -- Sincroniza RestedXP con nombres reales del cliente WoW en tiempo real.
--- v2.1 - Usa objeto AceAddon privado real de RXPGuides.
+-- v2.2 - Propaga typos compartidos entre nombres del mismo grupo de mobs.
 
 local ADDON_NAME = ...
 local AceAddon = LibStub and LibStub("AceAddon-3.0", true)
 local addon = AceAddon and AceAddon:GetAddon("RXPGuides", true)
 if not addon then
-    print("|cffff0000RXP Name Fixer v2.1|r: no encontró AceAddon RXPGuides")
+    print("|cffff0000RXP Name Fixer v2.2|r: no encontró AceAddon RXPGuides")
     return
 end
 
@@ -14,9 +14,11 @@ RXPNameFixerDB = RXPNameFixerDB or {}
 RXPNameFixerLog = RXPNameFixerLog or {}
 RXPNameFixerDB.names = RXPNameFixerDB.names or {}
 RXPNameFixerDB.overrides = RXPNameFixerDB.overrides or {}
+RXPNameFixerDB.wordOverrides = RXPNameFixerDB.wordOverrides or {}
 
 local namesByID = RXPNameFixerDB.names
 local overrides = RXPNameFixerDB.overrides
+local wordOverrides = RXPNameFixerDB.wordOverrides
 local logMax = 300
 local stats = {captures = 0, learned = 0, macro = 0, text = 0}
 local hooksReady = false
@@ -34,6 +36,7 @@ end
 
 -- Correcciones verificadas conocidas.
 overrides["Akoru el Clamafuegos"] = "Akoru el Pirotigma"
+wordOverrides["Umbropantano"] = "Umbrapantano"
 
 local function Log(category, message, detail)
     table.insert(RXPNameFixerLog, {
@@ -69,6 +72,9 @@ local function ResolveName(name)
         seen[name] = true
         name = overrides[name]
     end
+    name = name:gsub("(%S+)", function(word)
+        return wordOverrides[word] or word
+    end)
     return name
 end
 
@@ -82,6 +88,13 @@ local function ReplaceKnownNames(text)
                 text = fixed
                 changed = true
             end
+        end
+    end
+    for wrong, correct in pairs(wordOverrides) do
+        local fixed = text:gsub("%f[%a]" .. EscapePattern(wrong) .. "%f[%A]", correct)
+        if fixed ~= text then
+            text = fixed
+            changed = true
         end
     end
     return text, changed
@@ -182,15 +195,53 @@ local function Similarity(a, b)
     for token in pairs(ta) do countA = countA + 1; if tb[token] then common = common + 1 end end
     for _ in pairs(tb) do countB = countB + 1 end
     if countA + countB == 0 then return 0 end
-    return (2 * common) / (countA + countB)
+    local score = (2 * common) / (countA + countB)
+    local firstA = strlower(tostring(a or "")):match("^%S+")
+    local firstB = strlower(tostring(b or "")):match("^%S+")
+    if firstA and firstA == firstB then score = math.min(1, score + 0.35) end
+    return score
+end
+
+local function LearnWordOverride(wrong, correct, silent)
+    local wrongWords, correctWords = {}, {}
+    for word in tostring(wrong or ""):gmatch("%S+") do table.insert(wrongWords, word) end
+    for word in tostring(correct or ""):gmatch("%S+") do table.insert(correctWords, word) end
+    if #wrongWords ~= #correctWords or #wrongWords == 0 then return false end
+
+    local wrongWord, correctWord, differences
+    differences = 0
+    for index = 1, #wrongWords do
+        if wrongWords[index] ~= correctWords[index] then
+            differences = differences + 1
+            wrongWord, correctWord = wrongWords[index], correctWords[index]
+        end
+    end
+    if differences ~= 1 or #wrongWord ~= #correctWord then return false end
+
+    local byteDifferences = 0
+    for index = 1, #wrongWord do
+        if wrongWord:byte(index) ~= correctWord:byte(index) then byteDifferences = byteDifferences + 1 end
+    end
+    if byteDifferences > 2 or wordOverrides[wrongWord] == correctWord then return false end
+
+    wordOverrides[wrongWord] = correctWord
+    if not silent then
+        Log("WORD_LEARN", wrongWord .. " -> " .. correctWord, "propagación al grupo activo")
+        print("|cff00ff00RXP Name Fixer|r: typo compartido " .. wrongWord .. " -> " .. correctWord)
+    end
+    return true
 end
 
 local function LearnOverride(wrong, correct, reason)
     wrong, correct = StripEntry(wrong), StripEntry(correct)
     if type(wrong) ~= "string" or type(correct) ~= "string" then return false end
     if wrong == "" or correct == "" or wrong == correct then return false end
-    if overrides[wrong] == correct then return false end
+    if overrides[wrong] == correct then
+        LearnWordOverride(wrong, correct, true)
+        return false
+    end
     overrides[wrong] = correct
+    LearnWordOverride(wrong, correct, false)
     stats.learned = stats.learned + 1
     Log("LEARN", wrong .. " -> " .. correct, reason)
     print("|cff00ff00RXP Name Fixer|r: " .. wrong .. " -> " .. correct)
@@ -427,11 +478,12 @@ SLASH_RXPNAMEFIXER1 = "/rxpnf"
 SlashCmdList.RXPNAMEFIXER = function(message)
     message = strlower(strtrim(message or ""))
     if message == "" or message == "stats" then
-        local cached, learned = 0, 0
+        local cached, learned, wordCount = 0, 0, 0
         for _ in pairs(namesByID) do cached = cached + 1 end
         for _ in pairs(overrides) do learned = learned + 1 end
-        print("|cff00ff00RXP Name Fixer v2.1|r ACTIVO")
-        print("  Cache NPC: " .. cached .. " | Overrides: " .. learned)
+        for _ in pairs(wordOverrides) do wordCount = wordCount + 1 end
+        print("|cff00ff00RXP Name Fixer v2.2|r ACTIVO")
+        print("  Cache NPC: " .. cached .. " | Overrides: " .. learned .. " | Palabras: " .. wordCount)
         print("  Capturas: " .. stats.captures .. " | Aprendidos: " .. stats.learned)
         print("  Macros: " .. stats.macro .. " | Textos: " .. stats.text)
         print("  Hooks: " .. (hooksReady and "OK" or "esperando RXPGuides"))
@@ -455,13 +507,18 @@ SlashCmdList.RXPNAMEFIXER = function(message)
     elseif message == "clear" then
         wipe(namesByID)
         wipe(overrides)
+        wipe(wordOverrides)
         overrides["Akoru el Clamafuegos"] = "Akoru el Pirotigma"
+        wordOverrides["Umbropantano"] = "Umbrapantano"
         print("|cff00ff00RXP Name Fixer|r cache y aprendizaje limpiados")
     else
         print("/rxpnf [stats|sync|test|log|clear]")
     end
 end
 
+-- Derivar typos compartidos de correcciones aprendidas en sesiones anteriores.
+for wrong, correct in pairs(overrides) do LearnWordOverride(wrong, correct, true) end
+
 InstallHooks()
-Log("SYSTEM", "RXP Name Fixer v2.1 cargado")
-print("|cff00ff00RXP Name Fixer v2.1|r ACTIVO — conectado al AceAddon real")
+Log("SYSTEM", "RXP Name Fixer v2.2 cargado")
+print("|cff00ff00RXP Name Fixer v2.2|r ACTIVO — corrección por nombre y typo compartido")
