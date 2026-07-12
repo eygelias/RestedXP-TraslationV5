@@ -1,9 +1,9 @@
-## Interface: 11508, 110205, 50502, 120001, 110207
+## Interface: 20506, 20505, 11508, 50502, 110207
 ## Title: RXP Name Fixer
-## Notes: Corrige nombres de mobs en RestedXP (texto + macro) usando nombres reales del cliente.
+## Notes: Sincroniza macros, objetivos y nombres de RestedXP con el cliente WoW en tiempo real.
 ## Author: RXP Translator V5
-## Version: 1.4
+## Version: 2.0
 ## Dependencies: RXPGuides
-## SavedVariables: RXPNameFixerDB RXPNameFixerLog
+## SavedVariables: RXPNameFixerDB, RXPNameFixerLog
 
 RXPNameFixer.lua

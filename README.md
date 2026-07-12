@@ -249,15 +249,33 @@ Copiar a:
 C:\Program Files (x86)\World of Warcraft\_anniversary_\Interface\AddOns\RXPNameFixer\
 ```
 
-Dentro del juego:
+Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` para cargar v2.0:
 
 ```text
 /reload
 /rxpnf stats
+/rxpnf test
+```
+
+Después no requiere `/reload` al cambiar de paso, objetivo o zona. RXPNameFixer v2.0:
+
+- Hookea directamente `addon.targeting.UpdateMacro` (RXPGuides guarda `EditMacro` en un local).
+- Lee listas reales mediante `addon.targeting.GetCurrentTargets()`.
+- Aprende nombre correcto al seleccionar/mouseover NPC, priorizando ID exacto.
+- Corrige macro `RXPTargeting`, listas internas y texto activo.
+- Actualiza Target Frame y difiere cambios si estás en combate.
+- Revisa cambios cada 0.75 s.
+
+Comandos de diagnóstico:
+
+```text
+/rxpnf stats
+/rxpnf test
+/rxpnf sync
 /rxpnf log
 ```
 
-Este addon no reemplaza el traductor. Solo corrige casos runtime cuando el cliente WoW sabe el nombre real.
+Este addon no reemplaza el traductor. Solo corrige casos runtime cuando el cliente WoW conoce el nombre real.
 
 ## Build EXE Windows
 
