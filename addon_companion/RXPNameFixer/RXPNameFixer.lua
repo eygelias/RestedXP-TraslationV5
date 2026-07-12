@@ -1,10 +1,14 @@
 -- RXPNameFixer.lua
 -- Sincroniza RestedXP con nombres reales del cliente WoW en tiempo real.
--- v2.0 - Hooks directos de Targeting, aprendizaje por objetivo e IDs, sin reload entre pasos.
+-- v2.1 - Usa objeto AceAddon privado real de RXPGuides.
 
 local ADDON_NAME = ...
-local addon = _G.RXPGuides
-if not addon then return end
+local AceAddon = LibStub and LibStub("AceAddon-3.0", true)
+local addon = AceAddon and AceAddon:GetAddon("RXPGuides", true)
+if not addon then
+    print("|cffff0000RXP Name Fixer v2.1|r: no encontró AceAddon RXPGuides")
+    return
+end
 
 RXPNameFixerDB = RXPNameFixerDB or {}
 RXPNameFixerLog = RXPNameFixerLog or {}
@@ -426,7 +430,7 @@ SlashCmdList.RXPNAMEFIXER = function(message)
         local cached, learned = 0, 0
         for _ in pairs(namesByID) do cached = cached + 1 end
         for _ in pairs(overrides) do learned = learned + 1 end
-        print("|cff00ff00RXP Name Fixer v2.0|r ACTIVO")
+        print("|cff00ff00RXP Name Fixer v2.1|r ACTIVO")
         print("  Cache NPC: " .. cached .. " | Overrides: " .. learned)
         print("  Capturas: " .. stats.captures .. " | Aprendidos: " .. stats.learned)
         print("  Macros: " .. stats.macro .. " | Textos: " .. stats.text)
@@ -459,5 +463,5 @@ SlashCmdList.RXPNAMEFIXER = function(message)
 end
 
 InstallHooks()
-Log("SYSTEM", "RXP Name Fixer v2.0 cargado")
-print("|cff00ff00RXP Name Fixer v2.0|r ACTIVO — corrección automática sin reload")
+Log("SYSTEM", "RXP Name Fixer v2.1 cargado")
+print("|cff00ff00RXP Name Fixer v2.1|r ACTIVO — conectado al AceAddon real")

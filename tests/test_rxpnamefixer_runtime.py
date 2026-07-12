@@ -6,6 +6,11 @@ LUA = (ROOT / "addon_companion" / "RXPNameFixer" / "RXPNameFixer.lua").read_text
 
 
 class RuntimeIntegrationTests(unittest.TestCase):
+    def test_gets_real_rxp_aceaddon_not_public_empty_table(self):
+        self.assertIn('LibStub("AceAddon-3.0", true)', LUA)
+        self.assertIn('GetAddon("RXPGuides", true)', LUA)
+        self.assertNotIn("local addon = _G.RXPGuides", LUA)
+
     def test_does_not_depend_on_global_editmacro_override(self):
         # RXPGuides/Targeting.lua captures EditMacro in a local at load time.
         self.assertNotIn("EditMacro = function(", LUA)
