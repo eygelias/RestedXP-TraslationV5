@@ -1,12 +1,12 @@
 -- RXPNameFixer.lua
 -- Sincroniza RestedXP con nombres reales del cliente WoW en tiempo real.
--- v2.4 - Normaliza prefijo interno * de baja prioridad sin acumularlo.
+-- v2.5 - Variantes con sufijo son aliases, nunca reemplazos de texto.
 
 local ADDON_NAME = ...
 local AceAddon = LibStub and LibStub("AceAddon-3.0", true)
 local addon = AceAddon and AceAddon:GetAddon("RXPGuides", true)
 if not addon then
-    print("|cffff0000RXP Name Fixer v2.4|r: no encontró AceAddon RXPGuides")
+    print("|cffff0000RXP Name Fixer v2.5|r: no encontró AceAddon RXPGuides")
     return
 end
 
@@ -15,10 +15,12 @@ RXPNameFixerLog = RXPNameFixerLog or {}
 RXPNameFixerDB.names = RXPNameFixerDB.names or {}
 RXPNameFixerDB.overrides = RXPNameFixerDB.overrides or {}
 RXPNameFixerDB.wordOverrides = RXPNameFixerDB.wordOverrides or {}
+RXPNameFixerDB.aliases = RXPNameFixerDB.aliases or {}
 
 local namesByID = RXPNameFixerDB.names
 local overrides = RXPNameFixerDB.overrides
 local wordOverrides = RXPNameFixerDB.wordOverrides
+local aliases = RXPNameFixerDB.aliases
 local logMax = 300
 local stats = {captures = 0, learned = 0, macro = 0, text = 0}
 local hooksReady = false
@@ -76,15 +78,32 @@ local function FirstToken(value)
     return type(name) == "string" and strlower(name):match("^%S+") or nil
 end
 
--- Eliminar aprendizajes v2.2 que mezclaron entidades distintas sin ID.
+local function IsSuffixVariant(left, right)
+    left, right = StripEntry(left), StripEntry(right)
+    if type(left) ~= "string" or type(right) ~= "string" then return false end
+    if right:sub(1, #left + 1) == left .. " " then return true, left, right end
+    if left:sub(1, #right + 1) == right .. " " then return true, right, left end
+    return false
+end
+
+local function StoreAlias(base, variant)
+    aliases[base] = aliases[base] or {}
+    aliases[base][variant] = true
+end
+
+-- Migrar mappings peligrosos v2.4 a aliases y purgar entidades distintas.
 local invalidOverrides = {}
 for wrong, correct in pairs(overrides) do
-    if FirstToken(wrong) ~= FirstToken(correct) then
-        table.insert(invalidOverrides, {wrong, correct})
+    local isVariant, base, variant = IsSuffixVariant(wrong, correct)
+    if isVariant then
+        StoreAlias(base, variant)
+        table.insert(invalidOverrides, {wrong, correct, "migrado a alias"})
+    elseif FirstToken(wrong) ~= FirstToken(correct) then
+        table.insert(invalidOverrides, {wrong, correct, "entidades distintas sin ID"})
     end
 end
 for _, entry in ipairs(invalidOverrides) do
-    Log("PURGE", entry[1] .. " -/-> " .. entry[2], "entidades distintas sin ID")
+    Log("PURGE", entry[1] .. " -/-> " .. entry[2], entry[3])
     overrides[entry[1]] = nil
 end
 
@@ -106,7 +125,7 @@ local function ReplaceKnownNames(text)
     if type(text) ~= "string" then return text, false end
     local changed = false
     for wrong, correct in pairs(overrides) do
-        if wrong ~= correct then
+        if wrong ~= correct and not IsSuffixVariant(wrong, correct) then
             local fixed = text:gsub(EscapePattern(wrong), correct)
             if fixed ~= text then
                 text = fixed
@@ -256,6 +275,17 @@ local function LearnWordOverride(wrong, correct, silent)
     return true
 end
 
+local function LearnAlias(left, right, reason)
+    local isVariant, base, variant = IsSuffixVariant(left, right)
+    if not isVariant then return false end
+    if aliases[base] and aliases[base][variant] then return false end
+    StoreAlias(base, variant)
+    stats.learned = stats.learned + 1
+    Log("ALIAS", base .. " + " .. variant, reason)
+    print("|cff00ff00RXP Name Fixer|r: variante añadida " .. variant)
+    return true
+end
+
 local function LearnOverride(wrong, correct, reason, trustedID)
     wrong, correct = StripEntry(wrong), StripEntry(correct)
     if type(wrong) ~= "string" or type(correct) ~= "string" then return false end
@@ -322,6 +352,12 @@ local function LearnFromUnit(unit)
     local candidates = CollectNames(lists)
     if #candidates == 0 then return false end
 
+    for _, candidate in ipairs(candidates) do
+        if IsSuffixVariant(candidate, realName) then
+            return LearnAlias(candidate, realName, "variante seleccionada, ID " .. id)
+        end
+    end
+
     local best, bestScore, secondScore
     bestScore, secondScore = 0, 0
     for _, candidate in ipairs(candidates) do
@@ -334,8 +370,11 @@ local function LearnFromUnit(unit)
             secondScore = score
         end
     end
-    if best and bestScore >= 0.55 and bestScore - secondScore >= 0.15 then
-        return LearnOverride(best, realName, "similitud " .. string.format("%.2f", bestScore) .. ", ID " .. id)
+    if best and bestScore >= 0.55 and bestScore - secondScore >= 0.15 and
+       FirstToken(best) == FirstToken(realName) then
+        local learned = LearnWordOverride(best, realName, false)
+        if learned then stats.learned = stats.learned + 1 end
+        return learned
     end
     Log("UNRESOLVED", realName, "ID " .. id .. "; candidatos: " .. table.concat(candidates, ", "))
     return false
@@ -351,6 +390,37 @@ local function ApplyOverridesToLists()
                     list[key] = fixed
                     changed = true
                 end
+            end
+        end
+    end
+    return changed
+end
+
+local function ApplyAliasesToLists()
+    local changed = false
+    for _, list in ipairs(GetTargetLists()) do
+        if type(list) == "table" then
+            local existing, priority, additions = {}, {}, {}
+            for _, value in pairs(list) do
+                local name = ResolveName(value)
+                if type(name) == "string" then
+                    existing[name] = true
+                    if type(value) == "string" and value:match("^%*+") then priority[name] = "*" end
+                end
+            end
+            for base, variants in pairs(aliases) do
+                if existing[base] then
+                    for variant in pairs(variants) do
+                        if not existing[variant] then
+                            existing[variant] = true
+                            table.insert(additions, (priority[base] or "") .. variant)
+                        end
+                    end
+                end
+            end
+            for _, variant in ipairs(additions) do
+                table.insert(list, variant)
+                changed = true
             end
         end
     end
@@ -426,10 +496,11 @@ end
 local function RefreshRuntime(unit)
     local learned = unit and LearnFromUnit(unit)
     local changedLists = ApplyOverridesToLists()
+    local changedAliases = ApplyAliasesToLists()
     local changedSteps = ApplyOverridesToSteps()
 
     if addon.targeting then
-        if (learned or changedLists) and addon.targeting.UpdateMacro and not InCombatLockdown() then
+        if (learned or changedLists or changedAliases) and addon.targeting.UpdateMacro and not InCombatLockdown() then
             addon.targeting:UpdateMacro()
         end
         if addon.targeting.UpdateTargetFrame and not InCombatLockdown() then
@@ -437,7 +508,7 @@ local function RefreshRuntime(unit)
         end
     end
     SyncTargetMacro()
-    return learned or changedLists or changedSteps
+    return learned or changedLists or changedAliases or changedSteps
 end
 
 local function ScanNameplates()
@@ -461,6 +532,7 @@ local function InstallHooks()
         hooksecurefunc(addon.targeting, "UpdateUnitList", function()
             C_Timer.After(0, function()
                 local changed = ApplyOverridesToLists()
+                if ApplyAliasesToLists() then changed = true end
                 ApplyOverridesToSteps()
                 if changed and not InCombatLockdown() then addon.targeting:UpdateMacro() end
                 SyncTargetMacro()
@@ -494,8 +566,12 @@ end)
 C_Timer.NewTicker(0.75, function()
     InstallHooks()
     ScanNameplates()
-    ApplyOverridesToLists()
+    local changed = ApplyOverridesToLists()
+    if ApplyAliasesToLists() then changed = true end
     ApplyOverridesToSteps()
+    if changed and addon.targeting and addon.targeting.UpdateMacro and not InCombatLockdown() then
+        addon.targeting:UpdateMacro()
+    end
     SyncTargetMacro()
 end)
 
@@ -503,12 +579,13 @@ SLASH_RXPNAMEFIXER1 = "/rxpnf"
 SlashCmdList.RXPNAMEFIXER = function(message)
     message = strlower(strtrim(message or ""))
     if message == "" or message == "stats" then
-        local cached, learned, wordCount = 0, 0, 0
+        local cached, learned, wordCount, aliasCount = 0, 0, 0, 0
         for _ in pairs(namesByID) do cached = cached + 1 end
         for _ in pairs(overrides) do learned = learned + 1 end
         for _ in pairs(wordOverrides) do wordCount = wordCount + 1 end
-        print("|cff00ff00RXP Name Fixer v2.4|r ACTIVO")
-        print("  Cache NPC: " .. cached .. " | Overrides: " .. learned .. " | Palabras: " .. wordCount)
+        for _, variants in pairs(aliases) do for _ in pairs(variants) do aliasCount = aliasCount + 1 end end
+        print("|cff00ff00RXP Name Fixer v2.5|r ACTIVO")
+        print("  Cache NPC: " .. cached .. " | Overrides: " .. learned .. " | Palabras: " .. wordCount .. " | Alias: " .. aliasCount)
         print("  Capturas: " .. stats.captures .. " | Aprendidos: " .. stats.learned)
         print("  Macros: " .. stats.macro .. " | Textos: " .. stats.text)
         print("  Hooks: " .. (hooksReady and "OK" or "esperando RXPGuides"))
@@ -533,6 +610,7 @@ SlashCmdList.RXPNAMEFIXER = function(message)
         wipe(namesByID)
         wipe(overrides)
         wipe(wordOverrides)
+        wipe(aliases)
         overrides["Akoru el Clamafuegos"] = "Akoru el Pirotigma"
         wordOverrides["Umbropantano"] = "Umbrapantano"
         print("|cff00ff00RXP Name Fixer|r cache y aprendizaje limpiados")
@@ -545,5 +623,5 @@ end
 for wrong, correct in pairs(overrides) do LearnWordOverride(wrong, correct, true) end
 
 InstallHooks()
-Log("SYSTEM", "RXP Name Fixer v2.4 cargado")
-print("|cff00ff00RXP Name Fixer v2.4|r ACTIVO — prefijos y entidades seguros")
+Log("SYSTEM", "RXP Name Fixer v2.5 cargado")
+print("|cff00ff00RXP Name Fixer v2.5|r ACTIVO — aliases sin reemplazar objetivo base")

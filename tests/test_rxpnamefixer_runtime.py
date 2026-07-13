@@ -28,6 +28,14 @@ class RuntimeIntegrationTests(unittest.TestCase):
         self.assertIn("UpdateTargetFrame", LUA)
         self.assertIn("C_Timer.NewTicker", LUA)
 
+    def test_suffix_variant_becomes_alias_not_replacement(self):
+        self.assertIn("RXPNameFixerDB.aliases", LUA)
+        self.assertIn("LearnAlias", LUA)
+        self.assertIn("IsSuffixVariant", LUA)
+        self.assertNotIn("return LearnOverride(best, realName", LUA)
+        self.assertIn("ApplyAliasesToLists", LUA)
+        self.assertIn("overrides[entry[1]] = nil", LUA)
+
     def test_low_priority_star_prefix_is_idempotent(self):
         self.assertIn('gsub("^[%+%*]+", "")', LUA)
         self.assertIn('value:match("^%*+")', LUA)

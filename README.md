@@ -249,7 +249,7 @@ Copiar a:
 C:\Program Files (x86)\World of Warcraft\_anniversary_\Interface\AddOns\RXPNameFixer\
 ```
 
-Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` para cargar v2.4:
+Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` para cargar v2.5:
 
 ```text
 /reload
@@ -257,7 +257,7 @@ Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` p
 /rxpnf test
 ```
 
-Después no requiere `/reload` al cambiar de paso, objetivo o zona. RXPNameFixer v2.4:
+Después no requiere `/reload` al cambiar de paso, objetivo o zona. RXPNameFixer v2.5:
 
 - Hookea directamente `addon.targeting.UpdateMacro` (RXPGuides guarda `EditMacro` en un local).
 - Obtiene el objeto privado real mediante `AceAddon:GetAddon("RXPGuides")`; `_G.RXPGuides` solo es la API pública vacía.
@@ -267,6 +267,8 @@ Después no requiere `/reload` al cambiar de paso, objetivo o zona. RXPNameFixer
 - Mouseover y nameplates solo alimentan cache; no crean reemplazos.
 - Limpia automáticamente mappings corruptos aprendidos por v2.2.
 - Normaliza el prefijo interno `*` de baja prioridad a máximo uno; evita acumulación en cada ticker.
+- Trata variantes con sufijo como aliases adicionales (`Huargo gris` + `Huargo gris alfa`), nunca como reemplazos de texto.
+- Migra mappings de variante creados por v2.4 y evita repeticiones como `alfa alfa alfa`.
 - Si descubre un typo compartido (`Umbropantano` → `Umbrapantano`), lo propaga a todos los mobs del grupo.
 - Corrige macro `RXPTargeting`, listas internas y texto activo.
 - Actualiza Target Frame y difiere cambios si estás en combate.
