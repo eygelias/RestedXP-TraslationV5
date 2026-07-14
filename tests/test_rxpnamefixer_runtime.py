@@ -28,6 +28,14 @@ class RuntimeIntegrationTests(unittest.TestCase):
         self.assertIn("UpdateTargetFrame", LUA)
         self.assertIn("C_Timer.NewTicker", LUA)
 
+    def test_quest_objective_maps_complete_to_following_mob(self):
+        self.assertIn("LearnFromQuestObjectives", LUA)
+        self.assertIn("addon.GetQuestObjectives", LUA)
+        self.assertIn("element.questId", LUA)
+        self.assertIn("element.obj", LUA)
+        self.assertIn('"QUEST_OBJECTIVE"', LUA)
+        self.assertIn("local learnedFromQuest = LearnFromQuestObjectives()", LUA)
+
     def test_id_resolution_updates_step_text_and_macro(self):
         self.assertIn('LearnOverride(oldName, fixed, "ID " .. id, true)', LUA)
         self.assertIn("learnedFromID", LUA)

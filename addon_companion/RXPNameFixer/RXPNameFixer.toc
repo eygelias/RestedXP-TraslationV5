@@ -2,7 +2,7 @@
 ## Title: RXP Name Fixer
 ## Notes: Sincroniza macros, objetivos y nombres de RestedXP con el cliente WoW en tiempo real.
 ## Author: RXP Translator V5
-## Version: 2.6
+## Version: 2.7
 ## Dependencies: RXPGuides
 ## SavedVariables: RXPNameFixerDB, RXPNameFixerLog
 

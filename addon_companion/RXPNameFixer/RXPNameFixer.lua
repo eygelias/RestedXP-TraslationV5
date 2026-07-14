@@ -1,12 +1,12 @@
 -- RXPNameFixer.lua
 -- Sincroniza RestedXP con nombres reales del cliente WoW en tiempo real.
--- v2.6 - Resolución por ID actualiza listas, descripción y macro juntas.
+-- v2.7 - Empareja .complete QUEST,OBJ con .mob sin ID usando Quest Log.
 
 local ADDON_NAME = ...
 local AceAddon = LibStub and LibStub("AceAddon-3.0", true)
 local addon = AceAddon and AceAddon:GetAddon("RXPGuides", true)
 if not addon then
-    print("|cffff0000RXP Name Fixer v2.6|r: no encontró AceAddon RXPGuides")
+    print("|cffff0000RXP Name Fixer v2.7|r: no encontró AceAddon RXPGuides")
     return
 end
 
@@ -306,12 +306,12 @@ local function LearnOverride(wrong, correct, reason, trustedID)
     return true
 end
 
-local function WalkActiveElements(callback)
+local function WalkActiveSteps(callback)
     local visited = {}
     local function WalkStep(step)
         if type(step) ~= "table" or visited[step] then return end
         visited[step] = true
-        for _, element in pairs(step.elements or {}) do callback(element) end
+        callback(step)
     end
 
     if addon.RXPFrame and addon.RXPFrame.activeSteps then
@@ -320,6 +320,63 @@ local function WalkActiveElements(callback)
     for _, context in pairs(addon.generatedSteps or {}) do
         for _, step in pairs(context) do if step.active ~= false then WalkStep(step) end end
     end
+end
+
+local function WalkActiveElements(callback)
+    WalkActiveSteps(function(step)
+        for _, element in pairs(step.elements or {}) do callback(element) end
+    end)
+end
+
+local function QuestObjectiveName(text)
+    if type(text) ~= "string" then return nil end
+    text = strtrim(text)
+    text = text:gsub("%s*:%s*%d+/%d+.*$", "")
+    text = text:gsub("%s+%d+/%d+.*$", "")
+    return strtrim(text)
+end
+
+local function LearnFromQuestObjectives()
+    if not addon.GetQuestObjectives then return false end
+    local changed = false
+
+    WalkActiveSteps(function(step)
+        local pending
+        for _, element in ipairs(step.elements or {}) do
+            if element.questId and element.obj then
+                local objectives = addon.GetQuestObjectives(element.questId, step.index)
+                local objective = objectives and objectives[element.obj]
+                local name = objective and objective.type == "monster" and QuestObjectiveName(objective.text)
+                pending = name and name ~= "" and {
+                    name = name,
+                    questId = element.questId,
+                    obj = element.obj,
+                } or nil
+            elseif pending then
+                local matched
+                for _, key in ipairs({"unitscan", "mobs", "targets"}) do
+                    local list = element[key]
+                    if type(list) == "table" then
+                        for _, value in pairs(list) do
+                            local oldName = StripEntry(value)
+                            if type(oldName) == "string" and not oldName:match("^%d+$") and
+                               oldName ~= pending.name then
+                                local reason = "QUEST_OBJECTIVE " .. pending.questId .. "," .. pending.obj
+                                if LearnOverride(oldName, pending.name, reason, true) then
+                                    changed = true
+                                    Log("QUEST_OBJECTIVE", oldName .. " -> " .. pending.name, reason)
+                                end
+                            end
+                        end
+                        matched = true
+                    end
+                end
+                if matched then pending = nil end
+            end
+        end
+    end)
+
+    return changed
 end
 
 local function LearnByElementID(id, realName)
@@ -502,12 +559,13 @@ end
 
 local function RefreshRuntime(unit)
     local learned = unit and LearnFromUnit(unit)
+    local learnedFromQuest = LearnFromQuestObjectives()
     local changedLists = ApplyOverridesToLists()
     local changedAliases = ApplyAliasesToLists()
     local changedSteps = ApplyOverridesToSteps()
 
     if addon.targeting then
-        if (learned or changedLists or changedAliases or changedSteps) and addon.targeting.UpdateMacro and not InCombatLockdown() then
+        if (learned or learnedFromQuest or changedLists or changedAliases or changedSteps) and addon.targeting.UpdateMacro and not InCombatLockdown() then
             addon.targeting:UpdateMacro()
         end
         if addon.targeting.UpdateTargetFrame and not InCombatLockdown() then
@@ -515,7 +573,7 @@ local function RefreshRuntime(unit)
         end
     end
     SyncTargetMacro()
-    return learned or changedLists or changedAliases or changedSteps
+    return learned or learnedFromQuest or changedLists or changedAliases or changedSteps
 end
 
 local function ScanNameplates()
@@ -538,7 +596,8 @@ local function InstallHooks()
     if addon.targeting.UpdateUnitList then
         hooksecurefunc(addon.targeting, "UpdateUnitList", function()
             C_Timer.After(0, function()
-                local changed = ApplyOverridesToLists()
+                local changed = LearnFromQuestObjectives()
+                if ApplyOverridesToLists() then changed = true end
                 if ApplyAliasesToLists() then changed = true end
                 local changedSteps = ApplyOverridesToSteps()
                 if changedSteps then changed = true end
@@ -574,7 +633,8 @@ end)
 C_Timer.NewTicker(0.75, function()
     InstallHooks()
     ScanNameplates()
-    local changed = ApplyOverridesToLists()
+    local changed = LearnFromQuestObjectives()
+    if ApplyOverridesToLists() then changed = true end
     if ApplyAliasesToLists() then changed = true end
     local changedSteps = ApplyOverridesToSteps()
     if changedSteps then changed = true end
@@ -593,7 +653,7 @@ SlashCmdList.RXPNAMEFIXER = function(message)
         for _ in pairs(overrides) do learned = learned + 1 end
         for _ in pairs(wordOverrides) do wordCount = wordCount + 1 end
         for _, variants in pairs(aliases) do for _ in pairs(variants) do aliasCount = aliasCount + 1 end end
-        print("|cff00ff00RXP Name Fixer v2.6|r ACTIVO")
+        print("|cff00ff00RXP Name Fixer v2.7|r ACTIVO")
         print("  Cache NPC: " .. cached .. " | Overrides: " .. learned .. " | Palabras: " .. wordCount .. " | Alias: " .. aliasCount)
         print("  Capturas: " .. stats.captures .. " | Aprendidos: " .. stats.learned)
         print("  Macros: " .. stats.macro .. " | Textos: " .. stats.text)
@@ -632,5 +692,5 @@ end
 for wrong, correct in pairs(overrides) do LearnWordOverride(wrong, correct, true) end
 
 InstallHooks()
-Log("SYSTEM", "RXP Name Fixer v2.6 cargado")
-print("|cff00ff00RXP Name Fixer v2.6|r ACTIVO — ID sincroniza texto, listas y macro")
+Log("SYSTEM", "RXP Name Fixer v2.7 cargado")
+print("|cff00ff00RXP Name Fixer v2.7|r ACTIVO — objetivos de misión sincronizan texto y macro")

@@ -249,7 +249,7 @@ Copiar a:
 C:\Program Files (x86)\World of Warcraft\_anniversary_\Interface\AddOns\RXPNameFixer\
 ```
 
-Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` para cargar v2.6:
+Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` para cargar v2.7:
 
 ```text
 /reload
@@ -257,11 +257,12 @@ Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` p
 /rxpnf test
 ```
 
-Después no requiere `/reload` al cambiar de paso, objetivo o zona. RXPNameFixer v2.6:
+Después no requiere `/reload` al cambiar de paso, objetivo o zona. RXPNameFixer v2.7:
 
 - Hookea directamente `addon.targeting.UpdateMacro` (RXPGuides guarda `EditMacro` en un local).
 - Obtiene el objeto privado real mediante `AceAddon:GetAddon("RXPGuides")`; `_G.RXPGuides` solo es la API pública vacía.
 - Lee listas reales mediante `addon.targeting.GetCurrentTargets()`.
+- Empareja `.complete QUEST,OBJ` con `.mob` siguiente y usa nombre localizado del Quest Log incluso cuando guía no trae NPC ID.
 - Cuando un `Nombre::ID` resuelve nombre real, registra mapping y sincroniza requisitos, descripción y macro en la misma pasada.
 - Cualquier cambio de step fuerza reconstrucción de `RXPTargeting` fuera de combate.
 - Aprende nombre correcto al seleccionar un NPC, priorizando ID exacto.

@@ -1,4 +1,4 @@
-# RXPNameFixer v2.6
+# RXPNameFixer v2.7
 
 Addon complementario de RestedXP/RXPGuides para sincronizar nombres de mobs/NPC y la macro `RXPTargeting` con los nombres reales del cliente WoW.
 
@@ -41,8 +41,11 @@ Después funciona automáticamente al entrar, cambiar paso, seleccionar NPC o ac
 RestedXP Guides / RXPGuides
 ```
 
-## v2.6
+## v2.7
 
+- Cuando guía usa `.complete QUEST,OBJ` seguido por `.mob` sin ID, toma nombre localizado directamente del objetivo de misión.
+- Ejemplo real: misión `10042` corrige `Verdugo/Invocador enigmático` usando requisitos `Verdugo/Invocador oscuro`.
+- Sincroniza descripción y macro aunque comandos `.mob` no contengan `::NPCID`.
 - Cuando `Nombre::ID` resuelve nombre real, aprende también `nombre viejo → nombre real`.
 - La misma corrección se aplica en una pasada a requisitos, descripción y macro.
 - Cambios dentro de step ahora fuerzan `Targeting.UpdateMacro`.
