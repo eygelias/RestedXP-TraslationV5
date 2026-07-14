@@ -28,6 +28,12 @@ class RuntimeIntegrationTests(unittest.TestCase):
         self.assertIn("UpdateTargetFrame", LUA)
         self.assertIn("C_Timer.NewTicker", LUA)
 
+    def test_id_resolution_updates_step_text_and_macro(self):
+        self.assertIn('LearnOverride(oldName, fixed, "ID " .. id, true)', LUA)
+        self.assertIn("learnedFromID", LUA)
+        self.assertIn("changedSteps) and addon.targeting.UpdateMacro", LUA)
+        self.assertIn("local changedSteps = ApplyOverridesToSteps()", LUA)
+
     def test_suffix_variant_becomes_alias_not_replacement(self):
         self.assertIn("RXPNameFixerDB.aliases", LUA)
         self.assertIn("LearnAlias", LUA)

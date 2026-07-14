@@ -1,12 +1,12 @@
 -- RXPNameFixer.lua
 -- Sincroniza RestedXP con nombres reales del cliente WoW en tiempo real.
--- v2.5 - Variantes con sufijo son aliases, nunca reemplazos de texto.
+-- v2.6 - Resolución por ID actualiza listas, descripción y macro juntas.
 
 local ADDON_NAME = ...
 local AceAddon = LibStub and LibStub("AceAddon-3.0", true)
 local addon = AceAddon and AceAddon:GetAddon("RXPGuides", true)
 if not addon then
-    print("|cffff0000RXP Name Fixer v2.5|r: no encontró AceAddon RXPGuides")
+    print("|cffff0000RXP Name Fixer v2.6|r: no encontró AceAddon RXPGuides")
     return
 end
 
@@ -437,8 +437,15 @@ local function ApplyOverridesToSteps()
             if type(list) == "table" then
                 for index, value in pairs(list) do
                     local id = ExtractID(value)
+                    local oldName = StripEntry(value)
                     local fixed = id and GetNameByID(id) or ResolveName(value)
+                    local learnedFromID = false
+                    if id and fixed and type(oldName) == "string" and
+                       not oldName:match("^%d+$") and oldName ~= fixed then
+                        learnedFromID = LearnOverride(oldName, fixed, "ID " .. id, true)
+                    end
                     fixed = PreserveLowPriority(value, fixed)
+                    if learnedFromID then changed = true end
                     if fixed and fixed ~= value then list[index] = fixed; changed = true end
                 end
             end
@@ -500,7 +507,7 @@ local function RefreshRuntime(unit)
     local changedSteps = ApplyOverridesToSteps()
 
     if addon.targeting then
-        if (learned or changedLists or changedAliases) and addon.targeting.UpdateMacro and not InCombatLockdown() then
+        if (learned or changedLists or changedAliases or changedSteps) and addon.targeting.UpdateMacro and not InCombatLockdown() then
             addon.targeting:UpdateMacro()
         end
         if addon.targeting.UpdateTargetFrame and not InCombatLockdown() then
@@ -533,7 +540,8 @@ local function InstallHooks()
             C_Timer.After(0, function()
                 local changed = ApplyOverridesToLists()
                 if ApplyAliasesToLists() then changed = true end
-                ApplyOverridesToSteps()
+                local changedSteps = ApplyOverridesToSteps()
+                if changedSteps then changed = true end
                 if changed and not InCombatLockdown() then addon.targeting:UpdateMacro() end
                 SyncTargetMacro()
             end)
@@ -568,7 +576,8 @@ C_Timer.NewTicker(0.75, function()
     ScanNameplates()
     local changed = ApplyOverridesToLists()
     if ApplyAliasesToLists() then changed = true end
-    ApplyOverridesToSteps()
+    local changedSteps = ApplyOverridesToSteps()
+    if changedSteps then changed = true end
     if changed and addon.targeting and addon.targeting.UpdateMacro and not InCombatLockdown() then
         addon.targeting:UpdateMacro()
     end
@@ -584,7 +593,7 @@ SlashCmdList.RXPNAMEFIXER = function(message)
         for _ in pairs(overrides) do learned = learned + 1 end
         for _ in pairs(wordOverrides) do wordCount = wordCount + 1 end
         for _, variants in pairs(aliases) do for _ in pairs(variants) do aliasCount = aliasCount + 1 end end
-        print("|cff00ff00RXP Name Fixer v2.5|r ACTIVO")
+        print("|cff00ff00RXP Name Fixer v2.6|r ACTIVO")
         print("  Cache NPC: " .. cached .. " | Overrides: " .. learned .. " | Palabras: " .. wordCount .. " | Alias: " .. aliasCount)
         print("  Capturas: " .. stats.captures .. " | Aprendidos: " .. stats.learned)
         print("  Macros: " .. stats.macro .. " | Textos: " .. stats.text)
@@ -623,5 +632,5 @@ end
 for wrong, correct in pairs(overrides) do LearnWordOverride(wrong, correct, true) end
 
 InstallHooks()
-Log("SYSTEM", "RXP Name Fixer v2.5 cargado")
-print("|cff00ff00RXP Name Fixer v2.5|r ACTIVO — aliases sin reemplazar objetivo base")
+Log("SYSTEM", "RXP Name Fixer v2.6 cargado")
+print("|cff00ff00RXP Name Fixer v2.6|r ACTIVO — ID sincroniza texto, listas y macro")
