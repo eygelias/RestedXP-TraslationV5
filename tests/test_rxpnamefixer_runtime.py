@@ -28,6 +28,13 @@ class RuntimeIntegrationTests(unittest.TestCase):
         self.assertIn("UpdateTargetFrame", LUA)
         self.assertIn("C_Timer.NewTicker", LUA)
 
+    def test_quest_objective_rejects_self_embedding_and_grammar_phrases(self):
+        self.assertIn("CanMapQuestObjective", LUA)
+        self.assertIn("IsSelfEmbedding", LUA)
+        self.assertIn('Log("OBJECTIVE_REJECT"', LUA)
+        self.assertIn("WordCount(oldName) == WordCount(objectiveName)", LUA)
+        self.assertIn("not IsSelfEmbedding(oldName, objectiveName)", LUA)
+
     def test_quest_objective_maps_complete_to_following_mob(self):
         self.assertIn("LearnFromQuestObjectives", LUA)
         self.assertIn("addon.GetQuestObjectives", LUA)

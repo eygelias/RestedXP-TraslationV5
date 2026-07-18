@@ -1,12 +1,12 @@
 -- RXPNameFixer.lua
 -- Sincroniza RestedXP con nombres reales del cliente WoW en tiempo real.
--- v2.7 - Empareja .complete QUEST,OBJ con .mob sin ID usando Quest Log.
+-- v2.8 - Rechaza objetivos gramaticales y mappings autoembebidos.
 
 local ADDON_NAME = ...
 local AceAddon = LibStub and LibStub("AceAddon-3.0", true)
 local addon = AceAddon and AceAddon:GetAddon("RXPGuides", true)
 if not addon then
-    print("|cffff0000RXP Name Fixer v2.7|r: no encontró AceAddon RXPGuides")
+    print("|cffff0000RXP Name Fixer v2.8|r: no encontró AceAddon RXPGuides")
     return
 end
 
@@ -27,6 +27,7 @@ local hooksReady = false
 local syncingMacro = false
 local pendingMacroSync = false
 local updatingText = false
+local rejectedObjectivePairs = {}
 local lastUnitName
 
 -- Migrar cache v1.x (IDs numéricos en raíz).
@@ -86,6 +87,23 @@ local function IsSuffixVariant(left, right)
     return false
 end
 
+local function IsSelfEmbedding(wrong, correct)
+    if type(wrong) ~= "string" or type(correct) ~= "string" then return false end
+    return strfind(strlower(correct), strlower(wrong), 1, true) ~= nil
+end
+
+local function WordCount(value)
+    local count = 0
+    for _ in tostring(value or ""):gmatch("%S+") do count = count + 1 end
+    return count
+end
+
+local function CanMapQuestObjective(oldName, objectiveName)
+    return WordCount(oldName) == WordCount(objectiveName) and
+           FirstToken(oldName) == FirstToken(objectiveName) and
+           not IsSelfEmbedding(oldName, objectiveName)
+end
+
 local function StoreAlias(base, variant)
     aliases[base] = aliases[base] or {}
     aliases[base][variant] = true
@@ -98,6 +116,8 @@ for wrong, correct in pairs(overrides) do
     if isVariant then
         StoreAlias(base, variant)
         table.insert(invalidOverrides, {wrong, correct, "migrado a alias"})
+    elseif IsSelfEmbedding(wrong, correct) then
+        table.insert(invalidOverrides, {wrong, correct, "reemplazo autoembebido"})
     elseif FirstToken(wrong) ~= FirstToken(correct) then
         table.insert(invalidOverrides, {wrong, correct, "entidades distintas sin ID"})
     end
@@ -125,7 +145,8 @@ local function ReplaceKnownNames(text)
     if type(text) ~= "string" then return text, false end
     local changed = false
     for wrong, correct in pairs(overrides) do
-        if wrong ~= correct and not IsSuffixVariant(wrong, correct) then
+        if wrong ~= correct and not IsSuffixVariant(wrong, correct) and
+           not IsSelfEmbedding(wrong, correct) then
             local fixed = text:gsub(EscapePattern(wrong), correct)
             if fixed ~= text then
                 text = fixed
@@ -290,6 +311,10 @@ local function LearnOverride(wrong, correct, reason, trustedID)
     wrong, correct = StripEntry(wrong), StripEntry(correct)
     if type(wrong) ~= "string" or type(correct) ~= "string" then return false end
     if wrong == "" or correct == "" or wrong == correct then return false end
+    if IsSelfEmbedding(wrong, correct) then
+        Log("REJECT", wrong .. " -/-> " .. correct, "reemplazo autoembebido")
+        return false
+    end
     if not trustedID and FirstToken(wrong) ~= FirstToken(correct) then
         Log("REJECT", wrong .. " -/-> " .. correct, "sin ID exacto")
         return false
@@ -362,9 +387,17 @@ local function LearnFromQuestObjectives()
                             if type(oldName) == "string" and not oldName:match("^%d+$") and
                                oldName ~= pending.name then
                                 local reason = "QUEST_OBJECTIVE " .. pending.questId .. "," .. pending.obj
-                                if LearnOverride(oldName, pending.name, reason, true) then
-                                    changed = true
-                                    Log("QUEST_OBJECTIVE", oldName .. " -> " .. pending.name, reason)
+                                if CanMapQuestObjective(oldName, pending.name) then
+                                    if LearnOverride(oldName, pending.name, reason, true) then
+                                        changed = true
+                                        Log("QUEST_OBJECTIVE", oldName .. " -> " .. pending.name, reason)
+                                    end
+                                else
+                                    local pair = oldName .. "\031" .. pending.name
+                                    if not rejectedObjectivePairs[pair] then
+                                        rejectedObjectivePairs[pair] = true
+                                        Log("OBJECTIVE_REJECT", oldName .. " -/-> " .. pending.name, reason)
+                                    end
                                 end
                             end
                         end
@@ -653,7 +686,7 @@ SlashCmdList.RXPNAMEFIXER = function(message)
         for _ in pairs(overrides) do learned = learned + 1 end
         for _ in pairs(wordOverrides) do wordCount = wordCount + 1 end
         for _, variants in pairs(aliases) do for _ in pairs(variants) do aliasCount = aliasCount + 1 end end
-        print("|cff00ff00RXP Name Fixer v2.7|r ACTIVO")
+        print("|cff00ff00RXP Name Fixer v2.8|r ACTIVO")
         print("  Cache NPC: " .. cached .. " | Overrides: " .. learned .. " | Palabras: " .. wordCount .. " | Alias: " .. aliasCount)
         print("  Capturas: " .. stats.captures .. " | Aprendidos: " .. stats.learned)
         print("  Macros: " .. stats.macro .. " | Textos: " .. stats.text)
@@ -692,5 +725,5 @@ end
 for wrong, correct in pairs(overrides) do LearnWordOverride(wrong, correct, true) end
 
 InstallHooks()
-Log("SYSTEM", "RXP Name Fixer v2.7 cargado")
-print("|cff00ff00RXP Name Fixer v2.7|r ACTIVO — objetivos de misión sincronizan texto y macro")
+Log("SYSTEM", "RXP Name Fixer v2.8 cargado")
+print("|cff00ff00RXP Name Fixer v2.8|r ACTIVO — mappings autoembebidos bloqueados")
